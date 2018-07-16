@@ -16,10 +16,138 @@
             android:id="@+id/top_image"
             android:contentDescription="@string/top_image_cd"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="100dp"
             android:src="@drawable/coffee_top"
             android:scaleType="centerCrop"/>
 
+        <!-- User's First Name and Last Name Container-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/first_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textPersonName"
+                android:hint="First Name" />
+
+            <EditText
+                android:id="@+id/last_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textPersonName"
+                android:hint="Last Name" />
+        </LinearLayout>
+
+        <!-- Coffee and Toppings Title Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="Coffees"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="Toppings"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Coffees and Toppings Selection Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <!-- Coffees List Selection -->
+            <ScrollView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="Latte"
+                        android:textSize="16dp" />
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="Cappuccino"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="Flat White"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="Espresso"
+                        android:textSize="16dp"/>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- Vertical black line -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <!-- Toppings List Selection -->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Whipped Cream"
+                    android:textSize="16dp" />
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Caramel Syrup"
+                    android:textSize="16dp" />
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+        
+<!-- Relative Layout
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -33,7 +161,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
                 android:src="@drawable/coffee_c"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"  />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -131,6 +259,8 @@
             </LinearLayout>
 
         </RelativeLayout>
+
+        -->
 
     </LinearLayout>
 
