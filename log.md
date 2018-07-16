@@ -19,3 +19,8 @@
 **Today's Progress:** I have completed the second project, reinforced my xml skills, learned a lot about how layouts work, and design the whole xml but keeping the project features. Using [Material Design](https://material.io/) I set a good color background for each view of this App.
 
 **Thoughts:** I dedicated a lot of time on this, figuring out how to have everything properly fitted in the groupviews take me most of it. Setting the buttons behavior was actually fast since I have done it before in the Coffee-Ordering App, the only improvement I did with this is that I did three methods for six buttons instead six methods for six buttons.
+
+## Day 4: July 15, 2018
+**Today's Progress:** I learned how scrollviews work and how they are implemented, new Coffee-Order App Design and started to set it up in the xml file, the new features of this design includes a text field for the user's name, more coffees options, new toppings section, and lastly an order summary.
+
+**Thoughts:** Having a scrollview opens many new design options, not worry anymore if all the content I want to make does not fit in a single view app. I felt like the xml file needed the comments that I commonly use for my C++/C#/Java/Python files to make everything more understandable, I searched on Google if there is a way and how do I implement them, then after find it I comment every element in the xml file, great relief to see all very organized and commented.
