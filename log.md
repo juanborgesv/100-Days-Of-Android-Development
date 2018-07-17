@@ -24,3 +24,9 @@
 **Today's Progress:** I learned how scrollviews work and how they are implemented, new Coffee-Order App Design and started to set it up in the xml file, the new features of this design includes a text field for the user's name, more coffees options, new toppings section, and lastly an order summary.
 
 **Thoughts:** Having a scrollview opens many new design options, not worry anymore if all the content I want to make does not fit in a single view app. I felt like the xml file needed the comments that I commonly use for my C++/C#/Java/Python files to make everything more understandable, I searched on Google if there is a way and how do I implement them, then after find it I comment every element in the xml file, great relief to see all very organized and commented.
+
+
+## Day 5: July 16, 2018
+**Today's Progress:** The coffee-order app is finished, I had to used a [Nested Scroll View](https://developer.android.com/reference/android/support/v4/widget/NestedScrollView) instead the regular Scroll View because if you use one inside the other, when you use the parent one, the child will seem like its disabled or you will have trouble using it properly.
+
+**Thoughts:** There's nothing better to see all your progress in one app, in the first chapter of this course (Android Basics: User Input). I thought the coffee-ordering app was finished, but after finishing the basketball app the next thing to do was to add some features to the coffee-ordering app, but that did not meant is was going to be only few steps. I design it in more depth and good a really good result!
