@@ -35,3 +35,8 @@
 **Today's Progress:** Almost finished the Android Basics: User Input course, the last thing to do is create a Quiz App. This last project is going to be about football/soccer, the project has been created and design is on paper, not it is time to pass the design to the xml file.
 
 **Thoughts:** I've never thought this course was going to be this long, it is a lot of things that I've learned and can't wait to start the next one, [Android Basics: Multiscreen Apps](https://www.udacity.com/course/android-basics-multiscreen-apps--ud839).
+
+## Day 7: July 18, 2018
+**Today's Progress:** For every question in the Quiz App there will be an image and four possible answers, currently only one question has been tested. Styles have been implemented to make the xml file of the design more short and easy to read.
+
+**Thoughts:** The Quis App design is simple, but strongly, using a single view without scrollview element is a great challenge, and it is what is up next, change the question text and image after the user has selected an answer.
