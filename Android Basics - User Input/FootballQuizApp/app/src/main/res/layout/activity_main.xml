@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5dp"
+           android:layout_marginStart="5dp"
+           android:layout_marginLeft="5dp"
+           android:layout_marginEnd="5dp"
+           android:layout_marginRight="5dp"
+           android:orientation="vertical">
+
+            <!--Question-->
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+
+               android:text="Question:"
+               android:textSize="24sp"
+               android:textColor="@color/colorPrimaryDark"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="20dp"
+
+               android:text=""
+               android:textSize="16sp"
+               android:textColor="@color/colorPrimary"/>
+
+           <!-- Question's Image -->
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:scaleType="centerCrop"
+               android:src="@drawable/russia_worldcup"/>
+
+           <!-- Possible answers -->
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <!-- Option A-->
+               <Button
+                   android:id="@+id/answer_a_button"
+                   android:tag="1"
+                   style="@style/EqualSizeOnHorizontalLayout"
+                   android:text="Brazil"/>
+
+               <!-- Option B-->
+               <Button
+                   android:id="@+id/answer_b_button"
+                   android:tag="2"
+                   style="@style/EqualSizeOnHorizontalLayout"
+                   android:text="Germany"/>
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <Button
+                   android:id="@+id/answer_c_button"
+                   android:tag="3"
+                   style="@style/EqualSizeOnHorizontalLayout"
+                   android:text="France"/>
+               <Button
+                   android:id="@+id/answer_d_button"
+                   android:tag="4"
+                   style="@style/EqualSizeOnHorizontalLayout"
+                   android:text="England"/>
+           </LinearLayout>
+
+       </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

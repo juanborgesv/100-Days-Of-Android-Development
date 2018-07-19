@@ -83,11 +83,12 @@ public class MainActivity extends AppCompatActivity
                 summary += iCoffeeQuantity[x];
                 summary += "  " + coffeeName[x];
                 summary += "\t\t $" + price;
-                summary += "\n\n";
+                summary += "\n";
 
                 total += price;
             }
         }
+        summary+= "\n";
 
         if (whipped.isChecked())
         {
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity
             total += 1.00f;
         }
 
-        summary += "Total: $" + total + "\n\n";
+        summary += "\nTotal: $" + total + "\n";
         orderSummary.setText("" + summary);
     }
 }
