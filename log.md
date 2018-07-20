@@ -40,3 +40,8 @@
 **Today's Progress:** For every question in the Quiz App there will be an image and four possible answers, currently only one question has been tested. Styles have been implemented to make the xml file of the design more short and easy to read.
 
 **Thoughts:** The Quis App design is simple, but strongly, using a single view without scrollview element is a great challenge, and it is what is up next, change the question text and image after the user has selected an answer.
+
+## Day 8: July 19, 2018
+**Today's Progress:** The Quiz App is one step to be completed, all the questions work perfectly, it is only left to set a resume of the Quiz, answers, good answers, bad answers and a reset button!
+
+**Thoughts:** It is been a good challenge since I am constantly changing an image and the question text. I have seen other people's project of the Quiz App, all of the projects that I saw used a long scrollview with all the questions one next to the other. I thought it will be better to do it more simple for the user and a little more difficult to make but worth it. Hope to finish this project tomorrow and start with the Multiscreen Apps course!
