@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity
     int score;  // Correct answers counter.
 
     String[] question = new String[4];
-    int[] correctAnswer = {3, 1, 4, 2};   // Answer sheet.
+    int[] correctAnswer = {2, 0, 3, 1};   // Answer sheet.
     int[] myAnswers = new int[4];
 
     String[][] possibleAnswer = new String[4][4];
@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity
         {
             Log.i("checkAnswer", "correct");
             buttonPressed = (Button) view;
+            ++score;
         }
         else
         {
@@ -103,16 +104,18 @@ public class MainActivity extends AppCompatActivity
         }
 
         // Save answer pressed
-        myAnswers[level] = (Integer.parseInt(view.getTag().toString()));
+        myAnswers[level] = Integer.parseInt(view.getTag().toString());
 
         // Load next question while the last one is not reached
         if (level < 3)
         {
-            ++level;
+            level += 1;
             loadNextQuestion();
         }
         else if (level == 3)
+        {
             endQuiz();
+        }
     }
 
     private void loadNextQuestion()
@@ -139,26 +142,35 @@ public class MainActivity extends AppCompatActivity
 
     private void endQuiz()
     {
-        //TextView endTitle = findViewById(R.id.question_title);
-       // endTitle.setText(""+ "Resume");
+        TextView endTitle = findViewById(R.id.question_title);
+        endTitle.setText(""+ "Resume");
+
+        level = 4;
 
         questionImage.setImageResource(R.drawable.iniesta);
 
-        summary = "1. "+ possibleAnswer[0][myAnswers[0]];
+        summary = "Score: "+ score+ "/4";
+
+        summary += "\n1. "+ possibleAnswer[0][myAnswers[0]];
         if (myAnswers[0] != correctAnswer[0])
-            summary += "(Wrong)";
+            summary += " (Wrong)";
 
         summary += "\n2. "+ possibleAnswer[1][myAnswers[1]];
-        if (myAnswers[0] != correctAnswer[0])
-            summary += "(Wrong)";
+        if (myAnswers[1] != correctAnswer[1])
+            summary += " (Wrong)";
 
         summary += "\n3. "+ possibleAnswer[2][myAnswers[2]];
-        if (myAnswers[0] != correctAnswer[0])
-            summary += "(Wrong)";
+        if (myAnswers[2] != correctAnswer[2])
+            summary += " (Wrong)";
 
         summary += "\n4. "+ possibleAnswer[3][myAnswers[3]];
-        if (myAnswers[0] != correctAnswer[0])
-            summary += "(Wrong)";
+        if (myAnswers[3] != correctAnswer[3])
+            summary += " (Wrong Answer)";
+
+        answerA.setText(""+ "Thanks");
+        answerB.setText(""+ "For");
+        answerC.setText(""+ "Playing");
+        answerD.setText(""+ "!");
 
         questionText.setText(""+ summary);
     }
