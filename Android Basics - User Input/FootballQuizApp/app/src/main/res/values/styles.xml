@@ -10,18 +10,20 @@
 
 
     <!-- IDK -->
-    <style name="EqualSizeOnHorizontalLayout">
+    <style name="ButtonProperties">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
         <item name="android:onClick">checkAnswer</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="ImageSettings">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">250dp</item>
         <item name="android:scaleType">centerCrop</item>
-
     </style>
 
 
