@@ -91,30 +91,34 @@ public class MainActivity extends AppCompatActivity
 
     public void checkAnswer(View view)
     {
-        if (correctAnswer[level] == Integer.parseInt(view.getTag().toString()))
+        if (level <= 3)
         {
-            Log.i("checkAnswer", "correct");
-            buttonPressed = (Button) view;
-            ++score;
-        }
-        else
-        {
-            Log.i("checkAnswer", "incorrect");
-            buttonPressed = (Button) view;
-        }
+            if (correctAnswer[level] == Integer.parseInt(view.getTag().toString()))
+            {
+                Log.i("checkAnswer", "correct");
+                buttonPressed = (Button) view;
+                ++score;
+            }
+            else
+            {
+                Log.i("checkAnswer", "incorrect");
+                buttonPressed = (Button) view;
+            }
 
-        // Save answer pressed
-        myAnswers[level] = Integer.parseInt(view.getTag().toString());
+            // Save answer pressed
+            myAnswers[level] = Integer.parseInt(view.getTag().toString());
 
-        // Load next question while the last one is not reached
-        if (level < 3)
-        {
-            level += 1;
-            loadNextQuestion();
-        }
-        else if (level == 3)
-        {
-            endQuiz();
+            // Load next question while the last one is not reached
+            if (level < 3)
+            {
+                level += 1;
+                loadNextQuestion();
+            }
+            else if (level == 3)
+            {
+                level +=1;
+                endQuiz();
+            }
         }
     }
 
@@ -145,8 +149,6 @@ public class MainActivity extends AppCompatActivity
         TextView endTitle = findViewById(R.id.question_title);
         endTitle.setText(""+ "Resume");
 
-        level = 4;
-
         questionImage.setImageResource(R.drawable.iniesta);
 
         summary = "Score: "+ score+ "/4";
@@ -171,6 +173,7 @@ public class MainActivity extends AppCompatActivity
         answerB.setText(""+ "For");
         answerC.setText(""+ "Playing");
         answerD.setText(""+ "!");
+
 
         questionText.setText(""+ summary);
     }
