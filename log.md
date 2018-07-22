@@ -50,3 +50,8 @@
 **Today's Progress:** Finally the Quiz App is finished, it has 4 questions about football (soccer), and a Resume which contains a score, and the answered questions, if one of the answers was wrong it is detailed on the resume. Started the [Android Basics: Multiscreen Apps](https://www.udacity.com/course/android-basics-multiscreen-apps--ud839) course.
 
 **Thoughts:** Each new app is a bigger challenge than the last one, it always has more new concepts. Now implementing new activities using intends, extends a lot of the things one can do in one App. This is one of the longest courses since it is expected to last 2 months, can't wait to finish this course and look back to all I have achieved.
+
+## Day 10: July 21, 2018
+**Today's Progress:** Learned about how to implement intends in order to use new activities, and learned how to use Listeners, an alternative way of onClick, that allows to do certain methods after the user clicks.
+
+**Thoughts:** Is it really good to use listeners instead of only manage the clicks through the onClick component of the UI elements. Some post of Quora and Stackoverflow say they have the same performance, and some say that using listeners is actually better, for now I'll just follow what the instructor does, then I'll do more research.
