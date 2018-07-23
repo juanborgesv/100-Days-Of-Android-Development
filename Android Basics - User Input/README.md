@@ -12,3 +12,6 @@ The second app is more challenging to develop but it reinforces the concepts exp
 
 ## Coffee-Ordering App (v2)
 After finishing the Basketball App you will have to create a few more features for your Coffee-Ordering App, CheckBoxes for coffee topings, EditTexts for the user's name and an a order resume. The app that I develop provides five different coffees to order, four toppings, and a great order resume.
+
+## Quiz App
+The last app that is going to be develop is a Quiz App, it has to be about anything you like, and I chose it will be about Football/Soccer. Before making any app I like to see the others project and some real apps on the play store, so I can get different perspectives and possibilities in order to design a simple and useful app that covers the features requested. I did not want to do what every student's did for this project, an app with simple questions one next to each other into an scrollview, instead, I tried to do my App similar to many Apps on the play store, only after you answer the question, this disappears and the next one is shown.
