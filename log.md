@@ -55,3 +55,8 @@
 **Today's Progress:** Learned about how to implement intends in order to use new activities, and learned how to use Listeners, an alternative way of onClick, that allows to do certain methods after the user clicks.
 
 **Thoughts:** Is it really good to use listeners instead of only manage the clicks through the onClick component of the UI elements. Some post of Quora and Stackoverflow say they have the same performance, and some say that using listeners is actually better, for now I'll just follow what the instructor does, then I'll do more research.
+
+## Day 11: July 22, 2018
+**Today's Progress:** I had some problem today with my internet connection so I could not follow with the class today. But that could not stop me for learning, so I advanced more in the Java Tutorial certified course by SoloLearn App, learned about Handling Exceptions, Lists and HashMap.
+
+**Thoughts:** I like to be a little more advanced on programming details in the Android course so I don't get stuck and get concepts quickly, I watched some videos on Youtube and saw the others student project of this course. Can't wait to do something similar to what I saw.
