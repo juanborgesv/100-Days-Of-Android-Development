@@ -65,3 +65,8 @@
 **Today's Progress:** Since I still have some problems with my internet connection I set some icon images for the happy birthday app, and the football quiz, fix some things that weren't working as expected at the last part of the Quiz App, nothing important but details that are always good to have them on point.
 
 **Thoughts:** It seems that my internet connection is getting more stable now so I as soon as possible I am going to keep following the course.
+
+## Day 13: July 25, 2018
+**Today's Progress:** Learned and implemented Array, then change the Array for an ArrayList in order to not to worry about the data structure's size, how to add and get elements to this data structure.
+
+**Thoughts:** I know how to use arrays but not ArrayList in Java, it offers some useful details.
