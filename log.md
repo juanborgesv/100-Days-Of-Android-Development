@@ -60,3 +60,8 @@
 **Today's Progress:** I had some problem today with my internet connection so I could not follow with the class today. But that could not stop me for learning, so I advanced more in the Java Tutorial certified course by SoloLearn App, learned about Handling Exceptions, Lists and HashMap.
 
 **Thoughts:** I like to be a little more advanced on programming details in the Android course so I don't get stuck and get concepts quickly, I watched some videos on Youtube and saw the others student project of this course. Can't wait to do something similar to what I saw.
+
+## Day 12: July 23, 2018
+**Today's Progress:** Since I still have some problems with my internet connection I set some icon images for the happy birthday app, and the football quiz, fix some things that weren't working as expected at the last part of the Quiz App, nothing important but details that are always good to have them on point.
+
+**Thoughts:** It seems that my internet connection is getting more stable now so I as soon as possible I am going to keep following the course.
