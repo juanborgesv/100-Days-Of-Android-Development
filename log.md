@@ -70,3 +70,8 @@
 **Today's Progress:** Learned and implemented Array, then change the Array for an ArrayList in order to not to worry about the data structure's size, how to add and get elements to this data structure.
 
 **Thoughts:** I know how to use arrays but not ArrayList in Java, it offers some useful details.
+
+## Day 14: July 26, 2018
+**Today's Progress:** Create a class with its constructor, setters and getters, then use the ArrayList that I previously created but with the type of the class that I just created in order to store in that list the two translations (Miwok and Default). Then using an ArrayAdapter to manage much better the memory in order to see all the elements on the list of words. But then I created a class WordAdapter to replace that ArrayAdapter and implement better the adapter in order to see the two TextViews. It was a lot!
+
+**Thoughts:** Tomorrow I will recap everything, it was a lot! I did not catch very well some details so I decided to stop, take a break and see everything more clearly tomorrow since I was learning a lot of things one after the other, and some of them I did not catch them at all.
