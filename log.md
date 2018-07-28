@@ -75,3 +75,8 @@
 **Today's Progress:** Create a class with its constructor, setters and getters, then use the ArrayList that I previously created but with the type of the class that I just created in order to store in that list the two translations (Miwok and Default). Then using an ArrayAdapter to manage much better the memory in order to see all the elements on the list of words. But then I created a class WordAdapter to replace that ArrayAdapter and implement better the adapter in order to see the two TextViews. It was a lot!
 
 **Thoughts:** Tomorrow I will recap everything, it was a lot! I did not catch very well some details so I decided to stop, take a break and see everything more clearly tomorrow since I was learning a lot of things one after the other, and some of them I did not catch them at all.
+
+## Day 15: July 27, 2018
+**Today's Progress:** Yesterday a lot of things were covered, today I focused on doing a recap of everything and I almost finished. View Recycling process, the use of a ListArray with an ArrayAdapter, build the item on list layout used by the ArrayAdapter, creation of the Word class and why it is created was everything that the today's review could cover. It is left to review the custom Adapter for the List View
+
+**Thoughts:** Today I did not see anything new, but It was important to review everything done in day 14, or almost everything. Important things were done and key concepts to catch, unfortunately maybe I was not focused enough that day and I did not catch at all everything. Happy to follow the instructor's advice.
