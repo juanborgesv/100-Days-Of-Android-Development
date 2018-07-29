@@ -6,16 +6,21 @@ package com.juanborges.miwok;
  */
 public class Word {
 
-    // Default translation of the word
+    // Default translation of the word.
     String defaultTranslation;
 
-    // Miwok translation of the word
+    // Miwok translation of the word.
     String miwokTranslation;
+
+    // Image resource id for the word.
+    int imageResourceId = NO_IMAGE_PROVIDED;
+
+    static final int NO_IMAGE_PROVIDED = -1;
 
     /**
      * Constructor of the class. Set the Default and Miwok translation of the Word.
-     * @param mDefaultTranslation
-     * @param mMiwokTranslation
+     * @param mDefaultTranslation is the word in the default language.
+     * @param mMiwokTranslation is the word in the Miwok language.
      */
     public Word(String mDefaultTranslation, String mMiwokTranslation) {
         defaultTranslation = mDefaultTranslation;
@@ -23,7 +28,19 @@ public class Word {
     }
 
     /**
-     * Get the Default translation
+     * Constructor of the class. Set the Default and Miwok translation of the Word.
+     * @param mDefaultTranslation is the word i the default language.
+     * @param mMiwokTranslation is the word in the Miwok language.
+     * @param mImageResourceId is the drawable image resource ID for the word's image.
+     */
+    public Word(String mDefaultTranslation, String mMiwokTranslation, int mImageResourceId) {
+        defaultTranslation = mDefaultTranslation;
+        miwokTranslation = mMiwokTranslation;
+        imageResourceId = mImageResourceId;
+    }
+
+    /**
+     * Get the Default translation.
      * @return defaultTranslation
      */
     public String getDefaultTranslation() {
@@ -31,7 +48,7 @@ public class Word {
     }
 
     /**
-     * Get the Miwok translation
+     * Get the Miwok translation.
      * @return miwokTranslation
      */
     public String getMiwokTranslation() {
@@ -39,18 +56,14 @@ public class Word {
     }
 
     /**
-     * Set the Default translation
-     * @param mDefaultTranslation
+     * Return the image resource ID of the word.
+     * @return imageResourceId
      */
-    public void setDefaultTranslation(String mDefaultTranslation) {
-        defaultTranslation = mDefaultTranslation;
+    public int getImageResourceId() {
+        return imageResourceId;
     }
 
-    /**
-     * Set the Miwok translation
-     * @param mMiwokTranslation
-     */
-    public void setMiwokTranslation(String mMiwokTranslation){
-        miwokTranslation = mMiwokTranslation;
+    public boolean hasImage(){
+        return imageResourceId != NO_IMAGE_PROVIDED;
     }
 }

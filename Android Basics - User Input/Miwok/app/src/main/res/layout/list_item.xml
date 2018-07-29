@@ -3,18 +3,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="horizontal"
+    android:minHeight="@dimen/list_item_height"
+    android:background="@color/tan_background">
 
-    <TextView
-        android:id="@+id/miwok_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Lutti" />
+    <ImageView
+        android:id="@+id/list_item_icon"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"/>
 
-    <TextView
-        android:id="@+id/default_text_view"
+    <LinearLayout
+        android:id="@+id/text_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="One" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:id="@+id/miwok_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            tools:text="Lutti"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/default_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="top"
+            tools:text="One" />
+    </LinearLayout>
 </LinearLayout>
