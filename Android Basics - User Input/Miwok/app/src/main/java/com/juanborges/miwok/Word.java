@@ -13,12 +13,15 @@ public class Word {
     String miwokTranslation;
 
     // Image resource id for the word.
-    int imageResourceId = NO_IMAGE_PROVIDED;
+    int imageResourceId = NO_SOURCE_PROVIDED;
 
-    static final int NO_IMAGE_PROVIDED = -1;
+    // Sound resource id for the word.
+    int soundResourceId = NO_SOURCE_PROVIDED;
+
+    static final int NO_SOURCE_PROVIDED = -1;
 
     /**
-     * Constructor of the class. Set the Default and Miwok translation of the Word.
+     * Custom constructor of the class. Set the Default and Miwok translation of the Word.
      * @param mDefaultTranslation is the word in the default language.
      * @param mMiwokTranslation is the word in the Miwok language.
      */
@@ -28,15 +31,31 @@ public class Word {
     }
 
     /**
-     * Constructor of the class. Set the Default and Miwok translation of the Word.
+     * Custom constructor of the class. Set the Default and Miwok translation of the Word,
+     * and a sound resource id.
      * @param mDefaultTranslation is the word i the default language.
      * @param mMiwokTranslation is the word in the Miwok language.
-     * @param mImageResourceId is the drawable image resource ID for the word's image.
+     * @param mSoundResourceId is the drawable image resource ID for the word's image.
      */
-    public Word(String mDefaultTranslation, String mMiwokTranslation, int mImageResourceId) {
+    public Word(String mDefaultTranslation, String mMiwokTranslation, int mSoundResourceId) {
+        defaultTranslation = mDefaultTranslation;
+        miwokTranslation = mMiwokTranslation;
+        soundResourceId = mSoundResourceId;
+    }
+
+    /**
+     * Custom constructor of the class. Set the Default and Miwok translation of the word, image
+     * and sound resource id.
+     * @param mDefaultTranslation
+     * @param mMiwokTranslation
+     * @param mImageResourceId
+     * @param mSoundResourceId
+     */
+    public Word(String mDefaultTranslation, String mMiwokTranslation, int mImageResourceId, int mSoundResourceId) {
         defaultTranslation = mDefaultTranslation;
         miwokTranslation = mMiwokTranslation;
         imageResourceId = mImageResourceId;
+        soundResourceId = mSoundResourceId;
     }
 
     /**
@@ -63,7 +82,27 @@ public class Word {
         return imageResourceId;
     }
 
+    /**
+     * Return the image resource ID of the word.
+     * @return soundResourceId
+     */
+    public int getSoundResourceId() {
+        return soundResourceId;
+    }
+
+    /**
+     * Check if the word has an Image resource id.
+     * @return
+     */
     public boolean hasImage(){
-        return imageResourceId != NO_IMAGE_PROVIDED;
+        return imageResourceId != NO_SOURCE_PROVIDED;
+    }
+
+    /**
+     * Check if the word has a Sound resource id.
+     * @return
+     */
+    public boolean hasSound(){
+        return soundResourceId != NO_SOURCE_PROVIDED;
     }
 }

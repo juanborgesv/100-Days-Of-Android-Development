@@ -1,6 +1,7 @@
 package com.juanborges.miwok;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -64,11 +65,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Find the ImageView in the list_item.xml layout with the id list_item_icon
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
 
+        // If the current word has an image, set it. Else disable the ImageView.
         if (currentWord.hasImage())
-        {
-            // Get the image resource ID from the current Word object and set it
             imageView.setImageResource(currentWord.getImageResourceId());
-        }
         else
             imageView.setVisibility(View.GONE);
 
