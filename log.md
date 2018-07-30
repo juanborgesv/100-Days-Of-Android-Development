@@ -85,3 +85,8 @@
 **Today's Progress:** I reviewed how the Adapter for the List view works, update it in order to allow the list item to have an image, update the word class to store an integer that represents the id of the image, modify de layout of the list item in order to have a background color in each different section of the app. 
 
 **Thoughts:** Today a big step has been done, I have had several days when I did not do much progress but todays I put a lot into it and finished a whole lesson.
+
+## Day 17: July 29, 2018
+**Today's Progress:** Lesson five is almost finished, the goal of this lesson is to manage audio features in order to hear the Miwok translation, it has been implemented but it is left to set the audio focus to have a more audio solid base.
+
+**Thoughts:** This is not the topic that calls my attention the most, but it is actually really interesting and a lot of things to look into. Manage the audio of an app is not as simple as I thought.
