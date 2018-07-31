@@ -90,3 +90,8 @@
 **Today's Progress:** Lesson five is almost finished, the goal of this lesson is to manage audio features in order to hear the Miwok translation, it has been implemented but it is left to set the audio focus to have a more audio solid base.
 
 **Thoughts:** This is not the topic that calls my attention the most, but it is actually really interesting and a lot of things to look into. Manage the audio of an app is not as simple as I thought.
+
+## Day 18: July 30, 2018
+**Today's Progress:** Miwok App is finished! But I started an Optional lesson that is really interesting where the Miwok App is going to change. This optional lesson is about refactoring the app with different design touches but keeping the its functionality, the first thing is to create a button in each activity that allows the user an alternative way to return to its parent's activity.
+
+**Thoughts:** This course it's been the hardest to finish and keep up with everything, some lessons were really hard to catch but being constant and learn everyday thanks to this challenge has facilitate me to learn everything accordingly.
