@@ -95,3 +95,8 @@
 **Today's Progress:** Miwok App is finished! But I started an Optional lesson that is really interesting where the Miwok App is going to change. This optional lesson is about refactoring the app with different design touches but keeping the its functionality, the first thing is to create a button in each activity that allows the user an alternative way to return to its parent's activity.
 
 **Thoughts:** This course it's been the hardest to finish and keep up with everything, some lessons were really hard to catch but being constant and learn everyday thanks to this challenge has facilitate me to learn everything accordingly.
+
+## Day 19: July 31, 2018
+**Today's Progress:** Miwok App v2 is finished! This second version is the same Miwok App v1 but with different design, using Fragments, ViewPager and TabLayout. The only part that did not go as planned was the TabLayout, in the prototype project it worked but somehow it did not implemented well in the Miwok App. 
+
+**Thoughts:** The 3rd course is almost done, it is only left to do the final project, maybe it will take two days, and then I will start the 4th course of the Android Basics Nanodegree program (I did not pay it but i am doing the courses for free).
