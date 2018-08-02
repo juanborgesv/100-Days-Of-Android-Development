@@ -100,3 +100,8 @@
 **Today's Progress:** Miwok App v2 is finished! This second version is the same Miwok App v1 but with different design, using Fragments, ViewPager and TabLayout. The only part that did not go as planned was the TabLayout, in the prototype project it worked but somehow it did not implemented well in the Miwok App. 
 
 **Thoughts:** The 3rd course is almost done, it is only left to do the final project, maybe it will take two days, and then I will start the 4th course of the Android Basics Nanodegree program (I did not pay it but i am doing the courses for free).
+
+## Day 20: August 1, 2018
+**Today's Progress:** The tour guide app that I am going to make is going to be about Merida, Venezuela. I worked on the design today (on paper) and it is almost done.
+
+**Thoughts:** I forgot how hard is to create a project, or maybe for me, because I always try to create something very complete that includes every detail that I've learned so far and maybe something new. I always try to compare great similar apps on the play store to my project and it is something that a lot of times makes me redesign the whole idea and try it to be the best possible than every other student's project. Maybe it is a bad habit for everything I do but sometimes it gets me great results.
