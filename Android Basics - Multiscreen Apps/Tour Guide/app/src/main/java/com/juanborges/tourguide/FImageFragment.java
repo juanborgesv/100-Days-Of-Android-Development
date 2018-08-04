@@ -6,21 +6,19 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ImageFragment extends Fragment {
+public class FImageFragment extends Fragment {
 
-    int imageId;
-
-    public ImageFragment() {}
+    public FImageFragment() { }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        return inflater.inflate(R.layout.fragment_fimage, container, false);
     }
 
 }

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tour Guide</string>
+
+    <string name="hotels_button">Hotels</string>
+    <string name="restaurants_button">Restaurants</string>
+    <string name="shopping_button">Shopping</string>
+    <string name="entertainment_button">Entertainment</string>
+
+    <string name="about_title">About</string>
+    <string name="about_text"></string>
+</resources>
