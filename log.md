@@ -104,4 +104,14 @@
 ## Day 20: August 1, 2018
 **Today's Progress:** The tour guide app that I am going to make is going to be about Merida, Venezuela. I worked on the design today (on paper) and it is almost done.
 
-**Thoughts:** I forgot how hard is to create a project, or maybe for me, because I always try to create something very complete that includes every detail that I've learned so far and maybe something new. I always try to compare great similar apps on the play store to my project and it is something that a lot of times makes me redesign the whole idea and try it to be the best possible than every other student's project. Maybe it is a bad habit for everything I do but sometimes it gets me great results.
+**Thoughts:** I forgot how hard it is to create a project, or maybe for me, because I always try to create something very complete that includes every detail that I've learned so far and maybe something new. I always try to compare great similar apps on the play store and the other's project to my project and it is something that a lot of times makes me redesign the whole idea and try it to be the best. Maybe it is a bad habit for everything I do but sometimes it gets me great results.
+
+## Day 21: August 2, 2018
+**Today's Progress:** The app design is done. Today I was really busy but I got some time to advance in the SoloLearn Java course, I almmost finish it, it is left to learn about handling files (Read/Write files).
+
+**Thoughts:** I don't believe the SoloLearn certificates are actually important, either way their lessons are really useful and it is always good to have certificates no matter how valuable they are.
+
+## Day 22: August 2, 2018
+**Today's Progress:** I have create the main activity, and implement some base behavior of buttons to open a new activity, these buttons are layouts with a clickListener that contains one image (a representative icon) and a text. The main activity has three images of Merida that can be seen by swiping the current image to the next one.
+
+**Thoughts:** I thought that it would take more time to do what I did, because it actually took several chapters of a lesson to learn each thing, but once you learned how they worked it is easy to use all that you have learned, even if you don't remember, taking a look of the code would instantly help and more if it is commented!
