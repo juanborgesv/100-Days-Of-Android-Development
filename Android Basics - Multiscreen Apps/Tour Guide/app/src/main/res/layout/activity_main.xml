@@ -20,18 +20,32 @@
         android:orientation="horizontal">
 
         <!-- Hotels button -->
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/hotels_button"/>
+        <LinearLayout
+            android:id="@+id/hotels_button"
+            style="@style/ButtonLayout">
+
+            <ImageView
+                style="@style/ButtonImage"
+                android:src="@drawable/shopping_icon"/>
+
+            <TextView
+                style="@style/ButtonText"
+                android:text="@string/hotels_button"/>
+        </LinearLayout>
 
         <!-- Restaurants button -->
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/restaurants_button"/>
+        <LinearLayout
+            android:id="@+id/restaurants_button"
+            style="@style/ButtonLayout">
+
+            <ImageView
+                style="@style/ButtonImage"
+                android:src="@drawable/shopping_icon"/>
+
+            <TextView
+                style="@style/ButtonText"
+                android:text="@string/restaurants_button"/>
+        </LinearLayout>
     </LinearLayout>
 
     <!-- Shopping and Entertainment buttons layout-->
@@ -43,31 +57,28 @@
         <!-- Shopping button -->
         <LinearLayout
             android:id="@+id/shopping_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            style="@style/ButtonLayout">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/shopping_icon"
-                android:scaleType="center"/>
+                style="@style/ButtonImage"
+                android:src="@drawable/shopping_icon"/>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/shopping_button"
-                android:textAlignment="center"
-                android:textSize="16dp"
-                android:textColor="@android:color/black"/>
+                style="@style/ButtonText"
+                android:text="@string/shopping_button"/>
         </LinearLayout>
 
         <!-- Entertainment button -->
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/entertainment_button"/>
+        <LinearLayout
+            android:id="@+id/entertainment_button"
+            style="@style/ButtonLayout">
+
+            <ImageView
+                style="@style/ButtonImage"
+                android:src="@drawable/shopping_icon"/>
+            <TextView
+                style="@style/ButtonText"
+                android:text="@string/entertainment_button"/>
+        </LinearLayout>
     </LinearLayout>
 
     <!-- About title text -->

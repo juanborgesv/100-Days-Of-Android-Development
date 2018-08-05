@@ -65,7 +65,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Find the ImageView in the list_item.xml layout with the id list_item_icon
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
 
-        // If the current word has an image, set it. Else disable the ImageView.
+        // If the current word has an image, set it. Else disable the ImageView
         if (currentWord.hasImage())
             imageView.setImageResource(currentWord.getImageResourceId());
         else
