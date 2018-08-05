@@ -111,7 +111,7 @@
 
 **Thoughts:** I don't believe the SoloLearn certificates are actually important, either way their lessons are really useful and it is always good to have certificates no matter how valuable they are.
 
-## Day 22: August 2, 2018
+## Day 22: August 3, 2018
 **Today's Progress:** I have create the main activity, and implement some base behavior of buttons to open a new activity, these buttons are layouts with a clickListener that contains one image (a representative icon) and a text. The main activity has three images of Merida that can be seen by swiping the current image to the next one.
 
 **Thoughts:** I thought that it would take more time to do what I did, because it actually took several chapters of a lesson to learn each thing, but once you learned how they worked it is easy to use all that you have learned, even if you don't remember, taking a look of the code would instantly help and more if it is commented!
