@@ -116,7 +116,12 @@
 
 **Thoughts:** I thought that it would take more time to do what I did, because it actually took several chapters of a lesson to learn each thing, but once you learned how they worked it is easy to use all that you have learned, even if you don't remember, taking a look of the code would instantly help and more if it is commented!
 
-## Day 22: August 3, 2018
+## Day 23: August 4, 2018
 **Today's Progress:** SoloLearn Java tutorial finished. I created some fragments that are going to show a list of items, these represents hotels, restaurants, shopping, and entertainment places. An item class of this list is created, it has a basic information about the item, such as an image, the title, and the contact number. Lastly I created an adapter to control the item's information in a item layout that is going to be displayed by a ListView.
 
 **Thoughts:** Happy to get another certificate, the app is really ugly but everything works by now, after I create every feature. I am going to dedicate a lot in polish the view of everything.
+
+## Day 24: August 5, 2018
+**Today's Progress:** The first two fragments are working with all its information, the listView of hotels and restaurants has all the information but every item has the same image since I am only worried about everything to be working, when I take care of the visual polish of the app I am going to change every item's image. A TabLayout has been added that indicates wich fragment is currently active.
+
+**Thoughts:** Once I finished the fragments information, I am going to set the About information in the main activity, then the visual polish, and this project will be completed!
