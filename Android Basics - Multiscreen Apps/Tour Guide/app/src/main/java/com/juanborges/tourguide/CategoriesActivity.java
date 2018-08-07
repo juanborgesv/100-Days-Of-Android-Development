@@ -25,8 +25,13 @@ public class CategoriesActivity extends AppCompatActivity {
         // Set the adapter onto the view pager
         viewPager.setAdapter(adapter);
 
+        // Find the TabLayout that will be set up with the ViewPager
         TabLayout tabLayout = findViewById(R.id.tabLayout);
-
         tabLayout.setupWithViewPager(viewPager);
+
+        // Get the fragment's position picked in the previous activity
+        Bundle extraPosition = getIntent().getExtras();
+        if (extraPosition != null)
+            viewPager.setCurrentItem(extraPosition.getInt("viewPagerPosition"));
     }
 }

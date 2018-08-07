@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
+                intent.putExtra("viewPagerPosition", 0);
                 startActivity(intent);
             }
         });
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
+                intent.putExtra("viewPagerPosition", 1);
                 startActivity(intent);
             }
         });
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
+                intent.putExtra("viewPagerPosition", 2);
                 startActivity(intent);
             }
         });
@@ -61,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
+                intent.putExtra("viewPagerPosition", 3);
                 startActivity(intent);
             }
         });

@@ -24,16 +24,13 @@ public class HotelsFragment extends Fragment {
 
         final ArrayList<ListItem> hotels = new ArrayList<>();
 
-        hotels.add(new ListItem(R.drawable.hotelroom, "Hotel Belensate", "0274 2663722"));
-        hotels.add(new ListItem(R.drawable.hotelroom, "Hotel Convencion Boutique", "0274 2405311"));
-        hotels.add(new ListItem(R.drawable.hotelroom, "Hotel Mucubaji", "0274 2443461"));
-        hotels.add(new ListItem(R.drawable.hotelroom, "Hotel La Terraza", "0274 244153"));
-        hotels.add(new ListItem(R.drawable.hotelroom, "Hotel El Serrano", "0274 2667447"));
-        hotels.add(new ListItem(R.drawable.hotelroom, "Hotel Mistafi", "0274 2510729"));
-        hotels.add(new ListItem(R.drawable.hotelroom, "Posada Casa Sol", "0274 2524164"));
-        hotels.add(new ListItem(R.drawable.hotelroom, "Hotel Chama", "0274 2524851"));
-        hotels.add(new ListItem(R.drawable.hotelroom, "Hotel Teleferico", "0412 7730148"));
-        hotels.add(new ListItem(R.drawable.hotelroom, "Hotel La Pedregosa", "0274 2663181"));
+        hotels.add(new ListItem(R.drawable.hotel_belensate, "Hotel Belensate", "0274 2663722"));
+        hotels.add(new ListItem(R.drawable.hotel_convencion, "Hotel Convencion Boutique", "0274 2405311"));
+        hotels.add(new ListItem(R.drawable.hotel_terraza, "Hotel La Terraza", "0274 244153"));
+        hotels.add(new ListItem(R.drawable.hotel_serrano, "Hotel El Serrano", "0274 2667447"));
+        hotels.add(new ListItem(R.drawable.posada_sol, "Posada Casa Sol", "0274 2524164"));
+        hotels.add(new ListItem(R.drawable.hotel_chama, "Hotel Chama", "0274 2524851"));
+        hotels.add(new ListItem(R.drawable.hotel_pedregosa, "Hotel La Pedregosa", "0274 2663181"));
 
         ItemAdapter adapter = new ItemAdapter(getActivity(), hotels);
 
