@@ -125,3 +125,8 @@
 **Today's Progress:** The first two fragments are working with all its information, the listView of hotels and restaurants has all the information but every item has the same image since I am only worried about everything to be working, when I take care of the visual polish of the app I am going to change every item's image. A TabLayout has been added that indicates wich fragment is currently active.
 
 **Thoughts:** Once I finished the fragments information, I am going to set the About information in the main activity, then the visual polish, and this project will be completed!
+
+## Day 25: August 6, 2018
+**Today's Progress:** All the fragments has all the information, I did some visual polish but also got some issues when setting the proper images for every item and the two categories that I implement the images are not running very smoothly. Every category has the same item layout but I am thinking about changing the Entertainment and Shopping item layout, make a different layout.
+
+**Thoughts:** Many issues have showed up during the making of this project and I liked a lot since it has give me more experience on certain things that I should be more careful, and also implementing little details that were not learned in the course.
