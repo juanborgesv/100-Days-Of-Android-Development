@@ -34,7 +34,7 @@ public class ShoppingFragment extends Fragment {
         shopping.add(new ListItem(R.drawable.hotelroom, "C.C. Las Tapias", "0274 244153"));
         shopping.add(new ListItem(R.drawable.hotelroom, "C.C. Milenium", "0274 2667447"));
 
-        ItemAdapter adapter = new ItemAdapter(getActivity(), shopping);
+        ItemTwoAdapter adapter = new ItemTwoAdapter(getActivity(), shopping);
 
         ListView listView = rootView.findViewById(R.id.listView);
         listView.setAdapter(adapter);

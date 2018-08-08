@@ -14,12 +14,15 @@ public class ListItem {
     // Item's name
     String itemName;
 
-    //
-    String contactNumber;
+    String itemDescription;
+
+    String itemLocation;
+
+    String itemSchedule;
+
+    String itemNumber;
 
     static final int NO_SOURCE_PROVIDED = -1;
-
-    // var locationId;
 
     /**
      * Custom constructor of the class.
@@ -31,28 +34,74 @@ public class ListItem {
     {
         imageResourceId = image;
         itemName = name;
-        contactNumber = number;
+        itemNumber = number;
     }
 
-    public ListItem(String name, String number)
+    public ListItem(int image, String name, String location, String number)
     {
+        imageResourceId = image;
         itemName = name;
-        contactNumber = number;
+        itemLocation = location;
+        itemNumber = number;
     }
+
+    public ListItem(int image, String name, String location, String time, String number)
+    {
+        imageResourceId = image;
+        itemName = name;
+        itemLocation = location;
+        itemSchedule = time;
+        itemNumber = number;
+    }
+
+    /**
+     * Custom constructor of the class.
+     * @param image
+     * @param name
+     * @param description
+     * @param location
+     * @param time
+     * @param number
+     */
+    public ListItem(int image, String name, String description, String location, String time, String number)
+    {
+        imageResourceId = image;
+        itemName = name;
+        itemDescription = description;
+        itemLocation = location;
+        itemSchedule = time;
+        itemNumber = number;
+    }
+
 
     // Get methods below
     //
-
     public int getImageResourceId() {
         return imageResourceId;
     }
 
     public String getContactNumber() {
-        return contactNumber;
+        return itemNumber;
     }
 
     public String getItemName() {
         return itemName;
+    }
+
+    public String getItemDescription(){
+        return itemDescription;
+    }
+
+    public String getItemLocation() {
+        return itemLocation;
+    }
+
+    public String getItemSchedule() {
+        return itemSchedule;
+    }
+
+    public String getItemNumber() {
+        return itemNumber;
     }
 
     public boolean hasImage() {

@@ -26,7 +26,7 @@ public class RestaurantsFragment extends Fragment {
 
         final ArrayList<ListItem> restaurants = new ArrayList<>();
 
-        restaurants.add(new ListItem(R.drawable.chistorra, "La chistorra", "0274 2440021"));
+        restaurants.add(new ListItem(R.drawable.chistorra, "La chistorra", "Av. Alberto Carnevali","Tu-Su: 12:00 - 0:00","0274 2440021"));
         restaurants.add(new ListItem(R.drawable.burger_bar, "Burger Bar Pub & Café", "0274 2528627"));
         restaurants.add(new ListItem(R.drawable.fraga_cafe, "Fraga Cafe", "0274 9350481"));
         restaurants.add(new ListItem(R.drawable.da_enzo, "Pizzería Da Enzo", "0274 2662881"));

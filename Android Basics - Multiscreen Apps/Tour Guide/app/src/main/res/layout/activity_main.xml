@@ -27,7 +27,7 @@
 
             <ImageView
                 style="@style/ButtonImage"
-                android:src="@drawable/shopping_icon"/>
+                android:src="@drawable/hotel_icon"/>
 
             <TextView
                 style="@style/ButtonText"
@@ -41,7 +41,7 @@
 
             <ImageView
                 style="@style/ButtonImage"
-                android:src="@drawable/shopping_icon"/>
+                android:src="@drawable/restaurant_icon"/>
 
             <TextView
                 style="@style/ButtonText"
@@ -63,9 +63,10 @@
             <ImageView
                 style="@style/ButtonImage"
                 android:src="@drawable/shopping_icon"/>
+
             <TextView
                 style="@style/ButtonText"
-                android:text="@string/shopping_button"/>
+                android:text="@string/shopping_button" />
         </LinearLayout>
 
         <!-- Entertainment button -->
@@ -75,7 +76,7 @@
 
             <ImageView
                 style="@style/ButtonImage"
-                android:src="@drawable/shopping_icon"/>
+                android:src="@drawable/entertainment_icon"/>
             <TextView
                 style="@style/ButtonText"
                 android:text="@string/entertainment_button"/>

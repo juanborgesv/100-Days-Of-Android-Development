@@ -37,23 +37,59 @@ public class ItemAdapter extends ArrayAdapter<ListItem> {
         // Get the current {@link ListItem}
         ListItem currentItem = getItem(position);
 
-        // Find the ImageView in the list_item.xml layout
+        /** Find the ImageView in the list_item.xml layout */
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.item_image);
 
-        // If the current word has an image, set it. Else disable the ImageView
+        // If the current item has an image, set it. Else disable the ImageView
         if (currentItem.hasImage())
             imageView.setImageResource(currentItem.imageResourceId);
         else
             imageView.setVisibility(View.GONE);
 
-        // Find the title TextView in the list_item.xml layout and set the current item title
+        /** Find the title TextView in the list_item.xml layout */
         TextView titleText = (TextView) listItemView.findViewById(R.id.title_text);
-        titleText.setText(""+ currentItem.getItemName());
 
-        // Find the phone number TextView in the list_item.xml layout
-        // and set the current item phone number
+        // If the current item has a title, set it. Else disable the TextView
+        if (currentItem.getItemName() != null)
+            titleText.setText(""+ currentItem.getItemName());
+        else
+            titleText.setVisibility(View.GONE);
+
+        /** Find the description TextView in the list_item.xml layout */
+        TextView descriptionText = (TextView) listItemView.findViewById(R.id.description_text);
+
+        // If the current item has a description, set it. Else disable the TextView
+        if (currentItem.getItemDescription() != null)
+            descriptionText.setText(""+ currentItem.getItemDescription());
+        else
+            descriptionText.setVisibility(View.GONE);
+
+        /** Find the location TextView in the list_item.xml layout */
+        TextView locationText = (TextView) listItemView.findViewById(R.id.location_text);
+
+        // If the current item has a location text, set it. Else disable the TextView
+        if (currentItem.getItemLocation() != null)
+            locationText.setText(""+ currentItem.getItemLocation());
+        else
+            locationText.setVisibility(View.GONE);
+
+        /** Find the schedule TextView in the list_item.xml layout */
+        TextView scheduleText = (TextView) listItemView.findViewById(R.id.time_text);
+
+        // If the current item has a schedule, set it. Else disable the TextView
+        if (currentItem.getItemSchedule() != null)
+            scheduleText.setText(""+ currentItem.getItemSchedule());
+        else
+            scheduleText.setVisibility(View.GONE);
+
+        /** Find the phone number TextView in the list_item.xml layout */
         TextView numberText = (TextView) listItemView.findViewById(R.id.number_text);
-        numberText.setText(""+ currentItem.getContactNumber());
+
+        // If the current word has a contact number, set it. Else disable the TextView
+        if (currentItem.getContactNumber() != null)
+            numberText.setText(""+ currentItem.getContactNumber());
+        else
+            numberText.setVisibility(View.GONE);
 
         return listItemView;
     }
