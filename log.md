@@ -130,3 +130,8 @@
 **Today's Progress:** All the fragments has all the information, I did some visual polish but also got some issues when setting the proper images for every item and the two categories that I implement the images are not running very smoothly. Every category has the same item layout but I am thinking about changing the Entertainment and Shopping item layout, make a different layout.
 
 **Thoughts:** Many issues have showed up during the making of this project and I liked a lot since it has give me more experience on certain things that I should be more careful, and also implementing little details that were not learned in the course.
+
+## Day 26: August 7, 2018
+**Today's Progress:** The app is looking really good by now, I did some research about why using a ListView with image and scrolling through will not performance really smooth, the solution I will do it at the very end. I modify the listItem class including some more atributes such as location, schedule, and description of the item (Hotel, Restaurant, Shopping or Entertainment place). So the Hotels and Food Fragments has change a bit. Finally added some icons (images) that indicates location, schedule and contact number for the last two fragments that has a different adapter and xml layout.
+
+**Thoughts:** It is funny how at the beginning I thought I was going to last two days, making a really complete app takes time, even though some days I did not do as much as I could but either way it was going to take some time to finish this project.
