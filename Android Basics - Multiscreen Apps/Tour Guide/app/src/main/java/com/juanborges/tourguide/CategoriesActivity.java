@@ -36,9 +36,16 @@ public class CategoriesActivity extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
 
+        tabLayout.getTabAt(0).setIcon(R.drawable.hotel_icon);
+        tabLayout.getTabAt(1).setIcon(R.drawable.restaurant_icon);
+        tabLayout.getTabAt(2).setIcon(R.drawable.shopping_icon);
+        tabLayout.getTabAt(3).setIcon(R.drawable.entertainment_icon);
+
         // Get the fragment's position picked in the previous activity
         Bundle extraPosition = getIntent().getExtras();
         if (extraPosition != null)
             viewPager.setCurrentItem(extraPosition.getInt("viewPagerPosition"));
+
+
     }
 }

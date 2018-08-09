@@ -7,7 +7,11 @@
     <string name="entertainment_button">Entertainment</string>
 
     <string name="about_title">About</string>
-    <string name="about_text">Here goes some description.\n This is just an example</string>
+    <string name="about_text">Mérida, officially known as Santiago de los Caballeros de Mérida, is
+        the capital of the municipality of Libertador and the state of Mérida, and is one of the
+        principal cities of the Venezuelan Andes. \n\nIt is home to the University of Los Andes and
+        the Archdiocese of Mérida. It also has the highest and longest cable car in the world.
+        It is the largest student and tourist center of western Venezuela.</string>
 
 
 </resources>

@@ -26,13 +26,13 @@ public class RestaurantsFragment extends Fragment {
 
         final ArrayList<ListItem> restaurants = new ArrayList<>();
 
-        restaurants.add(new ListItem(R.drawable.chistorra, "La chistorra", "Av. Alberto Carnevali","Tu-Su: 12:00-0:00","0274 2440021"));
-        restaurants.add(new ListItem(R.drawable.burger_bar, "Burger Bar Pub & Café","Av. 4 Btwn 17 & 18 St.","Tu-Sa: 12:00-1:00 & Su-Mo: 13:00-23:00", "0274 2528627"));
-        restaurants.add(new ListItem(R.drawable.fraga_cafe, "Fraga Cafe","Av. los Próceres, C.C. Pie de Monte","Tu-Th: 16:00-23:00 & Fr-Su: 12:30-23:00", "0274 9350481"));
-        restaurants.add(new ListItem(R.drawable.da_enzo, "Pizzería Da Enzo","C.C. San Cristóbal","We-Su: 17:00-22:00","0274 2662881"));
-        restaurants.add(new ListItem(R.drawable.avila_burger, "Ávila Burger","Av. Las Americas, C.C. Rodeo Plaza","Mo-Th: 12:00-22:00 & Fr-Su: 8:00-22:00", "0274 5000415"));
-        restaurants.add(new ListItem(R.drawable.gastrobar_5101, "5101 Gastrobar","Av. 3 Btwn 19 & 20 St.","12:00-1:00", "0274 2520211"));
-        restaurants.add(new ListItem(R.drawable.les_golfes, "Les Golfes De Salioli","Av. Alberto Carnevali","Mo-Tu: 12:00-13:00 & Th-Sa: 12:00-13:00", "0274 2445426"));
+        restaurants.add(new ListItem(R.drawable.r_chistorra, "La chistorra Bar & Restaurant", "Av. Alberto Carnevali","Tu-Su: 12:00-0:00","0274 2440021"));
+        restaurants.add(new ListItem(R.drawable.r_burger_bar, "Burger Bar Pub & Café","Av. 4 Btwn 17 & 18 St.","Tu-Sa: 12:00-1:00 & Su-Mo: 13:00-23:00", "0274 2528627"));
+        restaurants.add(new ListItem(R.drawable.r_fraga_cafe, "Fraga Cafe","Av. los Próceres, C.C. Pie de Monte","Tu-Th: 16:00-23:00 & Fr-Su: 12:30-23:00", "0274 9350481"));
+        restaurants.add(new ListItem(R.drawable.r_da_enzo, "Pizzería Da Enzo","C.C. San Cristóbal","We-Su: 17:00-22:00","0274 2662881"));
+        restaurants.add(new ListItem(R.drawable.r_avila_burger, "Ávila Burger","Av. Las Americas, C.C. Rodeo Plaza","Mo-Th: 12:00-22:00 & Fr-Su: 8:00-22:00", "0274 5000415"));
+        restaurants.add(new ListItem(R.drawable.r_gastrobar_5101, "5101 Gastrobar","Av. 3 Btwn 19 & 20 St.","12:00-1:00", "0274 2520211"));
+        restaurants.add(new ListItem(R.drawable.r_les_golfes, "Les Golfes De Salioli","Av. Alberto Carnevali","Mo-Tu: 12:00-13:00 & Th-Sa: 12:00-13:00", "0274 2445426"));
 
         ItemAdapter adapter = new ItemAdapter(getActivity(), restaurants);
 

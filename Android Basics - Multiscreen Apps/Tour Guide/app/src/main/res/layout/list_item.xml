@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="5dp"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@android:color/holo_blue_dark"
             android:textSize="14sp"
             tools:text="Example"/>
     </LinearLayout>

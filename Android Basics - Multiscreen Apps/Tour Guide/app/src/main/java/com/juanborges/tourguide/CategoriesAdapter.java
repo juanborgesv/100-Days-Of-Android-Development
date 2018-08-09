@@ -25,7 +25,9 @@ public class CategoriesAdapter extends FragmentPagerAdapter {
         return null;
     }
 
-    @Override
+    // This method is commented because the TabLayout will use icons defined in the
+    // CategoriesActivity.java file
+    /*@Override
     public CharSequence getPageTitle(int position) {
         if (position == 0)
             return "Hotels";
@@ -37,7 +39,7 @@ public class CategoriesAdapter extends FragmentPagerAdapter {
             return "Entertainment";
 
         return null;
-    }
+    }*/
 
     @Override
     public int getCount() {
