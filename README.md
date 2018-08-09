@@ -9,7 +9,7 @@ It is hard to start learning something new and even harder to develop a habit of
   - [Example 2](https://github.com/LordSomen/100DaysOfML/blob/master/Log.md)
 
 ## Learning resources
-Udacity's courses are a great point of start. Courses are listed ordered from basic to advanced that covers great material about Android Development. As I complete more courses I will be adding more, but for now these should be good:
+Udacity's courses are a great point of start. Courses are listed ordered from basic to advanced that covers great material about Android Development. As I complete more courses I will be adding more, but for now these should be good for now:
 
 1. [Android Basics: User Interface](https://www.udacity.com/course/android-basics-user-interface--ud834)
 2. [Android Basics: User Input](https://www.udacity.com/course/android-basics-user-input--ud836)
