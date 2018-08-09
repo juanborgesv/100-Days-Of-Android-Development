@@ -9,7 +9,8 @@
     <ImageView
         android:id="@+id/item_image"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="230dp"
+        android:scaleType="centerCrop"
         tools:background="@android:color/black"/>
 
     <!-- Item's title -->
@@ -34,6 +35,7 @@
 
     <!-- Location info -->
     <LinearLayout
+        android:id="@+id/location_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -48,11 +50,13 @@
             android:id="@+id/location_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             tools:text="This is the location of the item"/>
     </LinearLayout>
 
     <!-- Time info -->
     <LinearLayout
+        android:id="@+id/time_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -67,11 +71,13 @@
             android:id="@+id/time_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             tools:text="This is the location of the item"/>
     </LinearLayout>
 
     <!-- Phone info -->
     <LinearLayout
+        android:id="@+id/number_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -86,6 +92,7 @@
             android:id="@+id/number_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             android:textColor="@android:color/holo_blue_dark"
             tools:text="This is the location of the item"/>
     </LinearLayout>

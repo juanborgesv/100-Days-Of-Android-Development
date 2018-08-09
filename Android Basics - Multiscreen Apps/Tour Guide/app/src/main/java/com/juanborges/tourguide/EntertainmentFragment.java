@@ -25,13 +25,13 @@ public class EntertainmentFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_hotels, container, false);
 
         final ArrayList<ListItem> entertainment = new ArrayList<>();
-        entertainment.add(new ListItem(R.drawable.hotelroom, "Cinex", "0274 2448866"));
-        entertainment.add(new ListItem(R.drawable.hotelroom, "Multicine Las Tapias", "0274 2660349"));
-        entertainment.add(new ListItem(R.drawable.hotelroom, "Sistema De Teleférico Mukumbary", "0414 7035900"));
-        entertainment.add(new ListItem(R.drawable.hotelroom, "Ecowild", "0414 3740041"));
-        entertainment.add(new ListItem(R.drawable.hotelroom, "Venezuela de Antier", "0274 2450359"));
+        entertainment.add(new ListItem(R.drawable.cinex,"Cinex","Regular","C.C. Alto Prado, Av. Los Proceres", "Time not specified", "0274 2448866"));
+        entertainment.add(new ListItem(R.drawable.multicine, "Multicine Las Tapias","Regular","C.C. Las Tapias, Av. Andres Bello","Time not specified", "0274 2660349"));
+        entertainment.add(new ListItem(R.drawable.teleferico, "Sistema De Teleférico Mukumbary","Really Good","Plaza Las Heroinas","Tu-Su: 7:00 - 13:00", "0414 7035900"));
+        entertainment.add(new ListItem(R.drawable.ecowild, "Ecowild","Good","El Valle, Via la Culata","9:00 - 17:00", "0414 3740041"));
+        entertainment.add(new ListItem(R.drawable.vantier, "Venezuela de Antier","Good","5111, Merida","9:00 - 7:00", "0274 2450359"));
 
-        ItemAdapter adapter = new ItemAdapter(getActivity(), entertainment);
+        ItemTwoAdapter adapter = new ItemTwoAdapter(getActivity(), entertainment);
 
         ListView listView = rootView.findViewById(R.id.listView);
         listView.setAdapter(adapter);

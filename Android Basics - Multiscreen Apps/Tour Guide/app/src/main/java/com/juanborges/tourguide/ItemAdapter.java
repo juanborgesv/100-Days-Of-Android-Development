@@ -27,14 +27,14 @@ public class ItemAdapter extends ArrayAdapter<ListItem> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        // Check if the existing view is reused if not, inflate the view
+        /** Check if the existing view is reused if not, inflate the view */
         View listItemView = convertView;
         if (listItemView == null)
         {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
-        // Get the current {@link ListItem}
+        /** Get the current {@link ListItem} */
         ListItem currentItem = getItem(position);
 
         /** Find the ImageView in the list_item.xml layout */

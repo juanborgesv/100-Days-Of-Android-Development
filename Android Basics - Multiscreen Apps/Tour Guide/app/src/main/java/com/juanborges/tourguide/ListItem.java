@@ -100,10 +100,6 @@ public class ListItem {
         return itemSchedule;
     }
 
-    public String getItemNumber() {
-        return itemNumber;
-    }
-
     public boolean hasImage() {
         return imageResourceId != NO_SOURCE_PROVIDED;
     }
