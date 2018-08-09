@@ -135,3 +135,8 @@
 **Today's Progress:** The app is looking really good by now, I did some research about why using a ListView with image and scrolling through will not performance really smooth, the solution I will do it at the very end. I modify the listItem class including some more atributes such as location, schedule, and description of the item (Hotel, Restaurant, Shopping or Entertainment place). So the Hotels and Food Fragments has change a bit. Finally added some icons (images) that indicates location, schedule and contact number for the last two fragments that has a different adapter and xml layout.
 
 **Thoughts:** It is funny how at the beginning I thought I was going to last two days, making a really complete app takes time, even though some days I did not do as much as I could but either way it was going to take some time to finish this project.
+
+## Day 27: August 8, 2018
+**Today's Progress:** The color of the name of the app and the back button of the second Activity in the ActionBar is changed, added all the pictures of the places in Shopping and Entertainment, set all their information (except the item's description), set some padding for all the texts that needed it. Realise that as the Views in the ListView are being reused, if an item does not have an information that another has that view is hidden, but, if this view is then reused with an item that has that feature that the past one didn't then it is not going to show up, so I have to verify that the each view of an item if not hidden before reusing them.
+
+**Thoughts:** Everyday I realise something new, each stage of an app's development time, and key things that need to be set up and defined since the beginning in order to not be changing its design and losing sometime.
