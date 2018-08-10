@@ -140,3 +140,8 @@
 **Today's Progress:** The color of the name of the app and the back button of the second Activity in the ActionBar is changed, added all the pictures of the places in Shopping and Entertainment, set all their information (except the item's description), set some padding for all the texts that needed it. Realise that as the Views in the ListView are being reused, if an item does not have an information that another has that view is hidden, but, if this view is then reused with an item that has that feature that the past one didn't then it is not going to show up, so I have to verify that the each view of an item if not hidden before reusing them.
 
 **Thoughts:** Everyday I realise something new, each stage of an app's development time, and key things that need to be set up and defined since the beginning in order to not be changing its design and losing sometime.
+
+## Day 28: August 9, 2018
+**Today's Progress:** Finally I have finished the tour guide app, it looks pretty good, added a cool tabLayout circle indicator for images in the main activity. Tomorrow I will upload the screenshots.
+
+**Thoughts:** Very happy!
