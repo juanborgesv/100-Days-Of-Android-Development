@@ -1,6 +1,7 @@
 package com.juanborges.tourguide;
 
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,7 +26,15 @@ public class MainActivity extends AppCompatActivity {
         // Set the adapter onto the view pager
         viewPager.setAdapter(adapter);
 
-        // Set a click listener to the LinearLayout that represents the hotels button
+        // Find the tab layout that will indicates which image is displayed.
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+
+        tabLayout.setupWithViewPager(viewPager, true);
+
+
+
+
+        /** Set a click listener to the LinearLayout that represents the hotels button */
         LinearLayout hotels = (LinearLayout) findViewById(R.id.hotels_button);
         hotels.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Set a click listener to the LinearLayout that represents the restaurants button
+        /** Set a click listener to the LinearLayout that represents the restaurants button */
         LinearLayout restaurants = (LinearLayout) findViewById(R.id.restaurants_button);
         restaurants.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Set a click listener to the LinearLayout that represents the shopping button
+        /** Set a click listener to the LinearLayout that represents the shopping button */
         LinearLayout shopping = (LinearLayout) findViewById(R.id.shopping_button);
         shopping.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Set a click listener to the LinearLayout that represents the entertainment button
+        /** Set a click listener to the LinearLayout that represents the entertainment button */
         LinearLayout entertainment = (LinearLayout) findViewById(R.id.entertainment_button);
         entertainment.setOnClickListener(new View.OnClickListener() {
             @Override

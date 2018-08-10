@@ -3,6 +3,7 @@ package com.juanborges.tourguide;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,10 +37,10 @@ public class CategoriesActivity extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.getTabAt(0).setIcon(R.drawable.hotel_icon);
-        tabLayout.getTabAt(1).setIcon(R.drawable.restaurant_icon);
-        tabLayout.getTabAt(2).setIcon(R.drawable.shopping_icon);
-        tabLayout.getTabAt(3).setIcon(R.drawable.entertainment_icon);
+        tabLayout.getTabAt(0).setIcon(R.drawable.black_hotel_icon);
+        tabLayout.getTabAt(1).setIcon(R.drawable.black_restaurant_icon);
+        tabLayout.getTabAt(2).setIcon(R.drawable.black_shopping_icon);
+        tabLayout.getTabAt(3).setIcon(R.drawable.black_entertainment_icon);
 
         // Get the fragment's position picked in the previous activity
         Bundle extraPosition = getIntent().getExtras();

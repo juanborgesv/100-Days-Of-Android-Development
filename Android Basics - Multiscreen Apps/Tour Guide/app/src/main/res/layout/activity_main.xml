@@ -9,14 +9,31 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
+        <!-- Images ViewPager -->
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="220dp"
             tools:background="@android:color/black"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#212121"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"/>
+
+        <!-- Gray Horizontal Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
 
         <!-- Hotels and Restaurants buttons layout-->
         <LinearLayout
@@ -31,7 +48,7 @@
 
                 <ImageView
                     style="@style/ButtonImage"
-                    android:src="@drawable/hotel_icon"/>
+                    android:src="@drawable/blue_hotel_icon"/>
 
                 <TextView
                     style="@style/ButtonText"
@@ -50,7 +67,7 @@
 
                 <ImageView
                     style="@style/ButtonImage"
-                    android:src="@drawable/restaurant_icon"/>
+                    android:src="@drawable/blue_restaurant_icon"/>
 
                 <TextView
                     style="@style/ButtonText"
@@ -58,6 +75,7 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Gray Horizontal Line -->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -76,7 +94,7 @@
 
                 <ImageView
                     style="@style/ButtonImage"
-                    android:src="@drawable/shopping_icon"/>
+                    android:src="@drawable/blue_shopping_icon"/>
 
                 <TextView
                     style="@style/ButtonText"
@@ -95,13 +113,14 @@
 
                 <ImageView
                     style="@style/ButtonImage"
-                    android:src="@drawable/entertainment_icon"/>
+                    android:src="@drawable/blue_entertainment_icon"/>
                 <TextView
                     style="@style/ButtonText"
                     android:text="@string/entertainment_button"/>
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Gray Horizontal Line -->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -113,8 +132,9 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="@string/about_title"
-            android:textSize="22sp"
-            android:textColor="@android:color/black"/>
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#212121"/>
 
         <!-- About text -->
         <TextView
@@ -125,8 +145,7 @@
             android:paddingRight="10dp"
             android:paddingEnd="10dp"
             android:text="@string/about_text"
-            android:textSize="14sp"
-            android:justificationMode="inter_word"/>
+            android:textSize="16sp"/>
     </LinearLayout>
 
 
