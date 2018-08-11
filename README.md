@@ -17,7 +17,7 @@ Udacity's courses are a great point of start. Courses are listed ordered from ba
 4. [Android Basics: Networking](https://www.udacity.com/course/android-basics-networking--ud843)
 5. [Android Basics: Data Storage](https://www.udacity.com/course/android-basics-data-storage--ud845)
 
-The [Android Developer Documentation](https://developer.android.com/docs/)
+[Android Developer Documentation](https://developer.android.com/docs/)
 
 ## Download Android Studio
 [Android Studio](https://developer.android.com/studio/)
