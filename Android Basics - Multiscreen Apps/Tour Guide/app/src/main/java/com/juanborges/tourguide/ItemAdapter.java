@@ -14,8 +14,7 @@ import java.util.ArrayList;
 
 public class ItemAdapter extends ArrayAdapter<ListItem> {
 
-    public ItemAdapter(Activity context, ArrayList<ListItem> items)
-    {
+    public ItemAdapter(Activity context, ArrayList<ListItem> items) {
         // Here we initialize the ArrayAdapter's internal storage for the context and the list.
         // The second argument is used when the ArrayAdapter is populating a single view.
         // Because this is a custom adapter for two views and an ImageView, the adapter is not
@@ -29,8 +28,7 @@ public class ItemAdapter extends ArrayAdapter<ListItem> {
 
         /** Check if the existing view is reused if not, inflate the view */
         View listItemView = convertView;
-        if (listItemView == null)
-        {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
@@ -51,7 +49,7 @@ public class ItemAdapter extends ArrayAdapter<ListItem> {
 
         // If the current item has a title, set it. Else disable the TextView
         if (currentItem.getItemName() != null)
-            titleText.setText(""+ currentItem.getItemName());
+            titleText.setText("" + currentItem.getItemName());
         else
             titleText.setVisibility(View.GONE);
 
@@ -60,7 +58,7 @@ public class ItemAdapter extends ArrayAdapter<ListItem> {
 
         // If the current item has a description, set it. Else disable the TextView
         if (currentItem.getItemDescription() != null)
-            descriptionText.setText(""+ currentItem.getItemDescription());
+            descriptionText.setText("" + currentItem.getItemDescription());
         else
             descriptionText.setVisibility(View.GONE);
 
@@ -69,7 +67,7 @@ public class ItemAdapter extends ArrayAdapter<ListItem> {
 
         // If the current item has a location text, set it. Else disable the TextView
         if (currentItem.getItemLocation() != null)
-            locationText.setText(""+ currentItem.getItemLocation());
+            locationText.setText("" + currentItem.getItemLocation());
         else
             locationText.setVisibility(View.GONE);
 
@@ -78,7 +76,7 @@ public class ItemAdapter extends ArrayAdapter<ListItem> {
 
         // If the current item has a schedule, set it. Else disable the TextView
         if (currentItem.getItemSchedule() != null)
-            scheduleText.setText(""+ currentItem.getItemSchedule());
+            scheduleText.setText("" + currentItem.getItemSchedule());
         else
             scheduleText.setVisibility(View.GONE);
 
@@ -87,7 +85,7 @@ public class ItemAdapter extends ArrayAdapter<ListItem> {
 
         // If the current word has a contact number, set it. Else disable the TextView
         if (currentItem.getContactNumber() != null)
-            numberText.setText(""+ currentItem.getContactNumber());
+            numberText.setText("" + currentItem.getContactNumber());
         else
             numberText.setVisibility(View.GONE);
 

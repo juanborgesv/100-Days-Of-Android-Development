@@ -6,6 +6,7 @@
     <string name="shopping_button">Shopping</string>
     <string name="entertainment_button">Entertainment</string>
 
+    <!-- Main Activity's information -->
     <string name="about_title">About</string>
     <string name="about_text">Mérida, officially known as Santiago de los Caballeros de Mérida, is
         the capital of the municipality of Libertador and the state of Mérida, and is one of the
@@ -13,5 +14,176 @@
         the Archdiocese of Mérida. It also has the highest and longest cable car in the world.
         It is the largest student and tourist center of western Venezuela.</string>
 
+    <!-- Shopping Fragment's information -->
+    <string name="altos_title">C.C. Altos de Santa Maria</string>
+    <string name="altos_description">Do not be fooled by its size, because it has all the stores
+        needed.\n\nGo grab a bite at its bakery store. Needing some grocery? Head to the minimarket.
+        Trying to loose a little bit? Step Forward to one of the many night clubs.</string>
+    <string name="altos_location">Av. Universidad</string>
+    <string name="altos_schedule">Mo&#8211;Sa: 8:00&#8211;1:00</string>
+    <string name="altos_phone">0274 2663722</string>
 
+    <string name="villa_title">C.C. Villa Los Chorros</string>
+    <string name="villa_description">This mall is located in a quiet location, visited mostly
+        because its great nightclubs, Garage Rock Bar, Blue Bar, and Ibiza. It also has a variaty
+        of fastfoods and a nice restaurant.</string>
+    <string name="villa_location">Av. Principal de Los Chorros de Milla</string>
+    <string name="villa_schedule">8:00&#8211;22:00</string>
+    <string name="villa_phone">0274 2405311</string>
+
+    <string name="history_title">C.C. History Center</string>
+    <string name="history_description">Many tech stores, barbershops, and good prices for shopping.
+        One of the most visited places of Merida's downtown.</string>
+    <string name="history_location">24 St. Btwn. 2 and 3 Av.</string>
+    <string name="history_schedule">10:00&#8211;21:00</string>
+    <string name="history_phone">0274 2443461</string>
+
+    <string name="prado_title">C.C. Alto Prado</string>
+    <string name="prado_description">Used to be one of the most visited malls, it has one of the few
+        cinema theaters in the city, the biggest nightclub, and great fastfoods.</string>
+    <string name="prado_location">Av. Los Proceres</string>
+    <string name="prado_schedule">Mo&#8211;Fr: 8:00&#8211;5:00</string>
+    <string name="prado_phone">0274 4176124</string>
+
+    <string name="rodeo_title">C.C. Rodeo Plaza</string>
+    <string name="rodeo_description">The newest mall of Merida and one of the top of the city, it
+        has the best fastfoots and restaurants, including Avila Burger, Kansas Grill and
+        Caprara Pizzeria. </string>
+    <string name="rodeo_location">Av. Las Americas</string>
+    <string name="rodeo_schedule">10:00&#8211;20:00</string>
+    <string name="rodeo_phone">0274 5000350</string>
+
+    <string name="pie_title">C.C. Pie de Monte</string>
+    <string name="pie_description">Great for shopping. This great located mall offers a great
+        variety of fastfoods, coffees and restaurants, including Kansas Grill, Fraga Cafe, and more.
+    </string>
+    <string name="pie_location">Av. Los Proceres</string>
+    <string name="pie_schedule">10:00&#8211;21:00</string>
+    <string name="pie_phone">0424 7219267</string>
+
+    <string name="tapias_title">C.C. Las Tapias</string>
+    <string name="tapias_description">This old mall has one of the few cinema theaters of Merida,
+        nice shopping places of all types and prices, a great nightclub, and a good chill bar.
+    </string>
+    <string name="tapias_location">Av. Andres Bello</string>
+    <string name="tapias_schedule">11:00&#8211;20:00</string>
+    <string name="tapias_phone">0274 2661746</string>
+
+    <string name="milenium_title">C.C. Milenium</string>
+    <string name="milenium_description">This greatly located mall has one of the best stores for
+        shopping, fastfoods, and restaurants of the city. It has a great dance academy as well.
+    </string>
+    <string name="milenium_location">Av. Andres Bello</string>
+    <string name="milenium_schedule">7:00&#8211;21:00</string>
+    <string name="milenium_phone">0274 2408191</string>
+
+    <!-- Entertainment Fragment's information -->
+    <string name="teleferico_title">Sistema De Teleférico Mukumbari</string>
+    <string name="teleferico_description">Its base is located in the Venezuelan city of Mérida at an
+        altitude of 1,640 metres (5,380 ft), and its terminus is on Pico Espejo, at 4,765 metres
+        (15,633 ft).\n\nIt is the highest and second longest cable car in the world for just 500
+        meters, but is in first place for being the only one which combined such height and length.
+        \n\nMérida Cable Car is a journey of 12.5 kilometers, reaching a height of 4,765 meters,
+        making it an engineering marvel that is one of a kind and has over 40 years of history.
+    </string>
+    <string name="teleferico_location">Plaza Las Heroinas</string>
+    <string name="teleferico_schedule">Tu&#8211;Su: 7:00 &#8211; 13:00</string>
+    <string name="teleferico_phone">0414 7035900</string>
+
+    <string name="cinex_title">Cinex</string>
+    <string name="cinex_description">Always with the lastest movies with a 3D theater and several
+        sessions during the day.</string>
+    <string name="cinex_location">Av. Los Proceres, C.C. Alto Prado</string>
+    <string name="cinex_schedule">Time not specified</string>
+    <string name="cinex_phone">0274 2448866</string>
+
+    <string name="multicine_title">Multicine Las Tapias</string>
+    <string name="multicine_description">Great variaty of movies and two 3D theaters, decent place,
+        with the latest movies.</string>
+    <string name="multicine_location">Av. Andres Bello, C.C. Las Tapias</string>
+    <string name="multicine_schedule">Time not specified</string>
+    <string name="multicine_phone">0274 2660349</string>
+
+    <string name="ecowild_title">Ecowild</string>
+    <string name="ecowild_description">This is one of the top places for tourists, it has a great
+    restaurant, 4x4 motos ride through a big place with great animals, and kids place.</string>
+    <string name="ecowild_location">El Valle, Via la Culata</string>
+    <string name="ecowild_schedule">9:00 &#8211; 17:00</string>
+    <string name="ecowild_phone">0414 3740041</string>
+
+    <string name="vantier_title">Venezuela de Antier</string>
+    <string name="vantier_description">Enjoy traveling back in time in La Venezuela de Antier,
+        visiting key thematic places, old cars, and great restaurant.</string>
+    <string name="vantier_location">5111, Merida</string>
+    <string name="vantier_schedule">9:00 &#8211; 7:00</string>
+    <string name="vantier_phone">0274 2450359</string>
+
+    <!-- Restaurant Fragment's information -->
+    <string name="chistorra_title">La chistorra Bar &amp; Restaurant</string>
+    <string name="chistorra_description">Av. Alberto Carnevali</string>
+    <string name="chistorra_schedule">Tu&#8211;Su: 12:00&#8211;0:00</string>
+    <string name="chistorra_phone">0274 2440021</string>
+
+    <string name="burger_title">Burger Bar Pub &amp; Café</string>
+    <string name="burger_location"><![CDATA[Av. 4 Btwn 17 & 18 St.]]></string>
+    <string name="burger_schedule">Tu&#8211;Sa: 12:00&#8211;1:00 &amp; Su&#8211;Mo: 13:00&#8211;
+        23:00</string>
+    <string name="burger_phone">0274 2528627</string>
+
+    <string name="fraga_title">Fraga Cafe</string>
+    <string name="fraga_location">Av. los Próceres, C.C. Pie de Monte</string>
+    <string name="fraga_schedule">Tu&#8211;Th: 16:00&#8211;23:00 &amp; Fr&#8211;Su: 12:30&#8211;
+        23:00</string>
+    <string name="fraga_phone">0274 9350481</string>
+
+    <string name="daenzo_title">Pizzería Da Enzo</string>
+    <string name="daenzo_location">C.C. San Cristóbal</string>
+    <string name="daenzo_schedule">We&#8211;Su: 17:00&#8211;22:00</string>
+    <string name="daenzo_phone">0274 2662881</string>
+
+    <string name="avila_title">Ávila Burger</string>
+    <string name="avila_location">Av. Las Americas, C.C. Rodeo Plaza</string>
+    <string name="avila_schedule">Mo&#8211;Th: 12:00&#8211;22:00 &amp; Fr&#8211;Su: 8:00&#8211;22:00
+    </string>
+    <string name="avila_phone">0274 5000415</string>
+
+    <string name="gastrobar_title">5101 Gastrobar</string>
+    <string name="gastrobar_location">Av. 3 Btwn 19 &amp; 20 St.</string>
+    <string name="gastrobar_schedule">12:00&#8211;1:00</string>
+    <string name="gastrobar_phone">0274 2520211</string>
+
+    <string name="lesgolfes_title">Les Golfes De Salioli</string>
+    <string name="lesgolfes_location">Av. Alberto Carnevali</string>
+    <string name="lesgolfes_schedule">Mo&#8211;Tu: 12:00&#8211;13:00 &amp; Th&#8211;Sa: 12:00&#8211;
+        13:00</string>
+    <string name="lesgolfes_phone">0274 2445426</string>
+
+    <!-- Hotels Fragment's information-->
+    <string name="belensate_title">Hotel Belensate</string>
+    <string name="belensate_location">Urb. La Hacienda</string>
+    <string name="belensate_phone">0274 2663722</string>
+
+    <string name="convencion_title">Hotel Convencion Boutique</string>
+    <string name="convencion_location">Av. Alberto Carnevali</string>
+    <string name="convencion_phone">0274 2405311</string>
+
+    <string name="terraza_title">Hotel La Terraza</string>
+    <string name="terraza_location">Av. Principal de Los Chorros de Milla</string>
+    <string name="terraza_phone">0274 244153</string>
+
+    <string name="serrano_title">Hotel El Serrano</string>
+    <string name="serrano_location">Av. Los Proceres</string>
+    <string name="serrano_phone">0274 2667447</string>
+
+    <string name="posada_title">Posada Casa Sol</string>
+    <string name="posada_location">Avenida 4</string>
+    <string name="posada_phone">0274 2524164</string>
+
+    <string name="chama_title">Hotel Chama</string>
+    <string name="chama_location">Avenida 4</string>
+    <string name="chama_phone">0274 2524851</string>
+
+    <string name="pedregosa_title">Hotel La Pedregosa</string>
+    <string name="predregosa_location">La Pedregosa</string>
+    <string name="pedregosa_phone">0274 2663181</string>
 </resources>

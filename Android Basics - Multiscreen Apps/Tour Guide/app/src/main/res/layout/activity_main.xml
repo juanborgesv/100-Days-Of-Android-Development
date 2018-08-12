@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            tools:background="@android:color/black"/>
+            tools:background="@android:color/black" />
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabLayout"
@@ -27,13 +27,13 @@
             android:background="#212121"
             app:tabBackground="@drawable/tab_selector"
             app:tabGravity="center"
-            app:tabIndicatorHeight="0dp"/>
+            app:tabIndicatorHeight="0dp" />
 
         <!-- Gray Horizontal Line -->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/darker_gray" />
 
         <!-- Hotels and Restaurants buttons layout-->
         <LinearLayout
@@ -48,17 +48,17 @@
 
                 <ImageView
                     style="@style/ButtonImage"
-                    android:src="@drawable/blue_hotel_icon"/>
+                    android:src="@drawable/blue_hotel_icon" />
 
                 <TextView
                     style="@style/ButtonText"
-                    android:text="@string/hotels_button"/>
+                    android:text="@string/hotels_button" />
             </LinearLayout>
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
 
             <!-- Restaurants button -->
             <LinearLayout
@@ -67,11 +67,11 @@
 
                 <ImageView
                     style="@style/ButtonImage"
-                    android:src="@drawable/blue_restaurant_icon"/>
+                    android:src="@drawable/blue_restaurant_icon" />
 
                 <TextView
                     style="@style/ButtonText"
-                    android:text="@string/restaurants_button"/>
+                    android:text="@string/restaurants_button" />
             </LinearLayout>
         </LinearLayout>
 
@@ -79,7 +79,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/darker_gray" />
 
         <!-- Shopping and Entertainment buttons layout-->
         <LinearLayout
@@ -94,7 +94,7 @@
 
                 <ImageView
                     style="@style/ButtonImage"
-                    android:src="@drawable/blue_shopping_icon"/>
+                    android:src="@drawable/blue_shopping_icon" />
 
                 <TextView
                     style="@style/ButtonText"
@@ -104,7 +104,7 @@
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
 
             <!-- Entertainment button -->
             <LinearLayout
@@ -113,10 +113,11 @@
 
                 <ImageView
                     style="@style/ButtonImage"
-                    android:src="@drawable/blue_entertainment_icon"/>
+                    android:src="@drawable/blue_entertainment_icon" />
+
                 <TextView
                     style="@style/ButtonText"
-                    android:text="@string/entertainment_button"/>
+                    android:text="@string/entertainment_button" />
             </LinearLayout>
         </LinearLayout>
 
@@ -124,7 +125,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/darker_gray" />
 
         <!-- About title text -->
         <TextView
@@ -132,20 +133,20 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="@string/about_title"
+            android:textColor="#212121"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#212121"/>
+            android:textStyle="bold" />
 
         <!-- About text -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingStart="10dp"
-            android:paddingRight="10dp"
             android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
             android:text="@string/about_text"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
     </LinearLayout>
 
 

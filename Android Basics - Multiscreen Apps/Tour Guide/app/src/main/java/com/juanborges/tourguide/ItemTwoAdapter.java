@@ -15,8 +15,7 @@ import java.util.ArrayList;
 
 public class ItemTwoAdapter extends ArrayAdapter<ListItem> {
 
-    public ItemTwoAdapter(Activity context, ArrayList<ListItem> items)
-    {
+    public ItemTwoAdapter(Activity context, ArrayList<ListItem> items) {
         // Here we initialize the ArrayAdapter's internal storage for the context and the list.
         // The second argument is used when the ArrayAdapter is populating a single view.
         // Because this is a custom adapter for two views and an ImageView, the adapter is not
@@ -30,8 +29,7 @@ public class ItemTwoAdapter extends ArrayAdapter<ListItem> {
 
         /** Check if the existing view is reused if not, inflate the view */
         View listItemView = convertView;
-        if (listItemView == null)
-        {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item2, parent, false);
         }
 
@@ -52,7 +50,7 @@ public class ItemTwoAdapter extends ArrayAdapter<ListItem> {
 
         // If the current item has a title/name, set it. Else disable the TextView
         if (currentItem.getItemName() != null)
-            titleText.setText(""+ currentItem.getItemName());
+            titleText.setText("" + currentItem.getItemName());
         else
             titleText.setVisibility(View.GONE);
 
@@ -61,7 +59,7 @@ public class ItemTwoAdapter extends ArrayAdapter<ListItem> {
 
         // If the current item has a description, set it. Else disable the TextView
         if (currentItem.getItemDescription() != null)
-            descriptionText.setText(""+ currentItem.getItemDescription());
+            descriptionText.setText("" + currentItem.getItemDescription());
         else
             descriptionText.setVisibility(View.GONE);
 
@@ -71,7 +69,7 @@ public class ItemTwoAdapter extends ArrayAdapter<ListItem> {
 
         // If the current item has a location, set it. Else disable the LinearLayout.
         if (currentItem.getItemLocation() != null)
-            locationText.setText(""+ currentItem.getItemLocation());
+            locationText.setText("" + currentItem.getItemLocation());
         else
             locationLayout.setVisibility(View.GONE);
 
@@ -81,7 +79,7 @@ public class ItemTwoAdapter extends ArrayAdapter<ListItem> {
 
         // If the current item has a schedule, set it. Else disable the LinearLayout
         if (currentItem.getItemSchedule() != null)
-            timeText.setText(""+ currentItem.getItemSchedule());
+            timeText.setText("" + currentItem.getItemSchedule());
         else
             timeLayout.setVisibility(View.GONE);
 
@@ -91,7 +89,7 @@ public class ItemTwoAdapter extends ArrayAdapter<ListItem> {
 
         // If the current item has a contact number, set it. Else disable the LinearLayout
         if (currentItem.getContactNumber() != null)
-            numberText.setText(""+ currentItem.getContactNumber());
+            numberText.setText("" + currentItem.getContactNumber());
         else
             numberLayout.setVisibility(View.GONE);
 

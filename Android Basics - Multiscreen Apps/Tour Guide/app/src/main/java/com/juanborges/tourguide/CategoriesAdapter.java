@@ -10,7 +10,6 @@ public class CategoriesAdapter extends FragmentPagerAdapter {
         super(fm);
     }
 
-
     @Override
     public Fragment getItem(int position) {
         if (position == 0)
@@ -24,22 +23,6 @@ public class CategoriesAdapter extends FragmentPagerAdapter {
 
         return null;
     }
-
-    // This method is commented because the TabLayout will use icons defined in the
-    // CategoriesActivity.java file
-    /*@Override
-    public CharSequence getPageTitle(int position) {
-        if (position == 0)
-            return "Hotels";
-        else if (position == 1)
-            return "Food";
-        else if (position == 2)
-            return "Shopping";
-        else if (position == 3)
-            return "Entertainment";
-
-        return null;
-    }*/
 
     @Override
     public int getCount() {

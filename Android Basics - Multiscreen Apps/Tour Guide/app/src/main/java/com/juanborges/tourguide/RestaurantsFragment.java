@@ -26,13 +26,33 @@ public class RestaurantsFragment extends Fragment {
 
         final ArrayList<ListItem> restaurants = new ArrayList<>();
 
-        restaurants.add(new ListItem(R.drawable.r_chistorra, "La chistorra Bar & Restaurant", "Av. Alberto Carnevali","Tu-Su: 12:00-0:00","0274 2440021"));
-        restaurants.add(new ListItem(R.drawable.r_burger_bar, "Burger Bar Pub & Café","Av. 4 Btwn 17 & 18 St.","Tu-Sa: 12:00-1:00 & Su-Mo: 13:00-23:00", "0274 2528627"));
-        restaurants.add(new ListItem(R.drawable.r_fraga_cafe, "Fraga Cafe","Av. los Próceres, C.C. Pie de Monte","Tu-Th: 16:00-23:00 & Fr-Su: 12:30-23:00", "0274 9350481"));
-        restaurants.add(new ListItem(R.drawable.r_da_enzo, "Pizzería Da Enzo","C.C. San Cristóbal","We-Su: 17:00-22:00","0274 2662881"));
-        restaurants.add(new ListItem(R.drawable.r_avila_burger, "Ávila Burger","Av. Las Americas, C.C. Rodeo Plaza","Mo-Th: 12:00-22:00 & Fr-Su: 8:00-22:00", "0274 5000415"));
-        restaurants.add(new ListItem(R.drawable.r_gastrobar_5101, "5101 Gastrobar","Av. 3 Btwn 19 & 20 St.","12:00-1:00", "0274 2520211"));
-        restaurants.add(new ListItem(R.drawable.r_les_golfes, "Les Golfes De Salioli","Av. Alberto Carnevali","Mo-Tu: 12:00-13:00 & Th-Sa: 12:00-13:00", "0274 2445426"));
+        restaurants.add(new ListItem(R.drawable.r_chistorra, getString(R.string.chistorra_title),
+                getString(R.string.chistorra_description), getString(R.string.chistorra_schedule),
+                getString(R.string.chistorra_phone)));
+
+        restaurants.add(new ListItem(R.drawable.r_burger_bar, getString(R.string.burger_title),
+                getString(R.string.burger_location), getString(R.string.burger_schedule),
+                getString(R.string.burger_phone)));
+
+        restaurants.add(new ListItem(R.drawable.r_fraga_cafe, getString(R.string.fraga_title),
+                getString(R.string.fraga_location), getString(R.string.fraga_schedule),
+                getString(R.string.fraga_phone)));
+
+        restaurants.add(new ListItem(R.drawable.r_da_enzo, getString(R.string.daenzo_title),
+                getString(R.string.daenzo_location), getString(R.string.daenzo_schedule),
+                getString(R.string.daenzo_phone)));
+
+        restaurants.add(new ListItem(R.drawable.r_avila_burger, getString(R.string.avila_title),
+                getString(R.string.avila_location), getString(R.string.avila_schedule),
+                getString(R.string.avila_phone)));
+
+        restaurants.add(new ListItem(R.drawable.r_gastrobar_5101, getString(R.string.gastrobar_title),
+                getString(R.string.gastrobar_location), getString(R.string.gastrobar_schedule),
+                getString(R.string.gastrobar_phone)));
+
+        restaurants.add(new ListItem(R.drawable.r_les_golfes, getString(R.string.lesgolfes_title),
+                getString(R.string.lesgolfes_location), getString(R.string.lesgolfes_schedule),
+                getString(R.string.lesgolfes_phone)));
 
         ItemAdapter adapter = new ItemAdapter(getActivity(), restaurants);
 

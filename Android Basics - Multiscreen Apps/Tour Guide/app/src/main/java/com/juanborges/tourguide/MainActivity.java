@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager, true);
 
 
-
-
         /** Set a click listener to the LinearLayout that represents the hotels button */
         LinearLayout hotels = (LinearLayout) findViewById(R.id.hotels_button);
         hotels.setOnClickListener(new View.OnClickListener() {

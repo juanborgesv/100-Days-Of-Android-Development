@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="10dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
 
     <!-- Item's title -->
     <ImageView
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:scaleType="centerCrop"
-        tools:background="@android:color/black"/>
+        tools:background="@android:color/black" />
 
     <!-- Item's title -->
     <TextView
@@ -20,10 +20,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textSize="24sp"
         android:textColor="@android:color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
-        tools:text="Title"/>
+        tools:text="Title" />
 
     <!-- Description info -->
     <TextView
@@ -32,27 +32,27 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:textSize="14sp"
-        tools:text="This is some random text used for example, this TextView shows the description of a list item. This list_item2 layout is used for shopping and entertainment places."/>
+        tools:text="This is some random text used for example, this TextView shows the description of a list item. This list_item2 layout is used for shopping and entertainment places." />
 
     <!-- Location info -->
     <LinearLayout
         android:id="@+id/location_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/location_icon"/>
-        
+            android:src="@drawable/location_icon" />
+
         <TextView
             android:id="@+id/location_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="5dp"
-            tools:text="This is the location of the item"/>
+            tools:text="This is the location of the item" />
     </LinearLayout>
 
     <!-- Time info -->
@@ -60,20 +60,20 @@
         android:id="@+id/time_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/time_icon"/>
+            android:src="@drawable/time_icon" />
 
         <TextView
             android:id="@+id/time_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="5dp"
-            tools:text="This is the location of the item"/>
+            tools:text="This is the location of the item" />
     </LinearLayout>
 
     <!-- Phone info -->
@@ -81,13 +81,13 @@
         android:id="@+id/number_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/phone_icon"/>
+            android:src="@drawable/phone_icon" />
 
         <TextView
             android:id="@+id/number_text"
@@ -96,7 +96,7 @@
             android:paddingLeft="5dp"
             android:paddingStart="5dp"
             android:textColor="@android:color/holo_blue_dark"
-            tools:text="This is the location of the item"/>
+            tools:text="This is the location of the item" />
     </LinearLayout>
 
 </LinearLayout>

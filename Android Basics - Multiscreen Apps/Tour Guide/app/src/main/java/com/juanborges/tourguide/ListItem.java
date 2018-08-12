@@ -1,8 +1,5 @@
 package com.juanborges.tourguide;
 
-
-import java.util.List;
-
 /**
  * {@link ListItem} represents an item's information about anything in any category.
  */
@@ -24,29 +21,14 @@ public class ListItem {
 
     static final int NO_SOURCE_PROVIDED = -1;
 
-    /**
-     * Custom constructor of the class.
-     * @param image
-     * @param name
-     * @param number
-     */
-    public ListItem(int image, String name, String number)
-    {
-        imageResourceId = image;
-        itemName = name;
-        itemNumber = number;
-    }
-
-    public ListItem(int image, String name, String location, String number)
-    {
+    public ListItem(int image, String name, String location, String number) {
         imageResourceId = image;
         itemName = name;
         itemLocation = location;
         itemNumber = number;
     }
 
-    public ListItem(int image, String name, String location, String time, String number)
-    {
+    public ListItem(int image, String name, String location, String time, String number) {
         imageResourceId = image;
         itemName = name;
         itemLocation = location;
@@ -56,6 +38,7 @@ public class ListItem {
 
     /**
      * Custom constructor of the class.
+     *
      * @param image
      * @param name
      * @param description
@@ -63,8 +46,7 @@ public class ListItem {
      * @param time
      * @param number
      */
-    public ListItem(int image, String name, String description, String location, String time, String number)
-    {
+    public ListItem(int image, String name, String description, String location, String time, String number) {
         imageResourceId = image;
         itemName = name;
         itemDescription = description;
@@ -76,9 +58,6 @@ public class ListItem {
 
     // Get methods below
     //
-    public int getImageResourceId() {
-        return imageResourceId;
-    }
 
     public String getContactNumber() {
         return itemNumber;
@@ -88,7 +67,7 @@ public class ListItem {
         return itemName;
     }
 
-    public String getItemDescription(){
+    public String getItemDescription() {
         return itemDescription;
     }
 
@@ -100,6 +79,11 @@ public class ListItem {
         return itemSchedule;
     }
 
+    /**
+     * Check if the current item has an image resource
+     *
+     * @return true if the imageResourceId is different of NO_SOURCE_PROVIDED
+     */
     public boolean hasImage() {
         return imageResourceId != NO_SOURCE_PROVIDED;
     }

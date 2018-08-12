@@ -13,7 +13,8 @@ import android.view.ViewGroup;
  */
 public class FImageFragment extends Fragment {
 
-    public FImageFragment() { }
+    public FImageFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

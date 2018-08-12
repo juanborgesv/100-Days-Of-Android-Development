@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Basketball Live</string>
+    <string name="team1_name">BC</string>
+    <string name="team2_name">GSW</string>
 </resources>
