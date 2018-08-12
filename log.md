@@ -144,4 +144,9 @@
 ## Day 28: August 9, 2018
 **Today's Progress:** Finally I have finished the tour guide app, it looks pretty good, added a cool tabLayout circle indicator for images in the main activity. Tomorrow I will upload the screenshots.
 
-**Thoughts:** Very happy!
+**Thoughts:** Every course's project is more complete than the last one and takes more time, It is really satisfying to see the results of all your work and sometimes you might get doubts if what you are doing is really worth it at the end, and it is definitely.
+
+## Day 29: August 11, 2018
+**Today's Progress:** I am not part of the Android Basics Nanodegree Program but still I can submit my project, it has been reviewed and today I have been fixing everything suggested, due to the bad internet connection I could not finish the last part of the things I have to fix, but for sure it will be ready for tomorrow. Started JSON Parsing lesson and saw some details about what we are going to be working in this new chapter.
+
+**Thoughts:** It's been a month since I started this challenge and I could not be happier to see everything I have done. If someone that is not from Venezuela reads this probably may find hard to believe but yesterday I did not have internet connection, it was until today at 16:00 that I could continue learning from the Udacity course, and see the project's review.
