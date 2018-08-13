@@ -150,3 +150,8 @@
 **Today's Progress:** I am not part of the Android Basics Nanodegree Program but still I can submit my project, it has been reviewed and today I have been fixing everything suggested, due to the bad internet connection I could not finish the last part of the things I have to fix, but for sure it will be ready for tomorrow. Started JSON Parsing lesson and saw some details about what we are going to be working in this new chapter.
 
 **Thoughts:** It's been a month since I started this challenge and I could not be happier to see everything I have done. If someone that is not from Venezuela reads this probably may find hard to believe but yesterday I did not have internet connection, it was until today at 16:00 that I could continue learning from the Udacity course, and see the project's review.
+
+## Day 30: August 12, 2018
+**Today's Progress:** Create the Quake Report App with all the files provided, create a layout, and some classes in order to display more information about an Earthquake. Lastly see some videos about JSON components and how to read them.
+
+**Thoughts:** Did not see the time and upload today's changes too late, now seems like I did not do anything, but whatever. Some things about JSON might seem confusing now but as I used them I will make everything more clear.
