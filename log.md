@@ -155,3 +155,8 @@
 **Today's Progress:** Create the Quake Report App with all the files provided, create a layout, and some classes in order to display more information about an Earthquake. Lastly see some videos about JSON components and how to read them.
 
 **Thoughts:** Did not see the time and upload today's changes too late, now seems like I did not do anything, but whatever. Some things about JSON might seem confusing now but as I used them I will make everything more clear.
+
+## Day 31: August 13, 2018
+**Today's Progress:** In the Quake Report App, learned how to use JSONObject, JSONArray, and get objects from a JSONObject in order to get the primitive data required and create an Earthquake object with that information, and added to the ArrayList of Earthquakes. Check some projects of this course, just curious to see what I will achieve at the end of the course.
+
+**Thoughts:** I always wondered about making an app and how would I be able to update its information somehow using internet connection instead updating the app, learning these new concepts clears a lot of doubts.
