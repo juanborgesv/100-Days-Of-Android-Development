@@ -160,3 +160,8 @@
 **Today's Progress:** In the Quake Report App, learned how to use JSONObject, JSONArray, and get objects from a JSONObject in order to get the primitive data required and create an Earthquake object with that information, and added to the ArrayList of Earthquakes. Check some projects of this course, just curious to see what I will achieve at the end of the course.
 
 **Thoughts:** I always wondered about making an app and how would I be able to update its information somehow using internet connection instead updating the app, learning these new concepts clears a lot of doubts.
+
+## Day 31: August 14, 2018
+**Today's Progress:** Lesson one JSON Parsing is completed! I believe the Quake Report App is finished, it has simple TextViews that are managed using an adapter, it shows Earthquake reports, with a magnitude, location, and date. Magnitude has a very particular design with a background that changes its color depending the magnitude of the earthquake.
+
+**Thoughts:** This lesson has been quite fast, I have learned important things, such as what is an API, thing that I did not mention before, I have seen something like Instagram and Twitter API before so it might be something interesting to investigate later on how to use it.
