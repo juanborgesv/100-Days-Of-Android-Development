@@ -161,7 +161,12 @@
 
 **Thoughts:** I always wondered about making an app and how would I be able to update its information somehow using internet connection instead updating the app, learning these new concepts clears a lot of doubts.
 
-## Day 31: August 14, 2018
+## Day 32: August 14, 2018
 **Today's Progress:** Lesson one JSON Parsing is completed! I believe the Quake Report App is finished, it has simple TextViews that are managed using an adapter, it shows Earthquake reports, with a magnitude, location, and date. Magnitude has a very particular design with a background that changes its color depending the magnitude of the earthquake.
 
 **Thoughts:** This lesson has been quite fast, I have learned important things, such as what is an API, thing that I did not mention before, I have seen something like Instagram and Twitter API before so it might be something interesting to investigate later on how to use it.
+
+## Day 33: August 15, 2018
+**Today's Progress:** Started Lessson 2 (HTTP Networking), create a Soonami project and set some text in the manifest file of the project in order to ask permissions and connect to the internet.
+
+**Thoughts:** Could not do much today, I was kind of busy working, tomorrow I will try to finish what seems to be a short lesson.
