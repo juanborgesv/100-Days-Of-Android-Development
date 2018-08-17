@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                     Log.e(LOG_TAG, "Error response code: " + urlConnection.getResponseCode());
-                
+
             } catch (IOException e) {
                 // TODO: Handle the exception
                 Log.e(LOG_TAG, "I/O error while opening the connection", e);
