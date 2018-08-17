@@ -170,3 +170,8 @@
 **Today's Progress:** Started Lessson 2 (HTTP Networking), create a Soonami project and set some text in the manifest file of the project in order to ask permissions and connect to the internet.
 
 **Thoughts:** Could not do much today, I was kind of busy working, tomorrow I will try to finish what seems to be a short lesson.
+
+## Day 34: August 16, 2018
+**Today's Progress:** Finished Lessson 2 (HTTP Networking), learned components of how retrieving data from the internet and display it in an app, how to create, configure, and send http request using the HTTP URL class, then learned how to receive and parse the response, using a InputStream and convert that data using a InputStreamReader and a BufferedReader. Starting Lesson 3! Threads and Parallelism.
+
+**Thoughts:** I believe this lesson could be better explained, it was a lot concepts and not a lot of practice, it was only editing and existing project and fixing some things, but either way I learned a lot, can't wait to use all this in the course's final project!
