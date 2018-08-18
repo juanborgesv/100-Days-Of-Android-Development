@@ -42,7 +42,6 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         int magnitudeColor = getMagnitudeColor(currentEarthquake.getMagnitude());
         magnitudeCircle.setColor(magnitudeColor);
 
-
         String originalLocation = currentEarthquake.getLocation();
         String primaryLocation;
         String locationOffset;

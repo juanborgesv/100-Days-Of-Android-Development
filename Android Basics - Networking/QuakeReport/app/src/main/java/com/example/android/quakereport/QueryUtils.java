@@ -1,6 +1,7 @@
 package com.example.android.quakereport;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -63,7 +64,7 @@ public final class QueryUtils {
                 long time = properties.getLong("time");
                 String url = properties.getString("url");
 
-                earthquakes.add(new Earthquake(magnitude, location, time));
+                earthquakes.add(new Earthquake(magnitude, location, time, url));
             }
 
         } catch (JSONException e) {
