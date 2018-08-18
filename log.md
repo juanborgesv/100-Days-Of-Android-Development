@@ -175,3 +175,8 @@
 **Today's Progress:** Finished Lessson 2 (HTTP Networking), learned components of how retrieving data from the internet and display it in an app, how to create, configure, and send http request using the HTTP URL class, then learned how to receive and parse the response, using a InputStream and convert that data using a InputStreamReader and a BufferedReader. Starting Lesson 3! Threads and Parallelism.
 
 **Thoughts:** I believe this lesson could be better explained, it was a lot concepts and not a lot of practice, it was only editing and existing project and fixing some things, but either way I learned a lot, can't wait to use all this in the course's final project!
+
+## Day 35: August 17, 2018
+**Today's Progress:** Half of Lesson 3 (Threads and Parallelism) done. Today I learned about what is a threat, and create a project called Did You Feel It, running this projects makes the app crash. The logcat will show that an exception has happened and It will be because the networking connection should be done in the background thread, this will be fixed using the AsyncTask abstract class and creating an EarthquakeAsyncTask class, subclass of Asynctask. Also learned some common AsyncTask methods and if they occur in the main or background thread.
+
+**Thoughts:** A lot of concepts, they are really important and they are giving me ideas for some future apps that I have in mind.
