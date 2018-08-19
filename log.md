@@ -180,3 +180,9 @@
 **Today's Progress:** Half of Lesson 3 (Threads and Parallelism) done. Today I learned about what is a threat, and create a project called Did You Feel It, running this projects makes the app crash. The logcat will show that an exception has happened and It will be because the networking connection should be done in the background thread, this will be fixed using the AsyncTask abstract class and creating an EarthquakeAsyncTask class, subclass of Asynctask. Also learned some common AsyncTask methods and if they occur in the main or background thread.
 
 **Thoughts:** A lot of concepts, they are really important and they are giving me ideas for some future apps that I have in mind.
+
+## Day 36: August 18, 2018
+**Today's Progress:** I lost some time doing a quiz how I was not supposed to, many methods were already created and I was doing all the network request, parsing the data, etc. methods again when all that I had to do was to create a simple custom AsyncTask and do little changes into the doInBackground method. Now I have to apply all this into the QuakeReport App.
+
+**Thoughts:** 
+It was good to do all the methods even if it was not necessary for reinforcing all the concepts I have learned. I think it is not going to take me long to do all this into the QuakeReport App
