@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
          * Returns new URL object from the given string URL.
          */
         private URL createUrl(String stringUrl) {
-            URL url = null;
+            URL url;
 
             try {
                 url = new URL(stringUrl);
@@ -165,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
 
             HttpURLConnection urlConnection = null;
             InputStream inputStream = null; // Small chunks of code received from the server.
+
             try {
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");
