@@ -30,6 +30,7 @@ import java.util.List;
 
 public class EarthquakeActivity extends AppCompatActivity {
 
+    private static final String USGS_REQUEST_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10";
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
 
     private EarthquakeAdapter adapter;
@@ -39,17 +40,13 @@ public class EarthquakeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake_activity);
 
-        // Create a fake list of earthquake locations.
-        ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
-
         // Find a reference to the {@link ListView} in the layout
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
 
         // Create a new EarthquakeAdapter of earthquakes
         adapter = new EarthquakeAdapter(this, new ArrayList<Earthquake>());
 
-        // Set the adapter on the {@link ListView}
-        // so the list can be populated in the user interface
+        // Set the adapter on the {@link ListView so the list can be populated in the user interface
         earthquakeListView.setAdapter(adapter);
 
         earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -64,6 +61,9 @@ public class EarthquakeActivity extends AppCompatActivity {
                 startActivity(websiteIntent);
             }
         });
+
+        EarthquakeAsyncTask task = new EarthquakeAsyncTask();
+        task.execute(USGS_REQUEST_URL);
     }
 
     private class EarthquakeAsyncTask extends AsyncTask<String, Void, List<Earthquake>> {
@@ -73,7 +73,7 @@ public class EarthquakeActivity extends AppCompatActivity {
             if (urls[0] == null || urls.length < 1)
                 return null;
 
-            return null;
+            return QueryUtils.fetchEarthquakeData(urls[0]);
         }
 
         @Override
