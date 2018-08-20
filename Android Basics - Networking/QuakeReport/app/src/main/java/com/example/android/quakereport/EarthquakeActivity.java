@@ -17,6 +17,7 @@ package com.example.android.quakereport;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -25,10 +26,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class EarthquakeActivity extends AppCompatActivity {
 
     public static final String LOG_TAG = EarthquakeActivity.class.getName();
+
+    private EarthquakeAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +46,7 @@ public class EarthquakeActivity extends AppCompatActivity {
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
 
         // Create a new EarthquakeAdapter of earthquakes
-        final EarthquakeAdapter adapter = new EarthquakeAdapter(EarthquakeActivity.this, earthquakes);
+        adapter = new EarthquakeAdapter(this, new ArrayList<Earthquake>());
 
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
@@ -61,4 +65,27 @@ public class EarthquakeActivity extends AppCompatActivity {
             }
         });
     }
+
+    private class EarthquakeAsyncTask extends AsyncTask<String, Void, List<Earthquake>> {
+        @Override
+        protected List<Earthquake> doInBackground(String... urls) {
+
+            if (urls[0] == null || urls.length < 1)
+                return null;
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(List<Earthquake> earthquakes) {
+            // Clear the adapter of previous earthquake data
+            adapter.clear();
+
+            // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+            // data set. This will trigger the ListView to update.
+            if (earthquakes != null && !earthquakes.isEmpty())
+                adapter.addAll(earthquakes);
+        }
+    }
+
 }
