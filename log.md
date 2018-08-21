@@ -186,3 +186,8 @@
 
 **Thoughts:** 
 It was good to do all the methods even if it was not necessary for reinforcing all the concepts I have learned. I think it is not going to take me long to do all this into the QuakeReport App
+
+## Day 37: August 19, 2018
+**Today's Progress:** Finished the QuakeReport App.
+
+**Thoughts:** Took longer than expected
