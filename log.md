@@ -188,6 +188,11 @@
 It was good to do all the methods even if it was not necessary for reinforcing all the concepts I have learned. I think it is not going to take me long to do all this into the QuakeReport App
 
 ## Day 37: August 19, 2018
-**Today's Progress:** Finished the QuakeReport App.
+**Today's Progress:** Finished implemented de AsyncTask to the QuakeReport App. Started the Material Design for Android Developers in order to create better looking future course projects! Discover that there is a bad part of using AsyncTask, since it may create more than one httprequest when rotating!
 
-**Thoughts:** Took longer than expected
+**Thoughts:** 
+
+## Day 38: August 20, 2018
+**Today's Progress:** Finished the QuakeReport App. Learned about loaders and the difference between a using loaders and AsyncTask. Set a loading animation while loading the list of earthquake, also setting textViews for cases when there might not have internet connection and it will display some information about it, also even if the app connects, but no information is received it displays a text saying that it has not found information about the earthquakes.
+
+**Thoughts:** I was surprised when the instructors said that I finished the course, and there is still two more lessons, the thing is they are projects.
