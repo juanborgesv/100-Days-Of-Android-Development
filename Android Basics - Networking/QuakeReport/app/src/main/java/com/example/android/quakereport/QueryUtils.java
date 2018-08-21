@@ -25,6 +25,9 @@ import javax.net.ssl.HttpsURLConnection;
  */
 public final class QueryUtils {
 
+    /**
+     * Tag for the log messages
+     */
     public static final String LOG_TAG = QueryUtils.class.getSimpleName();
 
     /**
@@ -35,13 +38,19 @@ public final class QueryUtils {
     private QueryUtils() {
     }
 
+    /**
+     * Query the USGS dataset and return a list of {@link Earthquake} objects.
+     */
     private static URL createUrl(String stringUrl) {
         URL url = null;
+
+        // Perform HTTP request to the URL and receive a JSON response back
         try {
             url = new URL(stringUrl);
         } catch (MalformedURLException e) {
             Log.e(LOG_TAG, "Problem building the URL ", e);
         }
+
         return url;
     }
 
@@ -102,7 +111,12 @@ public final class QueryUtils {
         return earthquakes;
     }
 
+    /**
+     * Query the USGS dataset and return a list of {@link Earthquake} objects.
+     */
     public static List<Earthquake> fetchEarthquakeData(String requestUrl) {
+        Log.i(LOG_TAG, "Querying the USGS dataset and returning a list of objects");
+
         // Create URL object
         URL url = createUrl(requestUrl);
 
@@ -121,7 +135,11 @@ public final class QueryUtils {
         return earthquakes;
     }
 
+    /**
+     * Make an HTTP request to the given URL and return a String as the response.
+     */
     public static String makeHttpRequest(URL url) throws IOException {
+        Log.i(LOG_TAG, "Making an HTTP request to the given URL and returning a String as the response.");
         String jsonResponse = "";
 
         if (url == null)
@@ -152,12 +170,21 @@ public final class QueryUtils {
             if (urlConnection != null)
                 urlConnection.disconnect();
             if (inputStream != null)
+            {
+                // Closing the input stream could throw an IOException, which is why
+                // the makeHttpRequest(URL url) method signature specifies than an IOException
+                // could be thrown.
                 inputStream.close();
+            }
         }
 
         return jsonResponse;
     }
 
+    /**
+     * Convert the {@link InputStream} into a String which contains the
+     * whole JSON response from the server.
+     */
     private static String readFromStream(InputStream inputStream) throws IOException {
         StringBuilder jsonResponse = new StringBuilder();
 
