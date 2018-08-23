@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
     /**
      * URL for earthquake data from the USGS dataset
      */
-    private static final String USGS_REQUEST_URL =
-            "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2016-01-01&endtime=2016-05-02&minfelt=50&minmagnitude=5";
+    private static final String USGS_REQUEST_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=7&limit=1";
+            //"https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2018-08-01&endtime=2018-08-21&minfelt=1&minmagnitude=7";
 
     /**
      * Tag for log messages
