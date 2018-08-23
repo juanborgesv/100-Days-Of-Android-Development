@@ -196,3 +196,9 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Finished the QuakeReport App. Learned about loaders and the difference between a using loaders and AsyncTask. Set a loading animation while loading the list of earthquake, also setting textViews for cases when there might not have internet connection and it will display some information about it, also even if the app connects, but no information is received it displays a text saying that it has not found information about the earthquakes.
 
 **Thoughts:** I was surprised when the instructors said that I finished the course, and there is still two more lessons, the thing is they are projects.
+
+
+## Day 39: August 22, 2018
+**Today's Progress:** Design on paper the simple Book Listing App and create all the xml files that are going to be used, set all the elements of the UI and finished the desired design with some icons and the search bar.
+
+**Thoughts:** The edit text that handles the search of the book has some details that has to be fixed, such as set the max lines to one, and when the user taps enter, don't add a line, and by now, log a message.
