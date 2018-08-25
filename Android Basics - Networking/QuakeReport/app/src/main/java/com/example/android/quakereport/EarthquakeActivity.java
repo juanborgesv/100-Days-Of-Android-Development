@@ -94,10 +94,6 @@ public class EarthquakeActivity extends AppCompatActivity
             }
         });
 
-        // Start the AsyncTask to fetch the earthquake data
-        //EarthquakeAsyncTask task = new EarthquakeAsyncTask();
-        //task.execute(USGS_REQUEST_URL);
-
         // Get a reference to the ConnectivityManager to check state of network connectivity
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -130,7 +126,7 @@ public class EarthquakeActivity extends AppCompatActivity
 
         // Create a new loader for the given URL
         return new EarthquakeLoader(this, USGS_REQUEST_URL);
-        }
+    }
 
     @Override
     public void onLoadFinished(Loader<List<Earthquake>> loader, List<Earthquake> data) {

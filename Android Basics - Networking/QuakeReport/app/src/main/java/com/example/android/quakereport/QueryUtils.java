@@ -44,7 +44,6 @@ public final class QueryUtils {
     private static URL createUrl(String stringUrl) {
         URL url = null;
 
-        // Perform HTTP request to the URL and receive a JSON response back
         try {
             url = new URL(stringUrl);
         } catch (MalformedURLException e) {
