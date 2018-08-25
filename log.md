@@ -197,8 +197,18 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 
 **Thoughts:** I was surprised when the instructors said that I finished the course, and there is still two more lessons, the thing is they are projects.
 
-
 ## Day 39: August 22, 2018
 **Today's Progress:** Design on paper the simple Book Listing App and create all the xml files that are going to be used, set all the elements of the UI and finished the desired design with some icons and the search bar.
 
 **Thoughts:** The edit text that handles the search of the book has some details that has to be fixed, such as set the max lines to one, and when the user taps enter, don't add a line, and by now, log a message.
+
+
+## Day 40: August 23, 2018
+**Today's Progress:** Created the BookAdapter that handles the ListView and the Book class that has three atributes (Title, Author, Year, Image Url). Started with some methods of the QueryUtils class.
+
+**Thoughts:** I think I am doing this project in the wrong way, creating everything, and at the end do the real test and see if everything works.
+
+## Day 41: August 24, 2018
+**Today's Progress:** Finished the QueryUtils class, create the BookLoader class, as expected the app did not work, the EditText that gets the url does it correctly, checked by debugging it but it is failing maybe something wrong with the connection, I have to do some logs and check where it goes and where it stops.
+
+**Thoughts:** I knew somehow I was doing this the wrong way, implementing loaders, query utils, and at the end test it all. 
