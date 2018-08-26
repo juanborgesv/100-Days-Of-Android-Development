@@ -212,3 +212,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Finished the QueryUtils class, create the BookLoader class, as expected the app did not work, the EditText that gets the url does it correctly, checked by debugging it but it is failing maybe something wrong with the connection, I have to do some logs and check where it goes and where it stops.
 
 **Thoughts:** I knew somehow I was doing this the wrong way, implementing loaders, query utils, and at the end test it all. 
+
+## Day 42: August 25, 2018
+**Today's Progress:** The Book Listing App is finished, it has everything required to submit it but tomorrow I will try to create a class that loads the book images and allow the user to tap on X book of the list and it will open the store that sells it.
+
+**Thoughts:** It is very satisfying to see how things like adapters, loaders, and other things that at some point I find it really complex and hard to implement and understand, with practice now everything looks quite easy. I am almost half of the 100 Days Challenge done, and I can't imagine how much I will have learned at the end.
