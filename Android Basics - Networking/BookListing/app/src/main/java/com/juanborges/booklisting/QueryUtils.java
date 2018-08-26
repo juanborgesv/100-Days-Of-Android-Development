@@ -30,6 +30,8 @@ public final class QueryUtils {
     private QueryUtils() {}
 
     public static List<Book> fetchBooksData(String urlRequest) {
+        Log.i(LOG_TAG, "FetchingBooksData for: "+ urlRequest);
+
         // Create URL object
         URL myUrl = createUrl(urlRequest);
 
@@ -88,6 +90,8 @@ public final class QueryUtils {
             if (urlConnection.getResponseCode() == 200) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
+            } else {
+                Log.i(LOG_TAG, "Error trying to connect, response code: "+ urlConnection.getResponseCode());
             }
 
         } catch (IOException exception) {
