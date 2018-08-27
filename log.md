@@ -217,3 +217,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** The Book Listing App is finished, it has everything required to submit it but tomorrow I will try to create a class that loads the book images and allow the user to tap on X book of the list and it will open the store that sells it.
 
 **Thoughts:** It is very satisfying to see how things like adapters, loaders, and other things that at some point I find it really complex and hard to implement and understand, with practice now everything looks quite easy. I am almost half of the 100 Days Challenge done, and I can't imagine how much I will have learned at the end.
+
+## Day 43: August 26, 2018
+**Today's Progress:** Modify the book class in order to get the book's url and when the user clicks on a book, it opens it. Other's Book Listing App projects use Picasso that handles loading the images from an url in the background thread, it would like to do it without Picasso, I tried but I could not do it, I will ask on stackoverflow for suggestions. Create another Layout that is shown when there is not internet connection and implemented it properly.
+
+**Thoughts:** I was surprised that I could not submit the project, because the other courses I could but the difference here is that this is not the final project of the course. The Android Basics: Networking course has two projects, and the last one can be submitted.
