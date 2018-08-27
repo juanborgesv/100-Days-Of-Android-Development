@@ -52,7 +52,7 @@ public class BookAdapter extends ArrayAdapter<Book> /*implements LoaderManager.L
         return convertView;
     }
 
-   /* static URL createUrl(String myUrl) {
+    static URL createUrl(String myUrl) {
         URL url = null;
 
         try {
@@ -75,7 +75,7 @@ public class BookAdapter extends ArrayAdapter<Book> /*implements LoaderManager.L
         }
     }
 
-    @Override
+  /*  @Override
     public Loader<Bitmap> onCreateLoader(int id, Bundle args) {
         return new ImageLoader(getContext(), );
     }

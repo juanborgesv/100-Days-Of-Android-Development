@@ -5,6 +5,9 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.View;
 
+import com.juanborges.booklisting.Book;
+import com.juanborges.booklisting.BookAdapter;
+
 public class ImageLoader extends AsyncTaskLoader<Bitmap> {
 
     View myView;
@@ -25,5 +28,4 @@ public class ImageLoader extends AsyncTaskLoader<Bitmap> {
     public Bitmap loadInBackground() {
         BookAdapter.setImage(myView, myBook);
     }
-}
-*/
+}*/

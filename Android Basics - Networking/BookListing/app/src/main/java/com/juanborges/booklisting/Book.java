@@ -6,12 +6,14 @@ public class Book {
     String author;
     String year;
     String imageUrl;
+    String infoLink;
 
-    Book (String myTitle, String myAuthor, String myYear, String myImageUrl) {
+    Book (String myTitle, String myAuthor, String myYear, String myImageUrl, String website) {
         title = myTitle;
         author = myAuthor;
         year = myYear;
         imageUrl = myImageUrl;
+        infoLink = website;
     }
 
     public String getTitle() {
@@ -28,5 +30,9 @@ public class Book {
 
     public String getImageUrl() {
         return imageUrl;
+    }
+
+    public String getInfoLink() {
+        return infoLink;
     }
 }

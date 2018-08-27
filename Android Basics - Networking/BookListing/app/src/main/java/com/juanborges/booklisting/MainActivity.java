@@ -2,14 +2,17 @@ package com.juanborges.booklisting;
 
 import android.app.LoaderManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity
     View loadingIndicator;
 
     LinearLayout notFoundLayout;
+    LinearLayout noInternetLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +60,10 @@ public class MainActivity extends AppCompatActivity
         loadingIndicator.setVisibility(View.GONE);
 
         notFoundLayout = (LinearLayout) findViewById(R.id.not_found);
+        noInternetLayout = (LinearLayout) findViewById(R.id.no_connection);
 
-        notFoundLayout.setVisibility(View.INVISIBLE);
+        notFoundLayout.setVisibility(View.GONE);
+        noInternetLayout.setVisibility(View.GONE);
 
         EditText searchEditText = (EditText) findViewById(R.id.search);
 
@@ -82,11 +88,26 @@ public class MainActivity extends AppCompatActivity
                         // because this activity implements the LoaderCallbacks interface).
                         loaderManager.initLoader(BOOK_LOADER_ID, null, MainActivity.this);
                     } else {
-
+                        loadingIndicator.setVisibility(View.INVISIBLE);
+                        noInternetLayout.setVisibility(View.VISIBLE);
                     }
                 }
 
                 return false;
+            }
+        });
+
+        bookListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Book currentBook = adapter.getItem(position);
+
+                Uri bookUri = Uri.parse(currentBook.getInfoLink());
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, bookUri);
+
+                startActivity(intent);
             }
         });
     }
@@ -115,6 +136,7 @@ public class MainActivity extends AppCompatActivity
         if (data != null && !data.isEmpty()) {
             adapter.addAll(data);
             notFoundLayout.setVisibility(View.GONE);
+            noInternetLayout.setVisibility(View.GONE);
         } else {
             notFoundLayout.setVisibility(View.VISIBLE);
         }

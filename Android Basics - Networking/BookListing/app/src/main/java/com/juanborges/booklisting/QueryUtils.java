@@ -185,7 +185,9 @@ public final class QueryUtils {
 
                 String imageUrl = imageLinks.getString("thumbnail");
 
-                books.add(new Book(title, authors.toString(), date, imageUrl));
+                String website = volumeInfo.getString("infoLink");
+
+                books.add(new Book(title, authors.toString(), date, imageUrl, website));
             }
         } catch (JSONException exception) {
             // If an error is thrown when executing any of the above statements in the "try" block,
