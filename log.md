@@ -222,3 +222,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Modify the book class in order to get the book's url and when the user clicks on a book, it opens it. Other's Book Listing App projects use Picasso that handles loading the images from an url in the background thread, it would like to do it without Picasso, I tried but I could not do it, I will ask on stackoverflow for suggestions. Create another Layout that is shown when there is not internet connection and implemented it properly.
 
 **Thoughts:** I was surprised that I could not submit the project, because the other courses I could but the difference here is that this is not the final project of the course. The Android Basics: Networking course has two projects, and the last one can be submitted.
+
+## Day 44: August 27, 2018
+**Today's Progress:** Lesson Preferences started, added a Settings Activity for the QuakeReport App and added some strings in the strings.xml file. Learned about fragments, a little different from the fragments learned in the last course.
+
+**Thoughts:** This lesson is introducing fragments, and it is implemented in the SettingsActivity class in a different way that I've learned in the last course and also in the xml file as <fragment>.
