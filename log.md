@@ -227,3 +227,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Lesson Preferences started, added a Settings Activity for the QuakeReport App and added some strings in the strings.xml file. Learned about fragments, a little different from the fragments learned in the last course.
 
 **Thoughts:** This lesson is introducing fragments, and it is implemented in the SettingsActivity class in a different way that I've learned in the last course and also in the xml file as <fragment>.
+
+## Day 45: August 28, 2018
+**Today's Progress:** Lesson Preferences finished, the QuakeReport App has a nice settings activity that has a PreferenceFragment subclass and implements Preference.OnPreferenceChangeListener. This activity has the option to change the way the ListView is sorted (Magnitude / Recent) and change min magnitude that the list will display.
+
+**Thoughts:** Ready to start planning the final project of the course, this lesson was actually really interesting and could be very helpful for the final project.
