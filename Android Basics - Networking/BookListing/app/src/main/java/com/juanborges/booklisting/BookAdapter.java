@@ -22,7 +22,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-public class BookAdapter extends ArrayAdapter<Book> /*implements LoaderManager.LoaderCallbacks<Bitmap>*/{
+public class BookAdapter extends ArrayAdapter<Book> {
 
     static final String LOG_TAG = BookAdapter.class.getSimpleName();
 
@@ -40,6 +40,10 @@ public class BookAdapter extends ArrayAdapter<Book> /*implements LoaderManager.L
 
         Book currentBook = getItem(position);
 
+        ImageView image = (ImageView) convertView.findViewById(R.id.image);
+        if (currentBook.getImage() != null)
+            image.setImageBitmap(currentBook.getImage());
+
         TextView title = (TextView) convertView.findViewById(R.id.title);
         title.setText(currentBook.getTitle());
 
@@ -52,41 +56,4 @@ public class BookAdapter extends ArrayAdapter<Book> /*implements LoaderManager.L
         return convertView;
     }
 
-    static URL createUrl(String myUrl) {
-        URL url = null;
-
-        try {
-            url = new URL(myUrl);
-        } catch (MalformedURLException e) {
-            Log.i(LOG_TAG, "Malformed Url", e);
-        }
-
-        return url;
-    }
-
-    public static void setImage(View convertView, Book currentBook) {
-        try{
-            URL imageUrl = createUrl(currentBook.getImageUrl());
-            Bitmap bmp = BitmapFactory.decodeStream(imageUrl.openConnection().getInputStream());
-            ImageView image = convertView.findViewById(R.id.image);
-            image.setImageBitmap(bmp);
-        } catch (IOException e) {
-            Log.e(LOG_TAG, "I/O Exception when trying to load the image of the current book");
-        }
-    }
-
-  /*  @Override
-    public Loader<Bitmap> onCreateLoader(int id, Bundle args) {
-        return new ImageLoader(getContext(), );
-    }
-
-    @Override
-    public void onLoadFinished(Loader<Bitmap> loader, Bitmap data) {
-
-    }
-
-    @Override
-    public void onLoaderReset(Loader<Bitmap> loader) {
-
-    }*/
 }
