@@ -1,5 +1,8 @@
 package com.juanborges.booklisting;
 
+import android.app.LoaderManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -185,9 +188,10 @@ public final class QueryUtils {
 
                 String imageUrl = imageLinks.getString("thumbnail");
 
-                String website = volumeInfo.getString("infoLink");
+                Bitmap image = generateBitmapFromUrl(imageUrl);
 
-                books.add(new Book(title, authors.toString(), date, imageUrl, website));
+                String website = volumeInfo.getString("infoLink");
+                books.add(new Book(title, authors.toString(), date, image, website));
             }
         } catch (JSONException exception) {
             // If an error is thrown when executing any of the above statements in the "try" block,
@@ -197,5 +201,28 @@ public final class QueryUtils {
         }
 
         return books;
+    }
+
+    static Bitmap generateBitmapFromUrl(String imageUrl) {
+        if (imageUrl.length() == 0)
+            return null;
+
+        URL url = null;
+
+        try {
+            url = new URL(imageUrl);
+        } catch (MalformedURLException e) {
+            Log.e(LOG_TAG, "Malformed Url Exception", e);
+        }
+
+        Bitmap myBitmap = null;
+
+        try {
+            myBitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+        } catch (IOException e) {
+            Log.e(LOG_TAG, "Problem retrieving the book's thumbnail", e);
+        }
+
+        return myBitmap;
     }
 }
