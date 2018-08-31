@@ -1,18 +1,20 @@
 package com.juanborges.booklisting;
 
+import android.graphics.Bitmap;
+
 public class Book {
 
     String title;
     String author;
     String year;
-    String imageUrl;
+    Bitmap image;
     String infoLink;
 
-    Book (String myTitle, String myAuthor, String myYear, String myImageUrl, String website) {
+    Book (String myTitle, String myAuthor, String myYear, Bitmap myImage, String website) {
         title = myTitle;
         author = myAuthor;
         year = myYear;
-        imageUrl = myImageUrl;
+        image = myImage;
         infoLink = website;
     }
 
@@ -28,8 +30,8 @@ public class Book {
         return year;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public Bitmap getImage() {
+        return image;
     }
 
     public String getInfoLink() {
