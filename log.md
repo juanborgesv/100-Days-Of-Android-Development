@@ -232,3 +232,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Lesson Preferences finished, the QuakeReport App has a nice settings activity that has a PreferenceFragment subclass and implements Preference.OnPreferenceChangeListener. This activity has the option to change the way the ListView is sorted (Magnitude / Recent) and change min magnitude that the list will display.
 
 **Thoughts:** Ready to start planning the final project of the course, this lesson was actually really interesting and could be very helpful for the final project.
+
+## Day 46: August 29, 2018
+**Today's Progress:** Read The Guardian API, this API will be used for the News App, the final project of the Android Basics: Networking course. Started to design on paper how the app should look, and the content that it will display.
+
+**Thoughts:** I can't wait to start the last course of this Nanodegree, so I will do my best to finish this project as soon as possible implementing everything I have learned and maybe some new things that I have seen.
