@@ -237,3 +237,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Read The Guardian API, this API will be used for the News App, the final project of the Android Basics: Networking course. Started to design on paper how the app should look, and the content that it will display.
 
 **Thoughts:** I can't wait to start the last course of this Nanodegree, so I will do my best to finish this project as soon as possible implementing everything I have learned and maybe some new things that I have seen.
+
+## Day 47: August 30, 2018
+**Today's Progress:** In the Book Listing App I changed the Book Class, replace the "String image" with "Bitmap image", that way each book stores the image parsed from the jsonResponse image url. So I have to modify a bit the Adapter class, the list_item_layout xml and the QueryUtils class.
+
+**Thoughts:** I know the way I changed the app in order to display images from the JSON response was not the best, because I believe the images are loaded in the Main Thread when it should be in the Background Thread, but I did not use an external library and it was what I intended, for now it should be good since it does not store too many images.
