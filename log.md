@@ -242,3 +242,15 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** In the Book Listing App I changed the Book Class, replace the "String image" with "Bitmap image", that way each book stores the image parsed from the jsonResponse image url. So I have to modify a bit the Adapter class, the list_item_layout xml and the QueryUtils class.
 
 **Thoughts:** I know the way I changed the app in order to display images from the JSON response was not the best, because I believe the images are loaded in the Main Thread when it should be in the Background Thread, but I did not use an external library and it was what I intended, for now it should be good since it does not store too many images.
+
+
+## Day 48: September 1, 2018
+**Today's Progress:** Worked on a personal project that is going to use the Instagram API, it is not going to be shared since I want to publish it on the Play Store, I did some designs and I hope I start it when I finish the last course of Android Basics.
+
+**Thoughts:** It is a simple project, not very innovative but it is a good point of start to gain experience publishing apps.
+
+
+## Day 49: September 2, 2018
+**Today's Progress:** The design of the News App is finished, created the Story Class and the Story List Item xml that shows the title, date, section, author of the story. Tested the layouts and the Story class by adding two Stories to a List<Story> and show them using a ListView and a Custom Adapter.
+
+**Thoughts:** Now it is time to fetch the data from the internet, because all the information tested was already there in the project.
