@@ -254,3 +254,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** The design of the News App is finished, created the Story Class and the Story List Item xml that shows the title, date, section, author of the story. Tested the layouts and the Story class by adding two Stories to a List<Story> and show them using a ListView and a Custom Adapter.
 
 **Thoughts:** Now it is time to fetch the data from the internet, because all the information tested was already there in the project.
+
+## Day 50: September 3, 2018
+**Today's Progress:** QueryUtils Class is finished, it queries an url provided and fetch the data expected, also modified the Story class adding a String called url that will store a link that will allow the user access the full story when it clicks on the story item of the list.
+
+**Thoughts:** I did not test the QueryUtils class, it is left to create the loader that is going to call the QueryUtils method. At first it will request data from a constant url in order to test that everything works, then start modifying the query url in order to request data for what the user wants.
