@@ -8,13 +8,16 @@ public class Story {
     private String date;
     private String section;
     private Bitmap image;
+    private String url;
 
-    public Story(String title, String author, String date, String section, Bitmap image) {
+    public Story(String title, String author, String date, String section, Bitmap image, String url)
+    {
         this.title = title;
         this.author = author;
         this.date = date;
         this.section = section;
         this.image = image;
+        this.url = url;
     }
 
     public String getTitle() {
@@ -35,5 +38,9 @@ public class Story {
 
     public Bitmap getImage() {
         return image;
+    }
+
+    public String getUrl() {
+        return url;
     }
 }
