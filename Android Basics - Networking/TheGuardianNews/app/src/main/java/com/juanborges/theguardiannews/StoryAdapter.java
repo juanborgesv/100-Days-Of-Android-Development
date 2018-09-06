@@ -30,11 +30,11 @@ public class StoryAdapter extends ArrayAdapter<Story> {
         TextView title = convertView.findViewById(R.id.title);
         title.setText(currentStory.getTitle());
 
-        TextView author = convertView.findViewById(R.id.author);
-        author.setText(currentStory.getAuthor());
-
         TextView date = convertView.findViewById(R.id.date);
         date.setText(currentStory.getDate());
+
+        TextView pillar = convertView.findViewById(R.id.pillar);
+        pillar.setText(currentStory.getPillar());
 
         TextView section = convertView.findViewById(R.id.section);
         section.setText(currentStory.getSection());

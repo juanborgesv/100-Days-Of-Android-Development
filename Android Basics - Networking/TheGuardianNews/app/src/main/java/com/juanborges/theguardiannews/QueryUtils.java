@@ -1,8 +1,10 @@
 package com.juanborges.theguardiannews;
 
+import android.graphics.Bitmap;
 import android.util.Log;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -146,13 +148,33 @@ public final class QueryUtils {
                 // Get a single earthquake at position i within the list of earthquakes
                 JSONObject currentStory = results.getJSONObject(j);
 
-                String title = currentStory.getString("webTitle");
-                String author = currentStory.getString("");
-                String date = filterDate(currentStory.getString("webPublicationDate"));
-                String section 
+                String title = null;
+                String date = null;
+                String section = null;
+                String pillar = null;
+                String url = null;
 
-                stories.add(new Story(title, author, date, section, image, url));
+                if (currentStory.has("webTitle"))
+                    title = currentStory.getString("webTitle");
+
+                if (currentStory.has("webPublicationDate"))
+                    date = currentStory.getString("webPublicationDate");
+
+                if (currentStory.has("sectionName"))
+                    section = currentStory.getString("sectionName");
+
+                if (currentStory.has("pillarName"))
+                    pillar = currentStory.getString("pillarName");
+
+                if (currentStory.has("webUrl"))
+                    url = currentStory.getString("webUrl");
+
+                stories.add(new Story(title, date, section, pillar, url));
             }
+        } catch (JSONException e) {
+            Log.e("QueryUtils", "Problem parsing the story JSON results", e);
         }
+
+        return stories;
     }
 }

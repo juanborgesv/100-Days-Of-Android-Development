@@ -4,7 +4,10 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#484848</color>
 
-    <!-- Story text colors-->
+    <!-- Story colors-->
+    <color name="backgroundLayoutColor">#eceff1</color>
     <color name="textColorTitle">#212121</color>
-    <color name="textColorAuthor">#484848</color>
+    <color name="textColorDate">#484848</color>
+    <color name="textColorPillar">#1976d2</color>
+    <color name="textColorSection"></color>
 </resources>

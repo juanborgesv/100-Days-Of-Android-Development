@@ -146,6 +146,8 @@ public class EarthquakeActivity extends AppCompatActivity
         uriBuilder.appendQueryParameter("minmag", minMagnitude);
         uriBuilder.appendQueryParameter("orderby", orderBy);
 
+        Log.i(LOG_TAG, uriBuilder.toString());
+
         return new EarthquakeLoader(this, uriBuilder.toString());
     }
 
