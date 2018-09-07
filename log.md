@@ -269,4 +269,4 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 ## Day 51: September 6, 2018
 **Today's Progress:** The News App project is almost done, the app is fetching the data correctly and it updates the ListView as expected, I struggled because there was an Error trying to do the connection because I was casting Http to HttpsUrlConnection, it did not happen in the class project (Quake Report App) because it was Https to Https.
 
-**Thoughts:** Happy to encounter some errors that I will maybe face in the future, I did not debug the program as it should be (Debug Run), Did it printing logs.
+**Thoughts:** Happy to encounter some errors that I will maybe face in the future. I did not debug the program as it should be (Debug Run), I did it by printing logs, in the future I will learn to do it accordingly using the Debug Run.
