@@ -1,8 +1,8 @@
 package com.juanborges.theguardiannews;
 
 import android.content.Context;
-import android.support.v4.content.AsyncTaskLoader;
-import android.support.v4.content.Loader;
+import android.content.AsyncTaskLoader;
+import android.util.Log;
 
 import java.util.List;
 
@@ -11,18 +11,24 @@ import java.util.List;
  * network request to the given URL.
  */
 public class StoryLoader extends AsyncTaskLoader<List<Story>> {
+    final static String LOG_TAG = StoryLoader.class.getSimpleName();
+
 
     // Query URL
-    String url;
+    private String url;
 
     public StoryLoader(Context context, String url) {
         super(context);
         this.url = url;
+
+        Log.i(LOG_TAG, "StoryLoader constructor");
     }
 
     @Override
     protected void onStartLoading() {
         forceLoad();
+
+        Log.i(LOG_TAG, "onStartLoading method");
     }
 
     @Override
@@ -30,8 +36,8 @@ public class StoryLoader extends AsyncTaskLoader<List<Story>> {
         if (url == null || url.length() == 0)
             return null;
 
+        Log.i(LOG_TAG, "loadInBackground method");
+
         return QueryUtils.fetchStoriesData(url);
     }
-
-
 }

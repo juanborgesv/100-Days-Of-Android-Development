@@ -1,21 +1,21 @@
 package com.juanborges.theguardiannews;
 
-import android.graphics.Bitmap;
-
 public class Story {
     private String title;
     private String date;
     private String section;
     private String pillar;
     private String url;
+    private String author;
 
-    public Story(String title, String date, String section, String pillar, String url)
-    {
+    public Story
+            (String title, String date, String section, String pillar, String url, String author) {
         this.title = title;
         this.date = date;
         this.section = section;
         this.pillar = pillar;
         this.url = url;
+        this.author = author;
     }
 
     public String getTitle() {
@@ -36,5 +36,9 @@ public class Story {
 
     public String getUrl() {
         return url;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 }

@@ -7,7 +7,6 @@
     <!-- Story colors-->
     <color name="backgroundLayoutColor">#eceff1</color>
     <color name="textColorTitle">#212121</color>
-    <color name="textColorDate">#484848</color>
     <color name="textColorPillar">#1976d2</color>
-    <color name="textColorSection"></color>
+    <color name="textColorGrey">#484848</color>
 </resources>

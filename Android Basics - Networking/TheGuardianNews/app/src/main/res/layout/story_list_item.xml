@@ -19,15 +19,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/textColorTitle"
-            android:textSize="14sp"
+            android:textSize="16sp"
             tools:text="Title Example" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorGrey"
+            android:textSize="12sp"
+            android:textAllCaps="true"
+            tools:text="Author Example"/>
 
         <TextView
             android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/textColorGrey"
             android:textAllCaps="true"
-            android:textColor="@color/textColorDate"
             android:textSize="12sp"
             tools:text="Date Example"/>
 
@@ -57,7 +66,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="bottom"
-                android:textColor="@color/textColorDate"
+                android:textColor="@color/textColorGrey"
                 tools:text="Section Example"/>
 
         </LinearLayout>

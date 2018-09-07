@@ -1,6 +1,5 @@
 package com.juanborges.theguardiannews;
 
-import android.graphics.Bitmap;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -11,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
@@ -31,6 +31,7 @@ public final class QueryUtils {
     private QueryUtils() {}
 
     public static List<Story> fetchStoriesData(String urlRequest) {
+        Log.i(LOG_TAG, "Fetching stories data...");
 
         URL myUrl = createUrl(urlRequest);
 
@@ -58,6 +59,7 @@ public final class QueryUtils {
 
         List<Story> stories = extractFeatureFromJson(jsonResponse);
 
+        Log.i(LOG_TAG, "Stories data fetched.");
         return stories;
     }
 
@@ -67,6 +69,8 @@ public final class QueryUtils {
      * @return
      */
     private static URL createUrl(String urlRequest) {
+        Log.i(LOG_TAG, "Creating Url...");
+
         URL myUrl = null;
 
         try {
@@ -75,6 +79,7 @@ public final class QueryUtils {
             Log.e(LOG_TAG, "Problem creating a URL.", e);
        }
 
+        Log.i(LOG_TAG, "Url created.");
        return myUrl;
     }
 
@@ -84,21 +89,29 @@ public final class QueryUtils {
      * @return JSON response from the query
      * @throws IOException by inputStream.close()
      */
-    private static String makeHttpRequest(URL myUrl) throws IOException {
+    public static String makeHttpRequest(URL myUrl) throws IOException {
+        Log.i(LOG_TAG, "Making the Http request...");
+
         String jsonResponse = "";
 
-        HttpsURLConnection urlConnection = null;
+        HttpURLConnection urlConnection = null;
         InputStream inputStream = null;
 
         try {
-            urlConnection = (HttpsURLConnection) myUrl.openConnection();
+            Log.i(LOG_TAG, "Before casting.");
+            urlConnection = (HttpURLConnection) myUrl.openConnection();
+            Log.i(LOG_TAG, "After casting");
             urlConnection.setRequestMethod("GET");
             urlConnection.setReadTimeout(8000); // 8 Seconds
             urlConnection.setConnectTimeout(8000); // 8 Seconds
+            Log.i(LOG_TAG, "Before connect");
+            urlConnection.connect();
+            Log.i(LOG_TAG, "After connect");
 
             if (urlConnection.getResponseCode() == 200) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
+                Log.i(LOG_TAG, "Http request made.");
             } else {
                 Log.i(LOG_TAG, "Error trying to connect, response code: "+ urlConnection.getResponseCode());
             }
@@ -115,6 +128,7 @@ public final class QueryUtils {
     }
 
     private static String readFromStream(InputStream inputStream) throws IOException {
+        Log.i(LOG_TAG, "Reading from stream...");
         StringBuilder jsonResponse = new StringBuilder();
 
         if (inputStream != null) {
@@ -127,12 +141,16 @@ public final class QueryUtils {
                 jsonResponse.append(line);
                 line = bufferedReader.readLine();
             }
+
+            Log.i(LOG_TAG, "Stream read.");
         }
 
         return jsonResponse.toString();
     }
 
     private static List<Story> extractFeatureFromJson(String jsonResponse) {
+        Log.i(LOG_TAG, "Extracting feature from JSON");
+
         List<Story> stories = new ArrayList<>();
 
         // Try to parse the JSON response string. If there's a problem with the way the JSON
@@ -153,6 +171,7 @@ public final class QueryUtils {
                 String section = null;
                 String pillar = null;
                 String url = null;
+                String author = null;
 
                 if (currentStory.has("webTitle"))
                     title = currentStory.getString("webTitle");
@@ -169,11 +188,31 @@ public final class QueryUtils {
                 if (currentStory.has("webUrl"))
                     url = currentStory.getString("webUrl");
 
-                stories.add(new Story(title, date, section, pillar, url));
+                if (currentStory.has("tags")) {
+                    JSONArray tags = currentStory.getJSONArray("tags");
+                    StringBuilder authors = new StringBuilder();
+
+                    for (int b = 0; b < tags.length(); b++) {
+                        JSONObject tag = tags.getJSONObject(b);
+
+                        // Check if it is the last tag/author, if it is
+                        // not add a coma after the tag/author.
+                        if (b == tags.length()-1)
+                            authors.append(tag.getString("webTitle"));
+                        else
+                            authors.append(tag.getString("webTitle")+", ");
+                    }
+
+                    author = authors.toString();
+                }
+
+                stories.add(new Story(title, date, section, pillar, url, author));
             }
         } catch (JSONException e) {
             Log.e("QueryUtils", "Problem parsing the story JSON results", e);
         }
+
+        Log.i(LOG_TAG, "Feature extracted.");
 
         return stories;
     }
