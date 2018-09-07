@@ -260,13 +260,13 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 
 **Thoughts:** I did not test the QueryUtils class, it is left to create the loader that is going to call the QueryUtils method. At first it will request data from a constant url in order to test that everything works, then start modifying the query url in order to request data for what the user wants.
 
-## Day 50: September 4, 2018
+## Day 51: September 5, 2018
 **Today's Progress:** I have not finished the project, I had some problems loading the Url request in the web browser using Chrome and Safari, so I practice the Uri and Uri.Builder to build the desired Query Url. Then I started the last course of Android Basics called Data Storage, learned how process data in a database using SQLite through the Terminal, create a table, how it is structured, how to insert, read, update and delete data. 
 
 **Thoughts:** It is really important to know how to handle persistant data from your apps, because all this time every app that I have done uses data that lasts as long as the activity does, I picked an old project, the BasketBall App that I did a while ago and when the device is rotated the data it is lost. So little things like this can affect your app a lot and it is an essential to be prepared to handle this challenges.
 
 
-## Day 51: September 6, 2018
+## Day 52: September 6, 2018
 **Today's Progress:** The News App project is almost done, the app is fetching the data correctly and it updates the ListView as expected, I struggled because there was an Error trying to do the connection because I was casting Http to HttpsUrlConnection, it did not happen in the class project (Quake Report App) because it was Https to Https.
 
 **Thoughts:** Happy to encounter some errors that I will maybe face in the future. I did not debug the program as it should be (Debug Run), I did it by printing logs, in the future I will learn to do it accordingly using the Debug Run.
