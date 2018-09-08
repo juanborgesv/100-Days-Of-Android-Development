@@ -177,7 +177,7 @@ public final class QueryUtils {
                     title = currentStory.getString("webTitle");
 
                 if (currentStory.has("webPublicationDate"))
-                    date = currentStory.getString("webPublicationDate");
+                    date = extractDate(currentStory.getString("webPublicationDate"));
 
                 if (currentStory.has("sectionName"))
                     section = currentStory.getString("sectionName");
@@ -215,5 +215,9 @@ public final class QueryUtils {
         Log.i(LOG_TAG, "Feature extracted.");
 
         return stories;
+    }
+
+    private static String extractDate(String date) {
+        return date.substring(0,10);
     }
 }

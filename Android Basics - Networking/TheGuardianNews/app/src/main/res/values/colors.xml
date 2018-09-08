@@ -9,4 +9,7 @@
     <color name="textColorTitle">#212121</color>
     <color name="textColorPillar">#1976d2</color>
     <color name="textColorGrey">#484848</color>
+
+    <!-- -->
+    <color name="backgroundSearchText">#eceff1</color>
 </resources>
