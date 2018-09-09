@@ -274,3 +274,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** The News App is finished! It is similar to the Book Listing App, it has the same features, the difference is that it handles different information from a different API in order to display Stories.
 
 **Thoughts:** Happy to finish another course, a lot of things covered and a lot have to be polished as well. I hope I can practice a lot all I have learned in this course in a new project soon.
+
+## Day 54: September 8, 2018
+**Today's Progress:** Finished the first lesson of the Material Design for Android Developers, some key concepts of UI elements reinforced and learned a few new things. Started the second lesson of the Android Basics: Data Storage course about using a Database in an Android App, recap of what a schema is and learned what is a Contract class and why is it important to be defined.
+
+**Thoughts:** I check the material.io website and notice that the plugin that they offer is available for the Sketch App, I hope in the Material Design for Android Developers I will learn to use it, if not I will check material.io if there are tutorials about it.
