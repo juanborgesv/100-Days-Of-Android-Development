@@ -281,6 +281,6 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Thoughts:** I check the material.io website and notice that the plugin that they offer is available for the Sketch App, I hope in the Material Design for Android Developers I will learn to use it, if not I will check material.io if there are tutorials about it.
 
 ## Day 54: September 8, 2018
-**Today's Progress:** Created the Contract class, and the Data Base Helper Class for the Pets App. Understand how they worked and how to use them, checked that everything is well implemented by checking the current tables in the Data Base.
+**Today's Progress:** Created the Contract class, and the Data Base Helper Class for the Pets App. Understand how both classes worked and how to use them, checked that everything is well implemented by checking the current tables in the Data Base, got some errors caused by dumb little but important mistakes that seem to be common in the future.
 
-**Thoughts:** I did a lot but advanced not so much in content, but it is good to see everything
+**Thoughts:** I did not advanced a lot in this lesson but did some important changes, fix some errors and undertand key concepts, it is important to keep learning everyday no matter how much it is.
