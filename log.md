@@ -284,3 +284,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Created the Contract class, and the Data Base Helper Class for the Pets App. Understand how both classes worked and how to use them, checked that everything is well implemented by checking the current tables in the Data Base, got some errors caused by dumb little but important mistakes that seem to be common in the future.
 
 **Thoughts:** I did not advanced a lot in this lesson but did some important changes, fix some errors and undertand key concepts, it is important to keep learning everyday no matter how much it is.
+
+## Day 56: September 10, 2018
+**Today's Progress:** Modify the CatalogActivity class to insert "Dummy Data" to the data base, then modified the EditorActivity class to insert an specific data into the data base.
+
+**Thoughts:** s
