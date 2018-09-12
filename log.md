@@ -286,6 +286,6 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Thoughts:** I did not advanced a lot in this lesson but did some important changes, fix some errors and undertand key concepts, it is important to keep learning everyday no matter how much it is.
 
 ## Day 56: September 10, 2018
-**Today's Progress:** Modify the CatalogActivity class to insert "Dummy Data" to the data base, then modified the EditorActivity class to insert an specific data into the data base.
+**Today's Progress:** Modify the CatalogActivity class to insert "Dummy Data" to the data base, then modified the EditorActivity class to insert an specific data into the data base. Finally, understand how to query from the data base works using a Projection, Selection, SelectionArgs and Cursor.
 
-**Thoughts:** s
+**Thoughts:** Never thought all this could be this simple, maybe because it is really well explained. Checked the Data Storage Course Project and looks promising.
