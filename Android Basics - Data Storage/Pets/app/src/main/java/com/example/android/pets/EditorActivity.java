@@ -29,6 +29,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.android.pets.data.PetContract;
 import com.example.android.pets.data.PetContract.PetEntry;
@@ -151,15 +152,19 @@ public class EditorActivity extends AppCompatActivity {
         // Trim is used to eliminate any leading or trailing white space from the string
         String petName = mNameEditText.getText().toString().trim();
         String petBreed = mBreedEditText.getText().toString().trim();
-        int petGender = Integer.parseInt(mGenderSpinner.);
         int petWeight = Integer.parseInt(mWeightEditText.getText().toString().trim());
 
         values.put(PetEntry.COLUMN_PET_NAME, petName);
         values.put(PetEntry.COLUMN_PET_BREED, petBreed);
-        values.put(PetEntry.COLUMN_PET_GENDER, petGender);
+        values.put(PetEntry.COLUMN_PET_GENDER, mGender);
         values.put(PetEntry.COLUMN_PET_WEIGHT, petWeight);
 
         long newRowId = db.insert(PetEntry.TABLE_NAME, null, values);
         Log.v(LOG_TAG, "New Row ID "+ newRowId);
+
+        if (newRowId == -1)
+            Toast.makeText(this, "Error trying to save the pet's data", Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(this, "Pet saved with row id: "+ newRowId, Toast.LENGTH_SHORT).show();
     }
 }
