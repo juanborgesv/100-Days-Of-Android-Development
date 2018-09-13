@@ -286,6 +286,11 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Thoughts:** I did not advanced a lot in this lesson but did some important changes, fix some errors and undertand key concepts, it is important to keep learning everyday no matter how much it is.
 
 ## Day 56: September 10, 2018
-**Today's Progress:** Modify the CatalogActivity class to insert "Dummy Data" to the data base, then modified the EditorActivity class to insert an specific data into the data base. Finally, understand how to query from the data base works using a Projection, Selection, SelectionArgs and Cursor.
+**Today's Progress:** CatalogActivity class updated to insert "Dummy Data" to the data base, then modified the EditorActivity class to insert an specific data into the data base. Finally, understand how to query from the data base works using a Projection, Selection, SelectionArgs and Cursor.
 
 **Thoughts:** Never thought all this could be this simple, maybe because it is really well explained. Checked the Data Storage Course Project and looks promising.
+
+## Day 57: September 11, 2018
+**Today's Progress:** Learned about what is a Cursor, its methods and how it should be used to read the information in the data base. Learned a bit of why SQL Injections might be dangerous and possible options to avoid it. First lesson finished and started the second.
+
+**Thoughts:** Lesson 2 is about Content Providers. Which act as a layer between data base and activity to ensure that the data that is going to be saved is correct.
