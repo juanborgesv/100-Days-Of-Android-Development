@@ -298,4 +298,4 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 ## Day 58: September 12, 2018
 **Today's Progress:** Learned about why Content Providers are important, how they work, its essential methods, and created the ContentProvider class for the Pets App. 
 
-**Thoughts:** It is really interesting how they can be used to share data with other apps, as it is explained in the course how contacts info
+**Thoughts:** It is really interesting how they can be used to share data with other apps, as it is explained in the course how the Contacts App information is shared to other apps such as gmail, facebook and twitter.
