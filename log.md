@@ -293,4 +293,9 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 ## Day 57: September 11, 2018
 **Today's Progress:** Learned about what is a Cursor, its methods and how it should be used to read the information in the data base. Learned a bit of why SQL Injections might be dangerous and possible options to avoid it. First lesson finished and started the second.
 
-**Thoughts:** Lesson 2 is about Content Providers. Which act as a layer between data base and activity to ensure that the data that is going to be saved is correct.
+**Thoughts:** Even though the Activity class in the second lesson is not going to access the data base directly, for learning porpuses was really good to do it in the first lesson to learn how it works, its disadventages and why a Content Provider should be used.
+
+## Day 58: September 12, 2018
+**Today's Progress:** Learned about why Content Providers are important, how they work, its essential methods, and created the ContentProvider class for the Pets App. 
+
+**Thoughts:** It is really interesting how they can be used to share data with other apps, as it is explained in the course how contacts info
