@@ -38,6 +38,7 @@ public class CatalogActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = CatalogActivity.class.getSimpleName();
 
+    // Database helper object
     private PetDbHelper dbHelper;
 
     @Override
