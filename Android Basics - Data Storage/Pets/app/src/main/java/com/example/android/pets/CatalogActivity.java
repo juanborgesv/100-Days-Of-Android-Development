@@ -19,6 +19,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -39,7 +40,7 @@ public class CatalogActivity extends AppCompatActivity {
     private static final String LOG_TAG = CatalogActivity.class.getSimpleName();
 
     // Database helper object
-    private PetDbHelper dbHelper;
+    //private PetDbHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +57,7 @@ public class CatalogActivity extends AppCompatActivity {
             }
         });
 
-        dbHelper = new PetDbHelper(this);
+//        dbHelper = new PetDbHelper(this);
 
         displayDatabaseInfo();
     }
@@ -76,7 +77,7 @@ public class CatalogActivity extends AppCompatActivity {
         // and pass the context, which is the current activity.
         //PetDbHelper mDbHelper = new PetDbHelper(this);
         // Create and/or open a database to read from it
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        //SQLiteDatabase db = dbHelper.getReadableDatabase();
         // Perform this raw SQL query "SELECT * FROM pets"
         // to get a Cursor that contains all rows from the pets table.
         //Cursor cursor = db.rawQuery("SELECT * FROM " + PetEntry.TABLE_NAME, null);
@@ -89,15 +90,16 @@ public class CatalogActivity extends AppCompatActivity {
                 PetEntry.COLUMN_PET_WEIGHT
         };
 
-
-        Cursor cursor = db.query(
+        /*Cursor cursor = db.query(
                 PetEntry.TABLE_NAME,
                 projection,
                 null,
                 null,
                 null,
                 null,
-                null);
+                null);*/
+
+        Cursor cursor = getContentResolver().query(PetEntry.CONTENT_URI, projection, null, null, null);
 
         TextView displayView = (TextView) findViewById(R.id.text_view_pet);
 
@@ -172,17 +174,16 @@ public class CatalogActivity extends AppCompatActivity {
     }
 
     private void insertPet() {
-        PetDbHelper dbHelper = new PetDbHelper(this);
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-
         ContentValues values = new ContentValues();
         values.put(PetEntry.COLUMN_PET_NAME, "Draco");
         values.put(PetEntry.COLUMN_PET_BREED, "Snauzer");
         values.put(PetEntry.COLUMN_PET_GENDER, 1);
         values.put(PetEntry.COLUMN_PET_WEIGHT, 33);
 
-        // Create a long variable to help find any potential errors.
-        long newRowId = db.insert(PetEntry.TABLE_NAME, null, values);
-        Log.v(LOG_TAG, "New Row ID "+ newRowId);
+        // Insert a new row for Toto into the provider using the ContentResolver.
+        // Use the {@link PetEntry#CONTENT_URI} to indicate that we want to insert
+        // into the pets database table.
+        // Receive the new content URI that will allow us to access Toto's data in the future.
+        Uri newUri = getContentResolver().insert(PetEntry.CONTENT_URI, values);
     }
 }
