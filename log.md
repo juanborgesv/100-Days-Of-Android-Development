@@ -305,3 +305,7 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 
 **Thoughts:** Did a lot today, learned a lot of things, took also many breaks in order to refresh my mind and don't collapse. Ready to continue!
 
+## Day 60: September 14, 2018
+**Today's Progress:** Lesson 2 finished, implemented the update, delete and getType method for the Content Provider class (PetProvider), ensure that the data that is desired to be saved is valid and finished the second lesson of the Material design course aswell. Learned about what is a MIME type and how to implemented it.
+
+**Thoughts:** I thought this course would be longer, the Networking course has actually two projects and many Lessons so it is only one more lesson and the project!
