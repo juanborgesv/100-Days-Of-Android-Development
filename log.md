@@ -299,3 +299,17 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Learned about why Content Providers are important, how they work, its essential methods, and created the ContentProvider class for the Pets App. 
 
 **Thoughts:** It is really interesting how they can be used to share data with other apps, as it is explained in the course how the Contacts App information is shared to other apps such as gmail, facebook and twitter.
+<<<<<<< HEAD
+=======
+
+## Day 59: September 13, 2018
+**Today's Progress:** Almost finished lesson 2, learned more about URIs and how they are used to access a defined table or even an specific row in the db's table. Learned what is an UriMatcher, why it is essential and implemented it. It is left to do the update and delete method of the PetProvider class and ensure that the data that is going to be saved is valid.
+
+**Thoughts:** Did a lot today, learned a lot of things, took also many breaks in order to refresh my mind and don't collapse. Ready to continue!
+
+## Day 60: September 14, 2018
+**Today's Progress:** Lesson 2 finished, implemented the update, delete and getType method for the Content Provider class (PetProvider), ensure that the data that is desired to be saved is valid and finished the second lesson of the Material design course aswell. Learned about what is a MIME type and how to implemented it.
+
+**Thoughts:** I thought this course would be longer, the Networking course has actually two projects and many Lessons so it is only one more lesson and the project!
+ 
+>>>>>>> 75e4d885f99d8cc996885f3dcdbda140e4da87bf
