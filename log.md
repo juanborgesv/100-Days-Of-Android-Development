@@ -319,3 +319,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** CursorLoader implemented, create an empty view that is going to be displayed when the ListView is empty. Learned about CursorLoader, how to implement it and implemented its required methods in order to display properly all the data, the method called when it has to reset it and when the loader is created aswell.
 
 **Thoughts:** Very similar to the Loader on the QuakeReport App, so concepts and implementations weren't hard to get.
+
+## Day 63: September 19, 2018
+**Today's Progress:** Due to some problems with Android Studio I could not keep doing code everyday. Today I did a recap of everything about CursorLoaders and continue the lesson, I changed succesfully everything in the Main Activity in order to load the data from the database in the background threat, algo start to modify the Editor Activity that will show a pet's information when the item is clicked on the Main Activity listview.
+
+**Thoughts:** 
