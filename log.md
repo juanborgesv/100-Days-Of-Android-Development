@@ -323,4 +323,4 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 ## Day 63: September 19, 2018
 **Today's Progress:** Due to some problems with Android Studio I could not keep doing code everyday. Today I did a recap of everything about CursorLoaders and continue the lesson, I changed succesfully everything in the Main Activity in order to load the data from the database in the background threat, algo start to modify the Editor Activity that will show a pet's information when the item is clicked on the Main Activity listview.
 
-**Thoughts:** 
+**Thoughts:** It is really frustrating trying to progress in this course while Android Studio keeps freezing the entire mac OS. It keeps happening and I hope I at least can do even a little progress everyday
