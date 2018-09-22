@@ -323,4 +323,14 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 ## Day 63: September 19, 2018
 **Today's Progress:** Due to some problems with Android Studio I could not keep doing code everyday. Today I did a recap of everything about CursorLoaders and continue the lesson, I changed succesfully everything in the Main Activity in order to load the data from the database in the background threat, algo start to modify the Editor Activity that will show a pet's information when the item is clicked on the Main Activity listview.
 
-**Thoughts:** It is really frustrating trying to progress in this course while Android Studio keeps freezing the entire mac OS. It keeps happening and I hope I at least can do even a little progress everyday
+**Thoughts:** It is really frustrating trying to progress in this course while Android Studio keeps freezing the entire mac OS. It keeps happening and I hope I can do at least a little progress everyday.
+
+## Day 64: September 20, 2018
+**Today's Progress:** Due to some problems with Android Studio I could not keep doing code everyday. Today I did a recap of everything about CursorLoaders and continue the lesson, I changed succesfully everything in the Main Activity in order to load the data from the database in the background threat, algo start to modify the Editor Activity that will show a pet's information when the item is clicked on the Main Activity listview.
+
+**Thoughts:** It is really frustrating trying to progress in this course while Android Studio keeps freezing the entire mac OS. It keeps happening and I hope I can do at least a little progress everyday.
+
+## Day 65: September 21, 2018
+**Today's Progress:** Lesson 3: Surfaces finished! Learned a lot very important details that will help to create a more intuitive and smooth user interface experience, such as surface, FAB, paper transformation and responsive to scroll events.
+
+**Thoughts:** I am learning everything in a very general way, this course does not seem very detailed as the Android Basics courses but it is actually really good, when the moment to implement something I will look more deep into it.
