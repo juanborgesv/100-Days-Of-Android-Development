@@ -331,6 +331,11 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Thoughts:** It is really frustrating trying to progress in this course while Android Studio keeps freezing the entire mac OS. It keeps happening and I hope I can do at least a little progress everyday.
 
 ## Day 65: September 21, 2018
-**Today's Progress:** Lesson 3: Surfaces finished! Learned a lot very important details that will help to create a more intuitive and smooth user interface experience, such as surface, FAB, paper transformation and responsive to scroll events.
+**Today's Progress:** Lesson 3: Surfaces (Material Design course) finished! Learned a lot very important details that will help to create a more intuitive and smooth user interface experience, such as surface, FAB, paper transformation and responsive to scroll events.
 
 **Thoughts:** I am learning everything in a very general way, this course does not seem very detailed as the Android Basics courses but it is actually really good, when the moment to implement something I will look more deep into it.
+
+## Day 66: September 23, 2018
+**Today's Progress:** Lesson 4: Bold Graphic Design (Material Design course) finished! Learned about gestalt principle of grouping used to make design easily comprehensive, how to create a color palette and use the material.io color palette tool, typography, and lastly imaginery every important detail when using images in our apps.
+
+**Thoughts:** I think this course is as important as the Android Basics but it is not well developed. Designing an app is a key part of app development, the way it looks is something that will make a huge difference if not handled properly; functionality is important but if the app does not look good, it might not catch the attention and some other better looking apps that have similar functionality will be more
