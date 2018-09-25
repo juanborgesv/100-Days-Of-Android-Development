@@ -339,3 +339,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Lesson 4: Bold Graphic Design (Material Design course) finished! Learned about gestalt principle of grouping used to make design easily comprehensive, how to create a color palette and use the material.io color palette tool, typography, and lastly imaginery every important detail when using images in our apps.
 
 **Thoughts:** I think this course is as important as the Android Basics but it is not well developed. Designing an app is a key part of app development, the way it looks is something that will make a huge difference if not handled properly; functionality is important but if the app does not look good, it might not catch the attention and some other better looking apps that have similar functionality will be more likely to succeed.
+
+## Day 67: September 24, 2018
+**Today's Progress:** Lesson 5: Meaningful Motion (Material Design course) finished! All kinds of transitions covered, and why is it so useful to catch the user's attention. Android Studio 3.2 downloaded!
+
+**Thoughts:** This lesson was something I was really curious to learn about. I hope that the new Android Studio version is not going to give me freezing issues as the last one.
