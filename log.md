@@ -344,3 +344,9 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Lesson 5: Meaningful Motion (Material Design course) finished! All kinds of transitions covered, and why is it so useful to catch the user's attention. Android Studio 3.2 downloaded!
 
 **Thoughts:** This lesson was something I was really curious to learn about. I hope that the new Android Studio version is not going to give me freezing issues as the last one.
+
+
+## Day 68: September 25, 2018
+**Today's Progress:** Lesson 6: Adaptative Design (Material Design course) finished aswell as the course itself since this was the last lesson. Saw some examples of non optimal UIs aswell as some examples of optimal UIs designs, learned about breakpoints that set a point where the UI design changes if the screen size is bigger, and an introduction of standard things I can vary to make better use of my UI´s space.
+
+**Thoughts:** Happy to finish another course, I can´t wait to apply all I have learned into my projects and the Data Storage final course project.
