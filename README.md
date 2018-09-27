@@ -21,7 +21,7 @@ Udacity's courses are a great point of start. Courses are listed ordered from ba
 ### Design:
 6. [Material Design for Android Developers](https://www.udacity.com/course/material-design-for-android-developers--ud862)
 7. [Mobile Design and Usabilty for Android](https://www.udacity.com/course/mobile-design-and-usability-for-android--ud358)
-8. [UX Design for Mobile Developers] (https://www.udacity.com/course/ux-design-for-mobile-developers--ud849)
+8. [UX Design for Mobile Developers](https://www.udacity.com/course/ux-design-for-mobile-developers--ud849)
 
 ### Android Developer Documentation
 [Android Developer Documentation](https://developer.android.com/docs/)
