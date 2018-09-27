@@ -11,12 +11,19 @@ It is hard to start learning something new and even harder to develop a habit of
 ## Learning resources
 Udacity's courses are a great point of start. Courses are listed ordered from basic to advanced that covers great material about Android Development. As I complete more courses I will be adding more, but for now these should be good for now:
 
+### Android Basics Nanodegree:
 1. [Android Basics: User Interface](https://www.udacity.com/course/android-basics-user-interface--ud834)
 2. [Android Basics: User Input](https://www.udacity.com/course/android-basics-user-input--ud836)
 3. [Android Basics: Multiscreen Apps](https://www.udacity.com/course/android-basics-multiscreen-apps--ud839)
 4. [Android Basics: Networking](https://www.udacity.com/course/android-basics-networking--ud843)
 5. [Android Basics: Data Storage](https://www.udacity.com/course/android-basics-data-storage--ud845)
 
+### Design:
+6. [Material Design for Android Developers](https://www.udacity.com/course/material-design-for-android-developers--ud862)
+7. [Mobile Design and Usabilty for Android](https://www.udacity.com/course/mobile-design-and-usability-for-android--ud358)
+8. [UX Design for Mobile Developers] (https://www.udacity.com/course/ux-design-for-mobile-developers--ud849)
+
+### Android Developer Documentation
 [Android Developer Documentation](https://developer.android.com/docs/)
 
 ## Download Android Studio
