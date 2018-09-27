@@ -345,8 +345,12 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 
 **Thoughts:** This lesson was something I was really curious to learn about. I hope that the new Android Studio version is not going to give me freezing issues as the last one.
 
-
 ## Day 68: September 25, 2018
 **Today's Progress:** Lesson 6: Adaptative Design (Material Design course) finished aswell as the course itself since this was the last lesson. Saw some examples of non optimal UIs aswell as some examples of optimal UIs designs, learned about breakpoints that set a point where the UI design changes if the screen size is bigger, and an introduction of standard things I can vary to make better use of my UI´s space.
 
 **Thoughts:** Happy to finish another course, I can´t wait to apply all I have learned into my projects and the Data Storage final course project.
+
+## Day 69: September 26, 2018
+**Today's Progress:** Update some README files information, set up everything in the new Android Studio 3.2, Update a pet in the Pets App work as expected but now the app crashes when clicking the FAB to add a new pet. 
+
+**Thoughts:** Really upset because for once I thought Android Studio 3.2 fix the error from the previous Android Studio version that freezes the whole Mac OS, forcing me to turn it off. It is very frustrating not being able to finish this course. 
