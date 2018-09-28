@@ -353,4 +353,9 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 ## Day 69: September 26, 2018
 **Today's Progress:** Update some README files information, set up everything in the new Android Studio 3.2, Update a pet in the Pets App work as expected but now the app crashes when clicking the FAB to add a new pet. 
 
-**Thoughts:** Really upset because for once I thought Android Studio 3.2 fix the error from the previous Android Studio version that freezes the whole Mac OS, forcing me to turn it off. It is very frustrating not being able to finish this course. 
+**Thoughts:** Really upset because for once I thought Android Studio 3.2 fix the error from the previous Android Studio version that freezes the whole Mac OS, forcing me to turn it off. It is very frustrating not being able to finish this course.
+
+## Day 70: September 27, 2018
+**Today's Progress:** I have seen interesing things in the material.io website, I tried to use their plugin in the Sketch App by watching a video called Getting Started with Material Theme Editor but not useful at all, then I am following the [Developer Tutorials (Android Java)](https://material.io/collections/developer-tutorials/#android-java) and found some interesting alternatives of EditText with a different design, aswell for Button using a MaterialButton. Tutorial: [Java 101: Android Basics](https://codelabs.developers.google.com/codelabs/mdc-101-java)
+
+**Thoughts:** I did not do the tutorial on Android Studio since it is really simple, and I still have issues with the software.
