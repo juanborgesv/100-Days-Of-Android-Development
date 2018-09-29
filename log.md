@@ -358,4 +358,9 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 ## Day 70: September 27, 2018
 **Today's Progress:** I have seen interesing things in the material.io website, I tried to use their plugin in the Sketch App by watching a video called Getting Started with Material Theme Editor but not useful at all, then I am following the [Developer Tutorials (Android Java)](https://material.io/collections/developer-tutorials/#android-java) and found some interesting alternatives of EditText with a different design, aswell for Button using a MaterialButton. Tutorial: [Java 101: Android Basics](https://codelabs.developers.google.com/codelabs/mdc-101-java)
 
-**Thoughts:** I did not do the tutorial on Android Studio since it is really simple, and I still have issues with the software.
+**Thoughts:** I did not do the tutorial on Android Studio since it is really simple, and I still have issues with the software. Since I can't use Android Studio for now, I will try to learn some design concepts, and watch some tutorials that don't require to use Android Studio or at least they are simple enough and there is no need to do everything that is done in the tutorials.
+
+## Day 71: September 28, 2018
+**Today's Progress:** Today I did the second Developer Tutorial in the material.io website about [Structure and Layout](https://codelabs.developers.google.com/codelabs/mdc-102-java/#0). I learned about how to implement a Navigation Bar and reinforce a bit of how a menu is implemented aswell. Then, I find something that I have notice in others project, a MaterialCardView; a really smooth way to show information.
+
+**Thoughts:** I have three projects in mind, and after doing every Developer Tutorial in the material.io website, I am going to design all those projects. There are a lot of things left to learn and I will try to to my best to learn everything I can without using Android Studio.
