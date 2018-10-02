@@ -57,6 +57,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
     private static final String LOG_TAG = EditorActivity.class.getSimpleName();
 
+    /** Identifier for the pet data loader */
     private static final int EXISTING_PET_LOADER = 0;
 
     /**
