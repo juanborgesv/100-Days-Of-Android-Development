@@ -364,3 +364,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Today I did the second Developer Tutorial in the material.io website about [Structure and Layout](https://codelabs.developers.google.com/codelabs/mdc-102-java/#0). I learned about how to implement a Navigation Bar and reinforce a bit of how a menu is implemented aswell. Then, I find something that I have notice in others project, a MaterialCardView; a really smooth way to show information.
 
 **Thoughts:** I have three projects in mind, and after doing every Developer Tutorial in the material.io website, I am going to design all those projects. There are a lot of things left to learn and I will try to to my best to learn everything I can without using Android Studio.
+
+## Day 72: October 2, 2018
+**Today's Progress:** Lesson 4: Loading Data Using CursorLoader (Android Basics: Data Storage) finished, this means that the Pets App is also finished, implemented the delete method for the MainActivity and EditorActivity, and some methods that prevents the app from crashing!
+
+**Thoughts:** Android Studio was freezing my Mac because RAM problems, there was not more available RAM storage and Android Studio was requesting more causing it to freeze. Really happy to figure it out and almost finish the last course of Android Basics! It is only left to do the final project, the Inventory App.
