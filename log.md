@@ -369,3 +369,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Lesson 4: Loading Data Using CursorLoader (Android Basics: Data Storage) finished, this means that the Pets App is also finished, implemented the delete method for the MainActivity and EditorActivity, and some methods that prevents the app from crashing!
 
 **Thoughts:** Android Studio was freezing my Mac because RAM problems, there was not more available RAM storage and Android Studio was requesting more causing it to freeze. Really happy to figure it out and almost finish the last course of Android Basics! It is only left to do the final project, the Inventory App.
+
+## Day 73: October 3, 2018
+**Today's Progress:** Today I looked some Shop Apps to get an example of how their UI looked, it is quite similar to the Inventory App, despite of being a simple design I got some good ideas. Design the most part of the UI design of the Inventory App and I also did a list of everything my app have to have in order to accomplish the Project Rubric.
+
+**Thoughts:** 
