@@ -374,3 +374,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Today I looked some Shop Apps to get an example of how their UI looked, it is quite similar to the Inventory App, despite of being a simple design I got some good ideas. Design the most part of the UI design of the Inventory App and I also did a list of everything my app have to have in order to accomplish the Project Rubric.
 
 **Thoughts:** 
+
+## Day 74: October 4, 2018
+**Today's Progress:** Days ago I check some tutorials suggested in the Material.io website but I did not do it fully since at that time I could not use Android Studio. Today I did the two tutorials that I did that day, many things learned, and many doubts aswell since the tutorial does not explain every detail.
+
+**Thoughts:** These tutorials are good, you see how good looking you can make your app look, but it explain very generally. If I would rate these courses, I would give them a 5.5/10.
