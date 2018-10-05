@@ -62,6 +62,7 @@ public class ProductEntry {
                 Log.e(TAG, "Error closing the input stream.", exception);
             }
         }
+
         String jsonProductsString = writer.toString();
         Gson gson = new Gson();
         Type productListType = new TypeToken<ArrayList<ProductEntry>>() {

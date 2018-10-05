@@ -54,6 +54,7 @@ public class LoginFragment extends Fragment {
 
         // Snippet from "Navigate to the next Fragment" section goes here.
 
+
         return view;
     }
 
