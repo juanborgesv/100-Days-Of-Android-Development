@@ -9,7 +9,7 @@ It is hard to start learning something new and even harder to develop a habit of
   - [Example 2](https://github.com/LordSomen/100DaysOfML/blob/master/Log.md)
 
 ## Learning resources
-Udacity's courses are a great point of start. Courses are listed ordered from basic to advanced that covers great material about Android Development. As I complete more courses I will be adding more, but for now these should be good for now:
+Udacity's courses are a great point of start. Courses in Android Basics Nanodegree section are ordered from basic to advanced, they cover great material about Android Development. As I complete more courses I will be adding more, but these should be good for now:
 
 ### Android Basics Nanodegree:
 1. [Android Basics: User Interface](https://www.udacity.com/course/android-basics-user-interface--ud834)
@@ -21,8 +21,6 @@ Udacity's courses are a great point of start. Courses are listed ordered from ba
 ### Design:
 6. [Material Design Tutorials](https://material.io/collections/developer-tutorials/#)
 7. [Material Design for Android Developers](https://www.udacity.com/course/material-design-for-android-developers--ud862)
-8. [Mobile Design and Usabilty for Android](https://www.udacity.com/course/mobile-design-and-usability-for-android--ud358)
-9. [UX Design for Mobile Developers](https://www.udacity.com/course/ux-design-for-mobile-developers--ud849)
 
 ### Android Developer Documentation
 [Android Developer Documentation](https://developer.android.com/docs/)
