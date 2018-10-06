@@ -19,9 +19,10 @@ Udacity's courses are a great point of start. Courses are listed ordered from ba
 5. [Android Basics: Data Storage](https://www.udacity.com/course/android-basics-data-storage--ud845)
 
 ### Design:
-6. [Material Design for Android Developers](https://www.udacity.com/course/material-design-for-android-developers--ud862)
-7. [Mobile Design and Usabilty for Android](https://www.udacity.com/course/mobile-design-and-usability-for-android--ud358)
-8. [UX Design for Mobile Developers](https://www.udacity.com/course/ux-design-for-mobile-developers--ud849)
+6. [Material Design Tutorials](https://material.io/collections/developer-tutorials/#)
+7. [Material Design for Android Developers](https://www.udacity.com/course/material-design-for-android-developers--ud862)
+8. [Mobile Design and Usabilty for Android](https://www.udacity.com/course/mobile-design-and-usability-for-android--ud358)
+9. [UX Design for Mobile Developers](https://www.udacity.com/course/ux-design-for-mobile-developers--ud849)
 
 ### Android Developer Documentation
 [Android Developer Documentation](https://developer.android.com/docs/)
