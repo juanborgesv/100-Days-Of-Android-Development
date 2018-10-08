@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margin around the floating action button in CatalogActivity -->
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- -->
+    <dimen name="fab_elevation">22dp</dimen>
+
+    <!-- -->
+    <dimen name="fab_translation">12dp</dimen>
+</resources>
