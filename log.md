@@ -379,3 +379,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Days ago I check some tutorials suggested in the Material.io website but I did not do it fully since at that time I could not use Android Studio. Today I did the two tutorials that I did that day, many things learned, and many doubts aswell since the tutorial does not explain every detail.
 
 **Thoughts:** These tutorials are good, you see how good looking you can make your app look, but it explain very generally. If I would rate these courses, I would give them a 5.5/10.
+
+## Day 75: October 8, 2018
+**Today's Progress:** I saw a lot of posts on stackoverflow to learn how to load an image from the Gallery, and it was more simple than some people thought, using an ImageView method that sets an image from an URI. I modified also the Contract class, in order to set another column in my database to store Strings, this Strings represent the URI that access a product's image stored in the gallery.
+
+**Thoughts:** A lot of work left to do, I did many things despite I did not update the log.md file, because I want to do much more in Android Development and I don't want this challenge to end, but once I finish this I am going to create a respository about logs of Android Development, aswell as Game Development.
