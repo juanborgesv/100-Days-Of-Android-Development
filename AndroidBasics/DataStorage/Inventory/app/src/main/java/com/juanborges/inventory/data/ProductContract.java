@@ -1,5 +1,6 @@
 package com.juanborges.inventory.data;
 
+import android.content.ContentResolver;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
@@ -36,7 +37,53 @@ public final class ProductContract {
      * Each entry in the table represents a single product.
      */
     public static final class ProductEntry implements BaseColumns {
+
         /** The content URI to access the product data in the provider */
         public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_PRODUCTS);
+
+        /**
+         * The MIME type of the {@link #CONTENT_URI} for a list of products.
+         */
+        public static final String CONTENT_LIST_TYPE = ContentResolver.CURSOR_DIR_BASE_TYPE + "/" +
+                CONTENT_AUTHORITY + "/" + PATH_PRODUCTS;
+
+        /** Name of database table for pets */
+        public final static String TABLE_NAME = "products";
+
+        /**
+         * Unique ID number for the product (only for use in the database table).
+         *
+         * Type: INTEGER
+         */
+        public final static String _ID = BaseColumns._ID;
+
+        /**
+         * Name of the product.
+         *
+         * Type: TEXT
+         */
+        public final static String COLUMN_PRODUCT_NAME ="name";
+
+        /**
+         * Quantity of the product.
+         *
+         * Type: INTEGER
+         */
+        public final static String COLUMN_PRODUCT_QUANTITY = "quantity";
+
+        /**
+         * Price of the product.
+         *
+         * Type: REAL
+         */
+        public final static String COLUMN_PRODUCT_PRICE = "price";
+
+        /**
+         * Uri related to the product's image.
+         *
+         * Type: TEXT
+         */
+        public final static String COLUMN_PRODUCT_URI = "uri";
+
     }
 }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.v4.widget.NestedScrollView
+    <!--<android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -15,7 +15,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-    </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.NestedScrollView>-->
+
+    <ImageView
+        android:id="@+id/image_from_gallery"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="16dp"
+        android:background="@android:color/black"
+        android:scaleType="centerCrop"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -27,5 +35,6 @@
         android:src="@drawable/ic_add_white"
         app:elevation="@dimen/fab_elevation"
         app:pressedTranslationZ="@dimen/fab_translation" />
+
 
 </RelativeLayout>
