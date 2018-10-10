@@ -384,3 +384,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** I saw a lot of posts on stackoverflow to learn how to load an image from the Gallery, and it was more simple than some people thought, using an ImageView method that sets an image from an URI. I modified also the Contract class, in order to set another column in my database to store Strings, this Strings represent the URI that access a product's image stored in the gallery.
 
 **Thoughts:** A lot of work left to do, I did many things despite I did not update the log.md file, because I want to do much more in Android Development and I don't want this challenge to end, but once I finish this I am going to create a respository about logs of Android Development, aswell as Game Development.
+
+## Day 76: October 9, 2018
+**Today's Progress:** I implemented the DatabaseHelper class, and checked that the MainActivity creates/reads the database. Created the EditorActivity, change a bit the design that I planned for this activity, and implement every component of it using the InputText and MaterialButton that I learned creating the Shrine app (Material.io Tutorials) and it is looking good so far. Lastly, I created the Appbar menu icons that represent Save/Delete data in the activity.
+
+**Thoughts:** I am very happy with today's work, I spend more time than expected but worth it. I am probably going to change the PrimaryColor of the app.
