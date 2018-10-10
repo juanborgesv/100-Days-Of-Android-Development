@@ -17,13 +17,14 @@
 
     </android.support.v4.widget.NestedScrollView>-->
 
-    <ImageView
-        android:id="@+id/image_from_gallery"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+    <TextView
+        android:id="@+id/db_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        tools:text="HELLO BOY"
         android:layout_margin="16dp"
-        android:background="@android:color/black"
-        android:scaleType="centerCrop"/>
+        />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

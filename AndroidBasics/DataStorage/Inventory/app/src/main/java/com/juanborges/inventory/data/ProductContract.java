@@ -74,7 +74,7 @@ public final class ProductContract {
         /**
          * Price of the product.
          *
-         * Type: REAL
+         * Type: INTEGER
          */
         public final static String COLUMN_PRODUCT_PRICE = "price";
 
@@ -85,5 +85,18 @@ public final class ProductContract {
          */
         public final static String COLUMN_PRODUCT_URI = "uri";
 
+        /**
+         * Name of the product's provider.
+         *
+         * Type: TEXT
+         */
+        public final static String COLUMN_PRODUCT_PROVIDER_NAME = "pname";
+
+        /**
+         * Email of the product's provider.
+         *
+         * Type: TEXT
+         */
+        public final static String COLUMN_PRODUCT_PROVIDER_EMAIL = "pemail";
     }
 }

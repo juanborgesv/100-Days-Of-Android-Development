@@ -4,4 +4,23 @@
 
     <!-- Label for the overflow menu option that deletes all inventory data [CHAR LIMIT=20] -->
     <string name="delete_all">Delete All</string>
+
+    <!-- Label for the overflow menu option that deletes data in editor view [CHAR LIMIT=20] -->
+    <string name="action_delete_title">Delete</string>
+
+    <!-- Label for the overflow menu option that saves data in editor view [CHAR LIMIT=20] -->
+    <string name="action_save_title">Save</string>
+
+    <!-- EditorActivity -->
+    <string name="product_title">Product</string>
+    <string name="supplier_title">Supplier</string>
+    <string name="image_title">Image</string>
+    <string name="quantity_title">Quantity</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_price">Price</string>
+    <string name="hint_email">Email</string>
+
+    <string name="order_more">Order More</string>
+    
+    <string name="zero">0</string>
 </resources>
