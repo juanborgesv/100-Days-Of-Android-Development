@@ -389,3 +389,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** I implemented the DatabaseHelper class, and checked that the MainActivity creates/reads the database. Created the EditorActivity, change a bit the design that I planned for this activity, and implement every component of it using the InputText and MaterialButton that I learned creating the Shrine app (Material.io Tutorials) and it is looking good so far. Lastly, I created the Appbar menu icons that represent Save/Delete data in the activity.
 
 **Thoughts:** I am very happy with today's work, I spend more time than expected but worth it. I am probably going to change the PrimaryColor of the app.
+
+## Day 77: October 11, 2018
+**Today's Progress:** Change the design of the MainActivity, I was going to use a RecyclerView but the course assignment specifies I have to use a ListView, so I also changed the list item design and respectivly created the list_item.xml file. Then I created the Content Provider class and implemented query and insert methods.
+
+**Thoughts:** It is funny how at the first two courses I was used to do a project in a day or two, after the course Android Basics: Multiscreen Apps everything became more complex and projects eventually took longer.
