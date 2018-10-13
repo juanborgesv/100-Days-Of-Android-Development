@@ -394,3 +394,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Change the design of the MainActivity, I was going to use a RecyclerView but the course assignment specifies I have to use a ListView, so I also changed the list item design and respectivly created the list_item.xml file. Then I created the Content Provider class and implemented query and insert methods.
 
 **Thoughts:** It is funny how at the first two courses I was used to do a project in a day or two, after the course Android Basics: Multiscreen Apps everything became more complex and projects eventually took longer.
+
+## Day 78: October 12, 2018
+**Today's Progress:** I sketch the database look and its columns and corresponding datatypes, realized that I had to change the Product Price's datatype and modify the method that creates the database. I created all methods (CRUD) in the Content Provider class, but I have not tested them yet, I should have done and tested one by one. Modify a bit the EditorActivity to check that every component right by doing some logs.
+
+**Thoughts:** I have looked some of the next courses that I am going to make and look really interesting, they are about Firebase, a useful tool by Google to manage different things such as databases.
