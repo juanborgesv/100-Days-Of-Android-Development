@@ -22,7 +22,12 @@ Udacity's courses are a great point of start. Courses in Android Basics Nanodegr
 6. [Material Design Tutorials](https://material.io/collections/developer-tutorials/#)
 7. [Material Design for Android Developers](https://www.udacity.com/course/material-design-for-android-developers--ud862)
 
-### Android Developer Documentation
+### Firebase:
+8. [Firebase in a Weekend: Android](https://www.udacity.com/course/firebase-in-a-weekend-by-google-android--ud0352)
+9. [Firebase Analytics: Android](https://www.udacity.com/course/firebase-analytics-android--ud354)
+10. [Firebase Essentials For Android](https://sa.udacity.com/course/firebase-essentials-for-android--ud009) 
+
+### Android Developer Documentation:
 [Android Developer Documentation](https://developer.android.com/docs/)
 
 ## Download Android Studio
