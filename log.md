@@ -399,3 +399,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** I sketch the database look and its columns and corresponding datatypes, realized that I had to change the Product Price's datatype and modify the method that creates the database. I created all methods (CRUD) in the Content Provider class, but I have not tested them yet, I should have done and tested one by one. Modify a bit the EditorActivity to check that every component right by doing some logs.
 
 **Thoughts:** I have looked some of the next courses that I am going to make and look really interesting, they are about Firebase, a useful tool by Google to manage different things such as databases.
+
+## Day 79: October 13, 2018
+**Today's Progress:** Data is not being saved, and the app crashes when trying to save it. Today I created the method that saves all the data from the editor activity and change the editor activity title depending if it is going to be a new product or update an exting one.
+
+**Thoughts:** As expected, I did a lot of things without testing, this happened to me in the Android Basics: Networking course project and did again, the reason is because I been checking the project done in the course supposing I am doing everything good since that previous project works. So I don't test as much as done in the course, good thing it happens and I realize why and how this is happening.
