@@ -24,11 +24,13 @@
 
         <!-- Product Name -->
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/product_name_text_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_name"
             android:paddingStart="24dp"
-            android:paddingEnd="24dp">
+            android:paddingEnd="24dp"
+            app:errorEnabled="true">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/product_name_edit_text"
@@ -41,11 +43,13 @@
 
         <!-- Product Price -->
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/product_price_text_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_price"
             android:paddingStart="24dp"
-            android:paddingEnd="24dp">
+            android:paddingEnd="24dp"
+            app:errorEnabled="true">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/product_price_edit_text"
@@ -125,11 +129,13 @@
 
         <!-- Supplier Name -->
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/supplier_name_text_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_name"
             android:paddingStart="24dp"
-            android:paddingEnd="24dp">
+            android:paddingEnd="24dp"
+            app:errorEnabled="true">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/supplier_name_edit_text"
@@ -142,11 +148,13 @@
 
         <!-- Supplier Email -->
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/supplier_email_text_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_email"
             android:paddingStart="24dp"
-            android:paddingEnd="24dp">
+            android:paddingEnd="24dp"
+            app:errorEnabled="true">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/supplier_email_edit_text"

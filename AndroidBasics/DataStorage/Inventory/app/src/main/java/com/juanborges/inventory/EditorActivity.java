@@ -1,49 +1,70 @@
 package com.juanborges.inventory;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.design.button.MaterialButton;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.juanborges.inventory.data.ProductContract;
+import com.juanborges.inventory.data.ProductContract.ProductEntry;
 
 public class EditorActivity extends AppCompatActivity {
 
     static final String LOG_TAG = EditorActivity.class.getSimpleName();
     static final int PICK_IMAGE = 1;
 
-    private TextInputEditText productName;
+    private Uri currentUri;
 
-    TextInputEditText productPrice;
+    private TextInputEditText productNameEditText;
 
-    ImageView productImage;
-    String imageUri;
+    private TextInputEditText productPriceEditText;
 
-    TextView productQuantity;
+    private ImageView productImage;
+    private String imageUri;
 
-    TextInputEditText supplierName;
+    private TextView productQuantityEditText;
 
-    TextInputEditText supplierEmail;
+    private TextInputEditText supplierNameEditText;
+
+    private TextInputEditText supplierEmailEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor);
 
-        productName = findViewById(R.id.product_name_edit_text);
-        productPrice = findViewById(R.id.product_price_edit_text);
+        Intent intent = getIntent();
+        currentUri = intent.getData();
+
+        if (currentUri == null) {
+            setTitle(R.string.editor_activity_title_new_product);
+
+            invalidateOptionsMenu();
+        } else {
+            setTitle(R.string.editor_activity_title_edit_product);
+
+            // getLoaderManager().initLoader..........
+        }
+
+
+        productNameEditText = findViewById(R.id.product_name_edit_text);
+        productPriceEditText = findViewById(R.id.product_price_edit_text);
         productImage = findViewById(R.id.product_image);
-        productQuantity = findViewById(R.id.quantity_text);
-        supplierName = findViewById(R.id.supplier_name_edit_text);
-        supplierEmail = findViewById(R.id.supplier_email_edit_text);
+        productQuantityEditText = findViewById(R.id.quantity_text);
+        supplierNameEditText = findViewById(R.id.supplier_name_edit_text);
+        supplierEmailEditText = findViewById(R.id.supplier_email_edit_text);
 
         MaterialButton minusButton = findViewById(R.id.minus_button);
         MaterialButton plusButton = findViewById(R.id.plus_button);
@@ -61,30 +82,27 @@ public class EditorActivity extends AppCompatActivity {
         minusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int quantity = Integer.parseInt(productQuantity.getText().toString());
+                int quantity = Integer.parseInt(productQuantityEditText.getText().toString());
 
                 if (quantity < 1)
                     return;
 
                 --quantity;
 
-                productQuantity.setText(String.valueOf(quantity));
+                productQuantityEditText.setText(String.valueOf(quantity));
             }
         });
 
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int quantity = Integer.parseInt(productQuantity.getText().toString());
+                int quantity = Integer.parseInt(productQuantityEditText.getText().toString());
                 ++quantity;
 
 
-                productQuantity.setText(String.valueOf(quantity));
+                productQuantityEditText.setText(String.valueOf(quantity));
             }
         });
-
-
-
     }
 
     @Override
@@ -112,7 +130,7 @@ public class EditorActivity extends AppCompatActivity {
         if (requestCode == PICK_IMAGE && data != null) {
             try {
                 imageUri = data.getData().toString();
-                Log.i(LOG_TAG, "Picture path: "+ imageUri);
+                Log.i(LOG_TAG, "Picture path: " + imageUri);
                 productImage.setImageURI(data.getData());
             } catch (NullPointerException e) {
                 Log.e(LOG_TAG, "Something went wrong while trying to get image path", e);
@@ -121,16 +139,51 @@ public class EditorActivity extends AppCompatActivity {
     }
 
     private void saveProduct() {
-        Log.i(LOG_TAG, "Product info about to be saved below.");
-        try {
-            Log.i(LOG_TAG, "Product name: " + productName.getText().toString());
-            Log.i(LOG_TAG, "Product price: " + productPrice.getText().toString());
-            Log.i(LOG_TAG, "Product image: " + imageUri);
-            Log.i(LOG_TAG, "Product quantity: " + productQuantity.getText().toString());
-            Log.i(LOG_TAG, "Supplier name: " + supplierName.getText().toString());
-            Log.i(LOG_TAG, "Supplier email: " + supplierEmail.getText().toString());
-        } catch (NullPointerException exception) {
-            Log.e(LOG_TAG, "Something went wrong while saving data.", exception);
+        boolean isAllDataValid = true;
+
+        String productName = productNameEditText.getText().toString().trim();
+        String productPrice = productPriceEditText.getText().toString().trim();
+        String productQuantity = productQuantityEditText.getText().toString().trim();
+        String supplierName = supplierNameEditText.getText().toString().trim();
+        String supplierEmail = supplierEmailEditText.getText().toString().trim();
+
+        if (currentUri == null && TextUtils.isEmpty(productName) && TextUtils.isEmpty(productPrice)
+                && productQuantity == "0" && TextUtils.isEmpty(supplierName)
+                && TextUtils.isEmpty(supplierEmail)) {
+            return;
+        }
+
+        Float price = Float.parseFloat(productPrice);
+        Integer quantity = Integer.parseInt(productQuantity);
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(ProductEntry.COLUMN_PRODUCT_NAME, productName);
+        contentValues.put(ProductEntry.COLUMN_PRODUCT_PRICE, price);
+        contentValues.put(ProductEntry.COLUMN_PRODUCT_URI, imageUri);
+        contentValues.put(ProductEntry.COLUMN_PRODUCT_QUANTITY, quantity);
+        contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME, supplierName);
+        contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL, supplierEmail);
+
+        if (currentUri == null) {
+            Uri newUri = getContentResolver().insert(ProductEntry.CONTENT_URI, contentValues);
+
+            if (newUri == null) {
+                Toast.makeText(this, getString(R.string.editor_insert_product_failed),
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, getString(R.string.editor_insert_product_successful),
+                        Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            int rowsAffected = getContentResolver().update(currentUri, contentValues, null, null);
+
+            if (rowsAffected == 0) {
+                Toast.makeText(this, getString(R.string.editor_update_product_failed),
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, getString(R.string.editor_update_product_successful),
+                        Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }
