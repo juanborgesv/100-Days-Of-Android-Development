@@ -265,6 +265,7 @@ public class PetProvider extends ContentProvider {
 
     /**
      * Returns the MIME type of data for the content URI.
+     * The MIME type is a String that describes the type of the data stored at the input Uri.
      */
     @Override
     public String getType(Uri uri) {
