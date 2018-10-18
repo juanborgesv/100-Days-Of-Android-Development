@@ -50,4 +50,5 @@
     <string name="error_product_image">Product image required.</string>
     <string name="error_supplier_name">Supplier name required.</string>
     <string name="error_supplier_email">Supplier email required.</string>
+    <string name="insert_dummy_data">Insert Dummy Data</string>
 </resources>
