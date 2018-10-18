@@ -404,3 +404,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Data is not being saved, and the app crashes when trying to save it. Today I created the method that saves all the data from the editor activity and change the editor activity title depending if it is going to be a new product or update an exting one.
 
 **Thoughts:** As expected, I did a lot of things without testing, this happened to me in the Android Basics: Networking course project and did again, the reason is because I been checking the project done in the course supposing I am doing everything good since that previous project works. So I don't test as much as done in the course, good thing it happens and I realize why and how this is happening.
+
+## Day 80: October 14, 2018
+**Today's Progress:** Finally the Save Dummy Data option saves a default information and the database is updated accordingly. The problem was that I changed the Database structure but did not implement the onUpgrade Method of the Database Helper class, so it was looking for the a row that did not exist.
+
+**Thoughts:** It is really important that I get these errors while doing the project so I can get as much experience as possible. Got some ideas of future projects to abroad more important things in app development!
