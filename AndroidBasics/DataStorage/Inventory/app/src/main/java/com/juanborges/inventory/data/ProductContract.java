@@ -85,11 +85,11 @@ public final class ProductContract {
         public final static String COLUMN_PRODUCT_PRICE = "price";
 
         /**
-         * Uri related to the product's image.
+         * Uri String related to the product's image.
          *
          * Type: TEXT
          */
-        public final static String COLUMN_PRODUCT_URI = "uri";
+        public final static String COLUMN_PRODUCT_IMAGE = "image";
 
         /**
          * Name of the product's provider.

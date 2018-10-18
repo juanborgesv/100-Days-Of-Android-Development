@@ -126,7 +126,7 @@ public class ProductProvider extends ContentProvider {
         // Data validation
         String productName = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_NAME);
         Float productPrice = contentValues.getAsFloat(ProductEntry.COLUMN_PRODUCT_PRICE);
-        String productImage = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_URI);
+        String productImage = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_IMAGE);
         Integer productQuantity = contentValues.getAsInteger(ProductEntry.COLUMN_PRODUCT_QUANTITY);
         String supplierName = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME);
         String supplierEmail = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL);
@@ -202,8 +202,8 @@ public class ProductProvider extends ContentProvider {
                 throw new IllegalArgumentException("Product requires a valid price");
         }
 
-        if (contentValues.containsKey(ProductEntry.COLUMN_PRODUCT_URI)) {
-            String productImage = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_URI);
+        if (contentValues.containsKey(ProductEntry.COLUMN_PRODUCT_IMAGE)) {
+            String productImage = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_IMAGE);
             if (productImage == null)
                 throw new IllegalArgumentException("Product requires an image");
         }

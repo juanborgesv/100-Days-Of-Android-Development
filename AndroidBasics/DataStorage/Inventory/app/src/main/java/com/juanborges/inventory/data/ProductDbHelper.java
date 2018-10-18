@@ -3,7 +3,10 @@ package com.juanborges.inventory.data;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+import android.widget.Toast;
 
+import com.juanborges.inventory.MainActivity;
 import com.juanborges.inventory.data.ProductContract.ProductEntry;
 
 /**
@@ -17,7 +20,7 @@ public class ProductDbHelper extends SQLiteOpenHelper {
     /**
      * Database version. If you change the database schema, you must increment the database version.
      */
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     /**
      * Constructs a new instance of {@link ProductDbHelper}.
@@ -38,7 +41,7 @@ public class ProductDbHelper extends SQLiteOpenHelper {
                 ProductEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 ProductEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL, " +
                 ProductEntry.COLUMN_PRODUCT_PRICE + " REAL NOT NULL, " +
-                ProductEntry.COLUMN_PRODUCT_URI + "TEXT NOT NULL," +
+                ProductEntry.COLUMN_PRODUCT_IMAGE + " TEXT NOT NULL, " +
                 ProductEntry.COLUMN_PRODUCT_QUANTITY + " INTEGER NOT NULL DEFAULT 0, " +
                 ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME + " TEXT NOT NULL, " +
                 ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL + " TEXT NOT NULL);";
@@ -52,6 +55,7 @@ public class ProductDbHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        // The database is still at version 1, so there's nothing to do be done here.
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ ProductEntry.TABLE_NAME);
+        onCreate(sqLiteDatabase);
     }
 }
