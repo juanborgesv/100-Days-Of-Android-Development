@@ -159,7 +159,7 @@ public class EditorActivity extends AppCompatActivity {
         ContentValues contentValues = new ContentValues();
         contentValues.put(ProductEntry.COLUMN_PRODUCT_NAME, productName);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_PRICE, price);
-        contentValues.put(ProductEntry.COLUMN_PRODUCT_URI, imageUri);
+        contentValues.put(ProductEntry.COLUMN_PRODUCT_IMAGE, imageUri);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_QUANTITY, quantity);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME, supplierName);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL, supplierEmail);
