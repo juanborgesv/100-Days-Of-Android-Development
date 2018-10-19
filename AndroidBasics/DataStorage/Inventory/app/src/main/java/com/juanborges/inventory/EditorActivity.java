@@ -164,26 +164,6 @@ public class EditorActivity extends AppCompatActivity {
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME, supplierName);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL, supplierEmail);
 
-        if (currentUri == null) {
-            Uri newUri = getContentResolver().insert(ProductEntry.CONTENT_URI, contentValues);
 
-            if (newUri == null) {
-                Toast.makeText(this, getString(R.string.editor_insert_product_failed),
-                        Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, getString(R.string.editor_insert_product_successful),
-                        Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            int rowsAffected = getContentResolver().update(currentUri, contentValues, null, null);
-
-            if (rowsAffected == 0) {
-                Toast.makeText(this, getString(R.string.editor_update_product_failed),
-                        Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, getString(R.string.editor_update_product_successful),
-                        Toast.LENGTH_SHORT).show();
-            }
-        }
     }
 }
