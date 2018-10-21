@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.design.button.MaterialButton;
 import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -20,6 +21,8 @@ import android.widget.Toast;
 import com.juanborges.inventory.data.ProductContract;
 import com.juanborges.inventory.data.ProductContract.ProductEntry;
 
+import org.w3c.dom.Text;
+
 public class EditorActivity extends AppCompatActivity {
 
     static final String LOG_TAG = EditorActivity.class.getSimpleName();
@@ -28,8 +31,10 @@ public class EditorActivity extends AppCompatActivity {
     private Uri currentUri;
 
     private TextInputEditText productNameEditText;
+    private TextInputLayout productNameInput;
 
     private TextInputEditText productPriceEditText;
+    private TextInputLayout productPriceInput;
 
     private ImageView productImage;
     private String imageUri;
@@ -37,8 +42,10 @@ public class EditorActivity extends AppCompatActivity {
     private TextView productQuantityEditText;
 
     private TextInputEditText supplierNameEditText;
+    private TextInputLayout supplierNameInput;
 
     private TextInputEditText supplierEmailEditText;
+    private TextInputLayout supplierEmailInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,13 +65,16 @@ public class EditorActivity extends AppCompatActivity {
             // getLoaderManager().initLoader..........
         }
 
-
         productNameEditText = findViewById(R.id.product_name_edit_text);
+        productNameInput = findViewById(R.id.product_name_text_input);
         productPriceEditText = findViewById(R.id.product_price_edit_text);
+        productPriceInput = findViewById(R.id.product_price_text_input);
         productImage = findViewById(R.id.product_image);
         productQuantityEditText = findViewById(R.id.quantity_text);
         supplierNameEditText = findViewById(R.id.supplier_name_edit_text);
+        supplierNameInput = findViewById(R.id.supplier_name_text_input);
         supplierEmailEditText = findViewById(R.id.supplier_email_edit_text);
+        supplierEmailInput = findViewById(R.id.supplier_email_text_input);
 
         MaterialButton minusButton = findViewById(R.id.minus_button);
         MaterialButton plusButton = findViewById(R.id.plus_button);
@@ -99,7 +109,6 @@ public class EditorActivity extends AppCompatActivity {
                 int quantity = Integer.parseInt(productQuantityEditText.getText().toString());
                 ++quantity;
 
-
                 productQuantityEditText.setText(String.valueOf(quantity));
             }
         });
@@ -116,7 +125,6 @@ public class EditorActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_save:
                 saveProduct();
-                finish();
                 return true;
             case R.id.action_delete:
                 return true;
@@ -139,7 +147,8 @@ public class EditorActivity extends AppCompatActivity {
     }
 
     private void saveProduct() {
-        boolean isAllDataValid = true;
+
+        boolean isAtLeastOneEmpty = false;
 
         String productName = productNameEditText.getText().toString().trim();
         String productPrice = productPriceEditText.getText().toString().trim();
@@ -147,15 +156,51 @@ public class EditorActivity extends AppCompatActivity {
         String supplierName = supplierNameEditText.getText().toString().trim();
         String supplierEmail = supplierEmailEditText.getText().toString().trim();
 
+        // If it is a new product and there is not even one
+        // data specified, finish the activity.
         if (currentUri == null && TextUtils.isEmpty(productName) && TextUtils.isEmpty(productPrice)
                 && productQuantity == "0" && TextUtils.isEmpty(supplierName)
                 && TextUtils.isEmpty(supplierEmail)) {
             return;
         }
 
-        Float price = Float.parseFloat(productPrice);
+        if (TextUtils.isEmpty(productName)) {
+            isAtLeastOneEmpty = true;
+            productNameInput.setError(getString(R.string.error_product_name));
+        } else {
+            productNameInput.setError(null);
+        }
+
+        float price = 0f;
+        if (TextUtils.isEmpty(productPrice)) {
+            isAtLeastOneEmpty = true;
+            productPriceInput.setError(getString(R.string.error_product_price));
+        } else {
+            productPriceInput.setError(null);
+            price = Float.parseFloat(productPrice);
+        }
+
+        if (TextUtils.isEmpty(supplierName)) {
+            isAtLeastOneEmpty = true;
+            supplierNameInput.setError(getString(R.string.error_supplier_name));
+        } else {
+            supplierNameInput.setError(null);
+        }
+
+        if (TextUtils.isEmpty(supplierEmail)) {
+            isAtLeastOneEmpty = true;
+            supplierEmailInput.setError(getString(R.string.error_supplier_email));
+        } else {
+            supplierEmailInput.setError(null);
+        }
+
+        if (isAtLeastOneEmpty)
+            return;
+
         Integer quantity = Integer.parseInt(productQuantity);
 
+
+        Log.i(LOG_TAG, "Before contentvalues");
         ContentValues contentValues = new ContentValues();
         contentValues.put(ProductEntry.COLUMN_PRODUCT_NAME, productName);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_PRICE, price);
@@ -164,6 +209,6 @@ public class EditorActivity extends AppCompatActivity {
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME, supplierName);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL, supplierEmail);
 
-
+        finish();
     }
 }
