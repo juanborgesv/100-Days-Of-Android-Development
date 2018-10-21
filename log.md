@@ -414,3 +414,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** EditorActivity modified, it checks properly that everything is correct before saving data. Still getting an error while trying to get the product's price.
 
 **Thoughts:**
+
+## Day 81: October 20, 2018
+**Today's Progress:** EditorActivity saves properly the information in the database and the MainActivity updates the database info using the onStart method
+
+**Thoughts:**
