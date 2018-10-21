@@ -409,3 +409,13 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Finally the Save Dummy Data option saves a default information and the database is updated accordingly. The problem was that I changed the Database structure but did not implement the onUpgrade Method of the Database Helper class, so it was looking for the a row that did not exist.
 
 **Thoughts:** It is really important that I get these errors while doing the project so I can get as much experience as possible. Got some ideas of future projects to abroad more important things in app development!
+
+## Day 81: October 19, 2018
+**Today's Progress:** EditorActivity modified, it checks properly that everything is correct before saving data. Still getting an error while trying to get the product's price.
+
+**Thoughts:**
+
+## Day 81: October 20, 2018
+**Today's Progress:** EditorActivity saves properly the information in the database and the MainActivity updates the database info using the onStart method
+
+**Thoughts:**
