@@ -413,9 +413,14 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 ## Day 81: October 19, 2018
 **Today's Progress:** EditorActivity modified, it checks properly that everything is correct before saving data. Still getting an error while trying to get the product's price.
 
-**Thoughts:**
+**Thoughts:** There are several errors, an error when the price is null and try to save it or go to the previous Activity it crashes, when the save button is clicked it checks that every EditText required has information but it does not save and crashes.
 
 ## Day 81: October 20, 2018
-**Today's Progress:** EditorActivity saves properly the information in the database and the MainActivity updates the database info using the onStart method
+**Today's Progress:** Learned the difference between using TextUtils.isEmpty or String.isEmpty, and why TextUtils.isEmpty is better. Fix the errors that I had yesterday, I was doing Float.parseFloat(var) to an empty String. The other error was fixed "magically", I did several stuff and suddenly the EditorActivity saved the data properly.
 
-**Thoughts:**
+**Thoughts:** I have a lot of things to comment in my code, sometimes the code it is clear enough that variable names and method names talk for themselves that I don't want to comment them, despite of that I will do it, I believe it is always important to have a well commented code.
+
+## Day 82: October 21, 2018
+**Today's Progress:** I forgot some important concepts learned in the course, so I went back and do a little recap about what is a ContentResolver, how does it comunicates from any app to a cetain database, and why is it used to set notification and notifies when a database changes after updating, deleting or inserting. Also recap about what is a URI, how is it structured.
+
+**Thoughts:** After today's recap I felt really good, because I understood things that weren't that clear when I first saw them. I feel like I am doing the course for the second time but doing a different project, and it is true; in order to implement well a database to an app, it is good to complete every phase and test it, so it does not happen what I did (implementing everything and test at the end).
