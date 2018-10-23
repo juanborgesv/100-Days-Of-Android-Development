@@ -2,6 +2,7 @@ package com.juanborges.inventory;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.design.button.MaterialButton;
@@ -9,6 +10,7 @@ import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.LoginFilter;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -20,6 +22,7 @@ import android.widget.Toast;
 
 import com.juanborges.inventory.data.ProductContract;
 import com.juanborges.inventory.data.ProductContract.ProductEntry;
+import com.juanborges.inventory.data.ProductDbHelper;
 
 import org.w3c.dom.Text;
 
@@ -159,8 +162,9 @@ public class EditorActivity extends AppCompatActivity {
         // If it is a new product and there is not even one
         // data specified, finish the activity.
         if (currentUri == null && TextUtils.isEmpty(productName) && TextUtils.isEmpty(productPrice)
-                && productQuantity == "0" && TextUtils.isEmpty(supplierName)
+                && productQuantity.equals("0") && TextUtils.isEmpty(supplierName)
                 && TextUtils.isEmpty(supplierEmail)) {
+            finish();
             return;
         }
 
@@ -199,8 +203,6 @@ public class EditorActivity extends AppCompatActivity {
 
         Integer quantity = Integer.parseInt(productQuantity);
 
-
-        Log.i(LOG_TAG, "Before contentvalues");
         ContentValues contentValues = new ContentValues();
         contentValues.put(ProductEntry.COLUMN_PRODUCT_NAME, productName);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_PRICE, price);
@@ -208,6 +210,10 @@ public class EditorActivity extends AppCompatActivity {
         contentValues.put(ProductEntry.COLUMN_PRODUCT_QUANTITY, quantity);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME, supplierName);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL, supplierEmail);
+
+        ProductDbHelper dbHelper = new ProductDbHelper(this);
+        SQLiteDatabase database = dbHelper.getWritableDatabase();
+        database.insert(ProductEntry.TABLE_NAME, null, contentValues);
 
         finish();
     }

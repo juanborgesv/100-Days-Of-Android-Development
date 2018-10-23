@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,15 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
     final static String LOG_TAG = MainActivity.class.getSimpleName();
 
+    ProductCursorAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        if (deleteDatabase("products.db"))
-            Log.e(LOG_TAG, "TRUE");
-        else
-            Log.e(LOG_TAG, "FALSE");
 
         FloatingActionButton fab = findViewById(R.id.fab);
 
@@ -41,6 +39,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ListView listView = findViewById(R.id.list);
+
+        adapter = new ProductCursorAdapter(this, null);
+        listView.setAdapter(adapter);
+
+        displayDatabaseInfo();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         displayDatabaseInfo();
     }
 
@@ -62,8 +71,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             // Display the number of rows in the Cursor (which reflects the number of rows in the
             // pets table in the database).
-            TextView displayView = (TextView) findViewById(R.id.db_text_view);
-            displayView.setText("Rows in database table: " + cursor.getCount());
+            Log.i(LOG_TAG, "Rows in database table: " + cursor.getCount());
         } finally {
             // Always close the cursor when you're done reading from it. This releases all its
             // resources and makes it invalid.
@@ -104,22 +112,6 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase database = dbHelper.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
-
-        /*String productName = "BLU R1 HD";
-        Float productPrice = 104.99f;
-        String productImage = "content://com.android.providers.media.documents/document/image%3A419678";
-        Integer productQuantity = 5;
-        String supplierName = "Lucas";
-        String supplierEmail = "lucas@gmail.com";
-
-        contentValues.put(ProductEntry.COLUMN_PRODUCT_NAME, productName);
-        contentValues.put(ProductEntry.COLUMN_PRODUCT_PRICE, productPrice);
-        contentValues.put(ProductEntry.COLUMN_PRODUCT_URI, productImage);
-        contentValues.put(ProductEntry.COLUMN_PRODUCT_QUANTITY, productQuantity);
-        contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME, supplierName);
-        contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL, supplierEmail);
-
-        long newRowId = database.insert(ProductEntry.TABLE_NAME, null, contentValues);*/
 
         contentValues.put(ProductEntry.COLUMN_PRODUCT_NAME, "BLU R1 HD");
         contentValues.put(ProductEntry.COLUMN_PRODUCT_PRICE, 9.99f);
