@@ -424,3 +424,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** I forgot some important concepts learned in the course, so I went back and do a little recap about what is a ContentResolver, how does it comunicates from any app to a cetain database, and why is it used to set notification and notifies when a database changes after updating, deleting or inserting. Also recap about what is a URI, how is it structured.
 
 **Thoughts:** After today's recap I felt really good, because I understood things that weren't that clear when I first saw them. I feel like I am doing the course for the second time but doing a different project, and it is true; in order to implement well a database to an app, it is good to complete every phase and test it, so it does not happen what I did (implementing everything and test at the end).
+
+## Day 83: October 22, 2018
+**Today's Progress:** I fix a little things in the MainActivity and EditorActivity, some stuff deleted not useful anymore, before the MainActivity show a TextView that indicates the rows in the database but now that information is being logged. Created the CursorAdapater for the Inventory App aswell, the class that shows the information in the MainActivity ListView.
+
+**Thoughts:** Can't believe all that I have progressed since the first idea, I loved this initiative and I hope to keep doing it to learn more things!
