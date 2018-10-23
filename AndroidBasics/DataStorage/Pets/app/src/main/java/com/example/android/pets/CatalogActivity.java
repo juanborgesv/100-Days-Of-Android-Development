@@ -43,7 +43,7 @@ import com.example.android.pets.data.PetContract.PetEntry;
  */
 public class CatalogActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
-    private static final String LOG_TAG = CatalogActivity.class.getSimpleName();
+    //private static final String LOG_TAG = CatalogActivity.class.getSimpleName();
 
     /** Identifier for the pet data loader */
     private static final int PET_LOADER =  0;
