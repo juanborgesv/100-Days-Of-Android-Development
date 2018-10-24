@@ -62,15 +62,17 @@ public class ProductProvider extends ContentProvider {
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs,
                         String sortOrder) {
+        Log.i(LOG_TAG, "QUERYING");
 
         SQLiteDatabase database = dbHelper.getReadableDatabase();
 
-        Cursor cursor = null;
+        Cursor cursor;
 
         int match = uriMatcher.match(uri);
 
         switch (match) {
             case PRODUCTS:
+                Log.i(LOG_TAG, "PRODUCTS MATCHED");
                 cursor = database.query(
                         ProductEntry.TABLE_NAME,
                         projection,
@@ -81,6 +83,7 @@ public class ProductProvider extends ContentProvider {
                         sortOrder);
                 break;
             case PRODUCT_ID:
+                Log.i(LOG_TAG, "PRODUCT_ID MATCHED");
                 // ??
                 selection = ProductEntry._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
@@ -95,6 +98,7 @@ public class ProductProvider extends ContentProvider {
                         sortOrder);
                 break;
             default:
+                Log.i(LOG_TAG, "NOTHING MATCHED");
                 throw new IllegalArgumentException("Cannot query unknown URI " + uri);
         }
 
@@ -109,13 +113,14 @@ public class ProductProvider extends ContentProvider {
      */
     @Override
     public Uri insert(Uri uri, ContentValues contentValues) {
-        final int match = uriMatcher.match(uri);
+       /* final int match = uriMatcher.match(uri);
         switch (match) {
             case PRODUCTS:
                 return insertProduct(uri, contentValues);
             default:
                 throw new IllegalArgumentException("Insertion is not supported for " + uri);
-        }
+        }*/
+       return null;
     }
 
     /**
@@ -123,6 +128,7 @@ public class ProductProvider extends ContentProvider {
      * Return the new content URI for that specific row in the database.
      */
     private Uri insertProduct(Uri uri, ContentValues contentValues) {
+        /*
         // Data validation
         String productName = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_NAME);
         Float productPrice = contentValues.getAsFloat(ProductEntry.COLUMN_PRODUCT_PRICE);
@@ -159,7 +165,9 @@ public class ProductProvider extends ContentProvider {
 
         // Once we know the ID of the new row in the table,
         // return the new URI with the ID appended to the end of it
-        return ContentUris.withAppendedId(uri, id);
+        return ContentUris.withAppendedId(uri, id);*/
+
+        return null;
     }
 
     /**
@@ -167,7 +175,7 @@ public class ProductProvider extends ContentProvider {
      */
     @Override
     public int update(Uri uri, ContentValues contentValues, String selection, String[] selectionArgs) {
-        final int match = uriMatcher.match(uri);
+        /*final int match = uriMatcher.match(uri);
         switch (match) {
             case PRODUCTS:
                 return updateProduct(uri, contentValues, selection, selectionArgs);
@@ -177,7 +185,9 @@ public class ProductProvider extends ContentProvider {
                 return updateProduct(uri, contentValues, selection, selectionArgs);
             default:
                 throw new IllegalArgumentException("Update is not supported for " + uri);
-        }
+        }*/
+
+        return 0;
     }
 
     /**
@@ -186,7 +196,7 @@ public class ProductProvider extends ContentProvider {
      * Return the number of rows that were successfully updated.
      */
     private int updateProduct(Uri uri, ContentValues contentValues, String selection, String[] selectionArgs) {
-        // If there are no values to update, then don't try to update the database
+        /*// If there are no values to update, then don't try to update the database
         if (contentValues.size() == 0)
             return 0;
 
@@ -234,12 +244,12 @@ public class ProductProvider extends ContentProvider {
         if (rowsUpdated != 0)
             getContext().getContentResolver().notifyChange(uri, null);
 
-        return rowsUpdated;
+        return rowsUpdated;*/ return 0;
     }
 
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
-        SQLiteDatabase database = dbHelper.getWritableDatabase();
+        /*SQLiteDatabase database = dbHelper.getWritableDatabase();
 
         int rowsDeleted = 0;
 
@@ -264,7 +274,9 @@ public class ProductProvider extends ContentProvider {
             getContext().getContentResolver().notifyChange(uri, null);
         }
         // Return the number of rows deleted
-        return rowsDeleted;
+        return rowsDeleted;*/
+
+        return 0;
     }
 
     /**
@@ -272,6 +284,7 @@ public class ProductProvider extends ContentProvider {
      */
     @Override
     public String getType(Uri uri) {
+        /*
         final int match = uriMatcher.match(uri);
         switch (match) {
             case PRODUCTS:
@@ -280,6 +293,7 @@ public class ProductProvider extends ContentProvider {
                 return ProductEntry.CONTENT_ITEM_TYPE;
             default:
                 throw new IllegalStateException("Unknown URI " + uri + " with match " + match);
-        }
+        }*/
+        return null;
     }
 }
