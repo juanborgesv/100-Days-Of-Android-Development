@@ -431,6 +431,6 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Thoughts:** Can't believe all that I have progressed since the first idea, I loved this initiative and I hope to keep doing it to learn more things!
 
 ## Day 84: October 23, 2018
-**Today's Progress:** ContentProvider query method tested, and 
+**Today's Progress:** ContentProvider query method tested by modifying the MainActivity class and logging the data fetched by the cursor. The app crashed a couples times before testing it succesfully but it finally worked well.
 
-**Thoughts:** Can't believe all that I have progressed since the first idea, I loved this initiative and I hope to keep doing it to learn more things!
+**Thoughts:** I thought it would be less complicated to test this kind of things, I guess it is because of the way I did the project, I don't know if everytime I do a project related to database I have to do so many steps but I believe it should be done no matter what.
