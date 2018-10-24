@@ -429,3 +429,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** I fix a little things in the MainActivity and EditorActivity, some stuff deleted not useful anymore, before the MainActivity show a TextView that indicates the rows in the database but now that information is being logged. Created the CursorAdapater for the Inventory App aswell, the class that shows the information in the MainActivity ListView.
 
 **Thoughts:** Can't believe all that I have progressed since the first idea, I loved this initiative and I hope to keep doing it to learn more things!
+
+## Day 84: October 23, 2018
+**Today's Progress:** ContentProvider query method tested, and 
+
+**Thoughts:** Can't believe all that I have progressed since the first idea, I loved this initiative and I hope to keep doing it to learn more things!
