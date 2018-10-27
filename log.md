@@ -434,3 +434,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** ContentProvider query method tested by modifying the MainActivity class and logging the data fetched by the cursor. The app crashed a couples times before testing it succesfully but it finally worked well.
 
 **Thoughts:** I thought it would be less complicated to test this kind of things, I guess it is because of the way I did the project, I don't know if everytime I do a project related to database I have to do so many steps but I believe it should be done no matter what.
+
+## Day 85: October 26, 2018
+**Today's Progress:** Unfortunately I could not do much today, I got the same error as before, the problem is with the LoaderManager, it does not even do the query, i don't know if it is because the version of Loader and LoaderManager are deprecated or something else. There is no hint in Logs that tells me why the app is crashing. I tried to use the no-deprecated version of Loader and LoaderManager but could not get it working or even running. 
+
+**Thoughts:** There is something I really want to do, the problem is that I am going to the whole project again. I have never used the github branches and this is a great opportunity to have every version of the project well organized.
