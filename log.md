@@ -429,3 +429,18 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** I fix a little things in the MainActivity and EditorActivity, some stuff deleted not useful anymore, before the MainActivity show a TextView that indicates the rows in the database but now that information is being logged. Created the CursorAdapater for the Inventory App aswell, the class that shows the information in the MainActivity ListView.
 
 **Thoughts:** Can't believe all that I have progressed since the first idea, I loved this initiative and I hope to keep doing it to learn more things!
+
+## Day 84: October 23, 2018
+**Today's Progress:** ContentProvider query method tested by modifying the MainActivity class and logging the data fetched by the cursor. The app crashed a couples times before testing it succesfully but it finally worked well.
+
+**Thoughts:** I thought it would be less complicated to test this kind of things, I guess it is because of the way I did the project, I don't know if everytime I do a project related to database I have to do so many steps but I believe it should be done no matter what.
+
+## Day 85: October 26, 2018
+**Today's Progress:** Unfortunately I could not do much today, I got the same error as before, the problem is with the LoaderManager, it does not even do the query, i don't know if it is because the version of Loader and LoaderManager are deprecated or something else. There is no hint in Logs that tells me why the app is crashing. I tried to use the no-deprecated version of Loader and LoaderManager but could not get it working or even running. 
+
+**Thoughts:** There is something I really want to do, the problem is that I am going to the whole project again. I have never used the github branches and this is a great opportunity to have every version of the project well organized.
+
+## Day 86: October 27, 2018
+**Today's Progress:** Today I update Android Studio and other new stuff that came out. I noticed that getLoaderManager is deprecated and checked [this stackoverflow post](https://stackoverflow.com/questions/51408098/what-is-the-appropriate-replacer-of-deprecated-getsupportloadermanager) that talks about a solution, one either using LoaderManager.getInstance(this).initLoader(...) (LoaderManager v4) or using a new thing called [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) and [LiveData](https://developer.android.com/topic/libraries/architecture/livedata). Then I found [this](https://www.reddit.com/r/androiddev/comments/7kp9nl/does_livedata_and_viewmodel_replace_cursorloaders/) post on Reddit that talks about this subject.
+
+**Thoughts:** Udacity's Android Basics courses are a great point of start since it has really good content and builds a android development base. Instead of being upset that those videos are not totally updated with the latest methods, I am actually very excited to learn this new things. I have planned to have different version of the app, the one used in the course, the other using RecyclerView that replaces ListViews, and the other using ViewModel and LiveData.
