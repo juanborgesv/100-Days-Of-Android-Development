@@ -1,13 +1,14 @@
 package com.juanborges.inventory;
 
-import android.app.LoaderManager;
 import android.content.ContentValues;
-import android.content.CursorLoader;
 import android.content.Intent;
-import android.content.Loader;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,12 +21,11 @@ import android.widget.Toast;
 import com.juanborges.inventory.data.ProductContract.ProductEntry;
 import com.juanborges.inventory.data.ProductDbHelper;
 
-public class MainActivity extends AppCompatActivity/* implements LoaderManager.LoaderCallbacks<Cursor> */{
+public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private final static String LOG_TAG = MainActivity.class.getSimpleName();
 
     private final static int PRODUCT_LOADER = 0;
-
     ProductCursorAdapter adapter;
 
     @Override
@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity/* implements LoaderManager.L
         displayDatabaseInfo();
 
         //getLoaderManager().initLoader(PRODUCT_LOADER, null, this);
+        LoaderManager.getInstance(this).initLoader(PRODUCT_LOADER, null, this);
     }
 
     @Override
@@ -115,7 +116,7 @@ public class MainActivity extends AppCompatActivity/* implements LoaderManager.L
                                 quantity);
             }
         } finally {
-            cursor.close();
+                cursor.close();
         }
     }
 
@@ -163,14 +164,13 @@ public class MainActivity extends AppCompatActivity/* implements LoaderManager.L
         long newRowId = database.insert(ProductEntry.TABLE_NAME, null, contentValues);
     }
 
-
-   /* @Override
+    @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         String[] projection = {
                 ProductEntry._ID,
                 ProductEntry.COLUMN_PRODUCT_NAME,
                 ProductEntry.COLUMN_PRODUCT_PRICE,
-                ProductEntry.COLUMN_PRODUCT_QUANTITY
+                ProductEntry.COLUMN_PRODUCT_QUANTITY,
         };
 
         return new CursorLoader(
@@ -183,12 +183,12 @@ public class MainActivity extends AppCompatActivity/* implements LoaderManager.L
     }
 
     @Override
-    public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
+    public void onLoadFinished(@NonNull android.support.v4.content.Loader<Cursor> loader, Cursor cursor) {
         adapter.swapCursor(cursor);
     }
 
     @Override
-    public void onLoaderReset(Loader<Cursor> loader) {
+    public void onLoaderReset(@NonNull android.support.v4.content.Loader<Cursor> loader) {
         adapter.swapCursor(null);
-    }*/
+    }
 }
