@@ -3,21 +3,19 @@ package com.juanborges.inventory;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
+import android.support.v4.widget.CursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.juanborges.inventory.data.ProductContract.ProductEntry;
 
 public class ProductCursorAdapter extends CursorAdapter {
-
     public ProductCursorAdapter(Context context, Cursor cursor) {
         super(context, cursor, 0);
     }
-
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
@@ -26,7 +24,6 @@ public class ProductCursorAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-
         TextView nameTextView = view.findViewById(R.id.name);
         TextView priceTextView = view.findViewById(R.id.price);
         ImageView imageView = view.findViewById(R.id.image);
@@ -39,12 +36,14 @@ public class ProductCursorAdapter extends CursorAdapter {
 
         String name = cursor.getString(nameColumnIndex);
         float price = cursor.getFloat(priceColumnIndex);
-        String imageUri = cursor.getString(imageColumnIndex);
+        String mImageUri = cursor.getString(imageColumnIndex);
+        Uri imageUri = Uri.parse(mImageUri);
         int quantity = cursor.getInt(quantityColumnIndex);
 
         nameTextView.setText(name);
         priceTextView.setText(String.valueOf(price));
-        imageView.setImageURI(Uri.parse(imageUri));
+        imageView.setImageURI(null);
+        imageView.setImageURI(imageUri);
         quantityTextView.setText(String.valueOf(quantity));
     }
 }

@@ -48,16 +48,15 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         adapter = new ProductCursorAdapter(this, null);
         listView.setAdapter(adapter);
 
-        displayDatabaseInfo();
+        //displayDatabaseInfo();
 
-        //getLoaderManager().initLoader(PRODUCT_LOADER, null, this);
         LoaderManager.getInstance(this).initLoader(PRODUCT_LOADER, null, this);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        displayDatabaseInfo();
+        //displayDatabaseInfo();
     }
 
     /**
@@ -134,11 +133,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 break;
             case R.id.action_insert_dummy_data:
                 insertProduct();
-                displayDatabaseInfo();
+                //displayDatabaseInfo();
                 break;
         }
-        
-        
+
         if (item.getItemId() == R.id.action_delete_all) {
             // TODO: Delete all data in the database.
             Toast.makeText(this, "Delete All", Toast.LENGTH_SHORT).show();
@@ -156,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         contentValues.put(ProductEntry.COLUMN_PRODUCT_NAME, "BLU R1 HD");
         contentValues.put(ProductEntry.COLUMN_PRODUCT_PRICE, 9.99f);
-        contentValues.put(ProductEntry.COLUMN_PRODUCT_IMAGE, "content://com.android.providers.media.documents/document/image%3A419678");
+        contentValues.put(ProductEntry.COLUMN_PRODUCT_IMAGE, "content://com.android.providers.media.documents/document/image%3A428112");
         contentValues.put(ProductEntry.COLUMN_PRODUCT_QUANTITY, 2);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME, "Lucas");
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL, "lucas59@gmail.com");
@@ -170,9 +168,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 ProductEntry._ID,
                 ProductEntry.COLUMN_PRODUCT_NAME,
                 ProductEntry.COLUMN_PRODUCT_PRICE,
+                ProductEntry.COLUMN_PRODUCT_IMAGE,
                 ProductEntry.COLUMN_PRODUCT_QUANTITY,
         };
 
+        Log.i(LOG_TAG, "BEFORE CONTENTLOADER");
         return new CursorLoader(
                 this,
                 ProductEntry.CONTENT_URI,
@@ -183,12 +183,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     @Override
-    public void onLoadFinished(@NonNull android.support.v4.content.Loader<Cursor> loader, Cursor cursor) {
+    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor cursor) {
         adapter.swapCursor(cursor);
     }
 
     @Override
-    public void onLoaderReset(@NonNull android.support.v4.content.Loader<Cursor> loader) {
+    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
         adapter.swapCursor(null);
     }
 }

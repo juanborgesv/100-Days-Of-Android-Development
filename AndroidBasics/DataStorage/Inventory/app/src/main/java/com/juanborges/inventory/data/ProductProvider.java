@@ -7,9 +7,6 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import android.os.Bundle;
-import android.os.CancellationSignal;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.juanborges.inventory.data.ProductContract.ProductEntry;
@@ -46,6 +43,7 @@ public class ProductProvider extends ContentProvider {
         // should recognize. All paths added to the UriMatcher have a corresponding code to return
         // when a match is found.
         uriMatcher.addURI(ProductContract.CONTENT_AUTHORITY, ProductContract.PATH_PRODUCTS, PRODUCTS);
+
         uriMatcher.addURI(ProductContract.CONTENT_AUTHORITY, ProductContract.PATH_PRODUCTS + "/#", PRODUCT_ID);
     }
 
@@ -66,7 +64,7 @@ public class ProductProvider extends ContentProvider {
 
         SQLiteDatabase database = dbHelper.getReadableDatabase();
 
-        Cursor cursor;
+        Cursor cursor = null;
 
         int match = uriMatcher.match(uri);
 
@@ -81,6 +79,7 @@ public class ProductProvider extends ContentProvider {
                         null,
                         null,
                         sortOrder);
+                Log.i(LOG_TAG, "AFTER DATABASE.PRODUCTS QUERY ");
                 break;
             case PRODUCT_ID:
                 Log.i(LOG_TAG, "PRODUCT_ID MATCHED");

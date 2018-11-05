@@ -82,6 +82,9 @@ public class EditorActivity extends AppCompatActivity {
         MaterialButton minusButton = findViewById(R.id.minus_button);
         MaterialButton plusButton = findViewById(R.id.plus_button);
 
+        productImage.setImageURI(null);
+        productImage.setImageURI(Uri.parse("content://com.android.providers.media.documents/document/image%3A428112"));
+
         productImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -142,7 +145,7 @@ public class EditorActivity extends AppCompatActivity {
             try {
                 imageUri = data.getData().toString();
                 Log.i(LOG_TAG, "Picture path: " + imageUri);
-                productImage.setImageURI(data.getData());
+                productImage.setImageURI(/*data.getData()*/Uri.parse(imageUri));
             } catch (NullPointerException e) {
                 Log.e(LOG_TAG, "Something went wrong while trying to get image path", e);
             }
