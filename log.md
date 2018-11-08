@@ -449,3 +449,9 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** After debugging for a while a got to the error that made the app crash, it seems and it is actually really dumb. In my CursorAdapter in the bindView method I was trying to access a column that was not specified in the projection of the query. Now the app is working but with a strange bug, in EditorActivity I load an Image to an ImageView through an Intent->getData() (URI) using the setImageURI method, but in the MainActivity, the adapter uses the same steps to load the image but it does not load anything, the weird thing is that if then I open the EditorActivity, load the same Image that does not load in the MainActivity, and then return to the MainActivity, it loads.
 
 **Thoughts:** I thought I was not going to solve the issue, but using many logs through the app to see where exactly the app crash was very useful.
+
+
+## Day 86: October 27, 2018
+**Today's Progress:** Before fixing the problem that I got when trying to query data, I commented a lot of code in the Content Provider class. I got a lot of things working back again, and insert method using the content provider works well.
+
+**Thoughts:**
