@@ -214,9 +214,22 @@ public class EditorActivity extends AppCompatActivity {
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME, supplierName);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL, supplierEmail);
 
-        ProductDbHelper dbHelper = new ProductDbHelper(this);
+        // Determine if this is a new or existing product by checking if currentUri is null or not
+        if (currentUri == null) {
+            Uri newUri = getContentResolver().insert(ProductEntry.CONTENT_URI, contentValues);
+
+            if (newUri == null) {
+                Toast.makeText(this, getString(R.string.editor_insert_product_failed),
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, getString(R.string.editor_insert_product_successful),
+                        Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        /*ProductDbHelper dbHelper = new ProductDbHelper(this);
         SQLiteDatabase database = dbHelper.getWritableDatabase();
-        database.insert(ProductEntry.TABLE_NAME, null, contentValues);
+        database.insert(ProductEntry.TABLE_NAME, null, contentValues);*/
 
         finish();
     }

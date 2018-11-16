@@ -112,14 +112,13 @@ public class ProductProvider extends ContentProvider {
      */
     @Override
     public Uri insert(Uri uri, ContentValues contentValues) {
-       /* final int match = uriMatcher.match(uri);
+        final int match = uriMatcher.match(uri);
         switch (match) {
             case PRODUCTS:
                 return insertProduct(uri, contentValues);
             default:
                 throw new IllegalArgumentException("Insertion is not supported for " + uri);
-        }*/
-       return null;
+        }
     }
 
     /**
@@ -127,7 +126,7 @@ public class ProductProvider extends ContentProvider {
      * Return the new content URI for that specific row in the database.
      */
     private Uri insertProduct(Uri uri, ContentValues contentValues) {
-        /*
+
         // Data validation
         String productName = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_NAME);
         Float productPrice = contentValues.getAsFloat(ProductEntry.COLUMN_PRODUCT_PRICE);
@@ -164,9 +163,7 @@ public class ProductProvider extends ContentProvider {
 
         // Once we know the ID of the new row in the table,
         // return the new URI with the ID appended to the end of it
-        return ContentUris.withAppendedId(uri, id);*/
-
-        return null;
+        return ContentUris.withAppendedId(uri, id);
     }
 
     /**
