@@ -1,11 +1,15 @@
 package com.juanborges.inventory;
 
+import android.Manifest;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -15,6 +19,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -26,12 +31,23 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private final static String LOG_TAG = MainActivity.class.getSimpleName();
 
     private final static int PRODUCT_LOADER = 0;
+
+    private static final int MY_PERMISSIONS_REQUEST = 1;
+    
     ProductCursorAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String[] PERMISSIONS = {
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE
+        };
+
+        ActivityCompat.requestPermissions(this,
+                PERMISSIONS, MY_PERMISSIONS_REQUEST);
 
         FloatingActionButton fab = findViewById(R.id.fab);
 
@@ -49,6 +65,19 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         listView.setAdapter(adapter);
 
         //displayDatabaseInfo();
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(MainActivity.this, EditorActivity.class);
+
+                Uri currentUri = ContentUris.withAppendedId(ProductEntry.CONTENT_URI, l);
+
+                intent.setData(currentUri);
+
+                startActivity(intent);
+            }
+        });
 
         LoaderManager.getInstance(this).initLoader(PRODUCT_LOADER, null, this);
     }
@@ -129,6 +158,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_delete_all:
+                deleteAllProducts();
                 Toast.makeText(this, "Delete All", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.action_insert_dummy_data:
@@ -143,6 +173,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void deleteAllProducts() {
+        int rowsDeleted = getContentResolver().delete(ProductEntry.CONTENT_URI, null, null);
     }
 
     private void insertProduct() {

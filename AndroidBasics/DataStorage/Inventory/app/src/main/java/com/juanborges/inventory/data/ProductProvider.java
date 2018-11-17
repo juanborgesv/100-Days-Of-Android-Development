@@ -245,11 +245,10 @@ public class ProductProvider extends ContentProvider {
 
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
-        /*SQLiteDatabase database = dbHelper.getWritableDatabase();
+        SQLiteDatabase database = dbHelper.getWritableDatabase();
 
         int rowsDeleted = 0;
 
-        // ??
         final int match = uriMatcher.match(uri);
 
         switch (match) {
@@ -269,10 +268,9 @@ public class ProductProvider extends ContentProvider {
         if (rowsDeleted != 0) {
             getContext().getContentResolver().notifyChange(uri, null);
         }
-        // Return the number of rows deleted
-        return rowsDeleted;*/
 
-        return 0;
+        // Return the number of rows deleted
+        return rowsDeleted;
     }
 
     /**
