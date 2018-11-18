@@ -105,7 +105,6 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
     @Override
     protected void onStart() {
         super.onStart();
-        //displayDatabaseInfo();
     }
 
     // Inflate the menu options from the res/menu/menu_catalog.xml file.
@@ -115,6 +114,7 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
         // Inflate the menu options from the res/menu/menu_catalog.xml file.
         // This adds menu items to the app bar.
         getMenuInflater().inflate(R.menu.menu_catalog, menu);
+
         return true;
     }
 
@@ -132,6 +132,7 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
                 deleteAllPets();
                 return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 

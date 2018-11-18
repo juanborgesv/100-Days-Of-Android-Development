@@ -230,7 +230,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
                                 // User clicked "Discard" button, navigate to parent activity.
                                 NavUtils.navigateUpFromSameTask(EditorActivity.this);
                             }
-                        };
+                };
 
                 // Show a dialog that notifies the user they have unsaved changes
                 showUnsavedChangesDialog(discardButtonClickListener);
@@ -418,7 +418,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
     private void showUnsavedChangesDialog(
             DialogInterface.OnClickListener discardButtonClickListener) {
         // Create an AlertDialog.Builder and set the message, and click listeners
-        // for the postivie and negative buttons on the dialog.
+        // for the positive and negative buttons on the dialog.
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.unsaved_changes_dialog_msg);
         builder.setPositiveButton(R.string.discard, discardButtonClickListener);
