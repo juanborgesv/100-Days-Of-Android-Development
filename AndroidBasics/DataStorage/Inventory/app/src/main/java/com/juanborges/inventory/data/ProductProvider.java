@@ -250,6 +250,7 @@ public class ProductProvider extends ContentProvider {
         int rowsDeleted = 0;
 
         final int match = uriMatcher.match(uri);
+        Log.i(LOG_TAG, "match code: "+ match);
 
         switch (match) {
             case PRODUCTS:
@@ -259,6 +260,7 @@ public class ProductProvider extends ContentProvider {
                 selection = ProductEntry._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
                 rowsDeleted = database.delete(ProductEntry.TABLE_NAME, selection, selectionArgs);
+                break;
             default:
                 throw new IllegalArgumentException("Deletion is not supported for " + uri);
         }
