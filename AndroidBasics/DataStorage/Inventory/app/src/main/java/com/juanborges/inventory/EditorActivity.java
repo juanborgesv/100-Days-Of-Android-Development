@@ -60,6 +60,8 @@ public class EditorActivity extends AppCompatActivity
 
     private boolean productHasChanged = false;
 
+    private MaterialButton orderMoreButton;
+
     // OnTouchListener that listens for any user touches on a View, implying that they are modifying
     // the view, and we change the mPetHasChanged boolean to true.
     private View.OnTouchListener mTouchListener = new View.OnTouchListener() {
@@ -98,6 +100,7 @@ public class EditorActivity extends AppCompatActivity
         supplierNameInput = findViewById(R.id.supplier_name_text_input);
         supplierEmailEditText = findViewById(R.id.supplier_email_edit_text);
         supplierEmailInput = findViewById(R.id.supplier_email_text_input);
+        orderMoreButton = findViewById(R.id.order_button);
 
         productNameEditText.setOnTouchListener(mTouchListener);
         productPriceEditText.setOnTouchListener(mTouchListener);
@@ -150,6 +153,47 @@ public class EditorActivity extends AppCompatActivity
                     productHasChanged = true;
             }
         });
+
+        orderMoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isSupplierSpecified()) {
+                    Intent intent = new Intent(Intent.ACTION_SENDTO);
+                    intent.setType("text/plain");
+                    intent.setData(Uri.parse("mailto:"+ supplierEmailEditText.getText().toString().trim()));
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "New order - "+ productNameEditText.getText().toString().trim());
+
+                    String message = "Hi " + supplierNameEditText.getText().toString().trim() +
+                            ",\n\n" + "We need more " + productNameEditText.getText().toString().trim() +
+                            ", please confirm if you have this product available and when you" +
+                            " could send more to us. \n\n Thank you.";
+
+                    intent.putExtra(Intent.EXTRA_TEXT, message);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(EditorActivity.this,
+                            getString(R.string.supplier_missing_data), Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+    }
+
+    private boolean isSupplierSpecified() {
+        String supplierName = supplierNameEditText.getText().toString();
+        String supplierEmail = supplierEmailEditText.getText().toString();
+
+        if (supplierName == null || supplierName.length() == 0) {
+            return false;
+        }
+
+        if (supplierEmail == null || supplierEmail.length() == 0) {
+            return false;
+        }
+
+        return true;
     }
 
     @Override

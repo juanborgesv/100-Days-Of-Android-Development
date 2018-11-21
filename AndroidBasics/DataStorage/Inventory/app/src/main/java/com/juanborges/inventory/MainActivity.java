@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -11,6 +12,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.LoaderManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
@@ -43,11 +45,27 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         String[] PERMISSIONS = {
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.READ_EXTERNAL_STORAGE
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.CAMERA
         };
 
-        ActivityCompat.requestPermissions(this,
-                PERMISSIONS, MY_PERMISSIONS_REQUEST);
+        int wesPermissionCheck = ContextCompat.checkSelfPermission
+                (this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int resPermissionCheck = ContextCompat.checkSelfPermission
+                (this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        int cameraPermissionCheck = ContextCompat.checkSelfPermission
+                (this, Manifest.permission.CAMERA);
+
+        if (wesPermissionCheck != PackageManager.PERMISSION_GRANTED ||
+                resPermissionCheck != PackageManager.PERMISSION_GRANTED ||
+                cameraPermissionCheck != PackageManager.PERMISSION_GRANTED) {
+
+            Log.i(LOG_TAG, "Requesting permissions...");
+            ActivityCompat.requestPermissions(this,
+                    PERMISSIONS, MY_PERMISSIONS_REQUEST);
+        } else {
+            Log.i(LOG_TAG, "Every permission required are already is granted");
+        }
 
         FloatingActionButton fab = findViewById(R.id.fab);
 
@@ -63,8 +81,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         adapter = new ProductCursorAdapter(this, null);
         listView.setAdapter(adapter);
-
-        //displayDatabaseInfo();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -85,67 +101,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     protected void onStart() {
         super.onStart();
-        //displayDatabaseInfo();
-    }
-
-    /**
-     * Temporary helper method to display information in the onscreen TextView about the state of
-     * the products database.
-     */
-    private void displayDatabaseInfo() {
-        // To access our database, we instantiate our subclass of SQLiteOpenHelper
-        // and pass the context, which is the current activity.
-        ProductDbHelper dbHelper = new ProductDbHelper(this);
-
-        String[] projection = {
-                ProductEntry._ID,
-                ProductEntry.COLUMN_PRODUCT_NAME,
-                ProductEntry.COLUMN_PRODUCT_PRICE,
-                ProductEntry.COLUMN_PRODUCT_QUANTITY,
-                ProductEntry.COLUMN_PRODUCT_IMAGE,
-                ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME,
-                ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL
-        };
-
-        Cursor cursor = getContentResolver().query(
-                ProductEntry.CONTENT_URI,
-                projection,
-                null,
-                null,
-                null);
-
-        Log.i(LOG_TAG, ProductEntry._ID + " - " +
-                ProductEntry.COLUMN_PRODUCT_NAME + " - " +
-                ProductEntry.COLUMN_PRODUCT_PRICE + " - " +
-                ProductEntry.COLUMN_PRODUCT_QUANTITY + " - " +
-                ProductEntry.COLUMN_PRODUCT_IMAGE + " - " +
-                ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME + " - " +
-                ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL);
-
-        try {
-            // Figure out the index of each column
-            int idColumnIndex = cursor.getColumnIndex(ProductEntry._ID);
-            int nameColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_NAME);
-            int priceColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_PRICE);
-            int imageColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_IMAGE);
-            int quantityColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_QUANTITY);
-
-            while (cursor.moveToNext()) {
-                int currentId = cursor.getInt(idColumnIndex);
-                String name = cursor.getString(nameColumnIndex);
-                float price = cursor.getFloat(priceColumnIndex);
-                String imageUri = cursor.getString(imageColumnIndex);
-                int quantity = cursor.getInt(quantityColumnIndex);
-                Log.i(LOG_TAG,
-                        currentId + " - " +
-                                name + " - " +
-                                price + " - " +
-                                imageUri + " - " +
-                                quantity);
-            }
-        } finally {
-                cursor.close();
-        }
     }
 
     @Override
@@ -196,6 +151,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         long newRowId = database.insert(ProductEntry.TABLE_NAME, null, contentValues);
     }
 
+    @NonNull
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         String[] projection = {

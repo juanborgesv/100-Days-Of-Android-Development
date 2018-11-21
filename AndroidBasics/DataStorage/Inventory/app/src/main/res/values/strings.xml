@@ -58,6 +58,8 @@
     <!-- Dialog button text for the option to keep editing the current pet [CHAR LIMIT=20] -->
     <string name="keep_editing">Keep Editing</string>
 
+    <string name="supplier_missing_data">Could not order, some supplier data is missing</string>
+
 
     <string name="product_title">Product</string>
     <string name="supplier_title">Supplier</string>
