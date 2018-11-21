@@ -450,8 +450,17 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 
 **Thoughts:** I thought I was not going to solve the issue, but using many logs through the app to see where exactly the app crash was very useful.
 
-
 ## Day 86: October 27, 2018
 **Today's Progress:** Before fixing the problem that I got when trying to query data, I commented a lot of code in the Content Provider class. I got a lot of things working back again, and insert method using the content provider works well.
 
-**Thoughts:**
+**Thoughts:** I think I am actually really close to finish this, some methods to finish and visual polish!
+
+## Day 87: November 17, 2018
+**Today's Progress:** The MainActivity shows almost perfect all the data, the only problem is that it does not loads the product's image. The problem is apparently due to permissions, but even I have declared them in the Manifest file it still does not fix the issue. When an item on the list is clicked it opens the EditorAcitivty and loads all the corresponding information to the item clicked.
+
+**Thoughts:** After taking a little vacations, it was kind of hard to continue the project because practically I did not know where I left the project, which things I was doing and which I was about to do. At the end, almost every method of the Content Provider is done, it is left to check if the Update method works.
+
+## Day 88: November 18, 2018
+**Today's Progress:** Update method finished and checked, added a Dialog to confirm if the user wants to discard changes if they are not saved, and another Dialog to confirm the user wants to delete a product of the database.
+
+**Thoughts:** Can't wait to start learning how to use Firebase, the only thing that keeps not working well is loading the product's image. But either way I am going to send the project and see how the instructors can help me to fix the issue.
