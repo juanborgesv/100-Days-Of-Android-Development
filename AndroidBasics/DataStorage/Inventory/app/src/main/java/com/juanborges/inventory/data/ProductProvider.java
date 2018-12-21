@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.juanborges.inventory.data.ProductContract.ProductEntry;
 
@@ -171,19 +172,17 @@ public class ProductProvider extends ContentProvider {
      */
     @Override
     public int update(Uri uri, ContentValues contentValues, String selection, String[] selectionArgs) {
-        /*final int match = uriMatcher.match(uri);
+        final int match = uriMatcher.match(uri);
         switch (match) {
             case PRODUCTS:
                 return updateProduct(uri, contentValues, selection, selectionArgs);
             case PRODUCT_ID:
-                selection = ProductEntry._ID + "=?"; // ??
-                selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
+                selection = ProductEntry._ID + "=?";
+                selectionArgs = new String[]{ String.valueOf(ContentUris.parseId(uri)) };
                 return updateProduct(uri, contentValues, selection, selectionArgs);
             default:
                 throw new IllegalArgumentException("Update is not supported for " + uri);
-        }*/
-
-        return 0;
+        }
     }
 
     /**
@@ -192,55 +191,66 @@ public class ProductProvider extends ContentProvider {
      * Return the number of rows that were successfully updated.
      */
     private int updateProduct(Uri uri, ContentValues contentValues, String selection, String[] selectionArgs) {
-        /*// If there are no values to update, then don't try to update the database
+        // If there are no values to update, then don't try to update the database
         if (contentValues.size() == 0)
             return 0;
+
+        boolean isSomethingNull = false;
 
         if (contentValues.containsKey(ProductEntry.COLUMN_PRODUCT_NAME)) {
             String productName = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_NAME);
             if (productName == null)
-                throw new IllegalArgumentException("Product requires a name");
+                isSomethingNull = true;
         }
 
         if (contentValues.containsKey(ProductEntry.COLUMN_PRODUCT_PRICE)) {
             Float productPrice = contentValues.getAsFloat(ProductEntry.COLUMN_PRODUCT_PRICE);
             if (productPrice == null || productPrice < 0)
-                throw new IllegalArgumentException("Product requires a valid price");
+                isSomethingNull = true;
         }
 
         if (contentValues.containsKey(ProductEntry.COLUMN_PRODUCT_IMAGE)) {
             String productImage = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_IMAGE);
             if (productImage == null)
-                throw new IllegalArgumentException("Product requires an image");
+                isSomethingNull = true;
         }
 
         if (contentValues.containsKey(ProductEntry.COLUMN_PRODUCT_QUANTITY)) {
             Integer productQuantity = contentValues.getAsInteger(ProductEntry.COLUMN_PRODUCT_QUANTITY);
             if (productQuantity == null)
-                throw new IllegalArgumentException("Product requires a valid quantity");
+                isSomethingNull = true;
         }
 
         if (contentValues.containsKey(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME)) {
             String supplierName = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME);
             if (supplierName == null)
-                throw new IllegalArgumentException("Product requires a supplier name");
+                isSomethingNull = true;
 
         }
 
         if (contentValues.containsKey(ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL)) {
             String supplierEmail = contentValues.getAsString(ProductEntry.COLUMN_PRODUCT_SUPPLIER_EMAIL);
             if (supplierEmail == null)
-                throw new IllegalArgumentException("Product requires a supplier email");
+                isSomethingNull = true;
         }
 
         SQLiteDatabase database = dbHelper.getWritableDatabase();
 
-        int rowsUpdated = database.update(ProductEntry.TABLE_NAME, contentValues, selection, selectionArgs);
+        int rowsUpdated = 0;
 
-        if (rowsUpdated != 0)
-            getContext().getContentResolver().notifyChange(uri, null);
+        if (!isSomethingNull) {
+            rowsUpdated = database.update(ProductEntry.TABLE_NAME, contentValues, selection,
+                    selectionArgs);
 
-        return rowsUpdated;*/ return 0;
+            if (rowsUpdated != 0)
+                getContext().getContentResolver().notifyChange(uri, null);
+        } else {
+            Toast.makeText(getContext(), "Error updating. Check there is not null data.",
+                    Toast.LENGTH_LONG).show();
+            rowsUpdated = -1;
+        }
+
+        return rowsUpdated;
     }
 
     @Override
