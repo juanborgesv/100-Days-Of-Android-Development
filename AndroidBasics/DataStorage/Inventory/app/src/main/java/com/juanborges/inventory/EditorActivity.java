@@ -391,9 +391,21 @@ public class EditorActivity extends AppCompatActivity
                 Toast.makeText(this, getString(R.string.editor_insert_product_successful),
                         Toast.LENGTH_SHORT).show();
             }
+
+            finish();
+        } else {
+            int rowsAffected = getContentResolver().update(currentUri, contentValues, null,
+                    null);
+
+            if (rowsAffected == 0) {
+                Toast.makeText(this, "Error Updating", Toast.LENGTH_SHORT).show();
+            }
+
+            if (rowsAffected != -1)
+                finish();
         }
 
-        finish();
+
     }
 
     @NonNull
@@ -439,8 +451,8 @@ public class EditorActivity extends AppCompatActivity
 
             String productName = cursor.getString(nameColumnIndex);
             String productPrice = String.valueOf(cursor.getFloat(priceColumnIndex));
-            String productImage = cursor.getString(imageColumnIndex);
-            Uri imageUri = Uri.parse(productImage);
+            imageUri = cursor.getString(imageColumnIndex);
+            Uri productImage = Uri.parse(imageUri);
             String productQuantity = String.valueOf(cursor.getInt(quantityColumnIndex));
             String supplierName = cursor.getString(sNameColumnIndex);
             String supplierEmail = cursor.getString(sEmailColumnIndex);
@@ -449,7 +461,7 @@ public class EditorActivity extends AppCompatActivity
 
             productNameEditText.setText(productName);
             productPriceEditText.setText(productPrice);
-            productImageView.setImageURI(imageUri);
+            productImageView.setImageURI(productImage);
             productQuantityEditText.setText(productQuantity);
             supplierNameEditText.setText(supplierName);
             supplierEmailEditText.setText(supplierEmail);
