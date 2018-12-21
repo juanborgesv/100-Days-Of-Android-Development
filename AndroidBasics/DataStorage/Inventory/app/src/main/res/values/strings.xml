@@ -13,6 +13,9 @@
     <!-- Label for the overflow menu option that saves data in editor view [CHAR LIMIT=20] -->
     <string name="action_save_title">Save</string>
 
+    <!-- Label for the list item sale button -->
+    <string name="sale_button_title">Sale</string>
+
 
     <!-- EditorActivity Strings below -->
 
