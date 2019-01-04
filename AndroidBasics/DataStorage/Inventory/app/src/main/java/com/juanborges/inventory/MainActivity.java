@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -133,7 +132,6 @@ public class MainActivity
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        //TODO: Show a dialog that gives an option to confirm or cancel Delete All
         if (item.getItemId() == R.id.action_delete_all) {
             if (adapter.getCount() != 0)
                 showDeleteConfirmationDialog();

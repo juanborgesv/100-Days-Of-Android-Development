@@ -545,8 +545,6 @@ public class EditorActivity
             String supplierName = cursor.getString(sNameColumnIndex);
             String supplierEmail = cursor.getString(sEmailColumnIndex);
 
-            Log.i(LOG_TAG, "\nIMAGE URI: "+ productImage +"\n");
-
             // Update the views on the screen with the values from the database
             productNameEditText.setText(productName);
             productPriceEditText.setText(productPrice);

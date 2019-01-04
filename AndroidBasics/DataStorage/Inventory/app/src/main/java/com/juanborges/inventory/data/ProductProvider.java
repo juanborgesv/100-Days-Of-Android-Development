@@ -62,8 +62,6 @@ public class ProductProvider extends ContentProvider {
     @Override
     public Cursor query(@NonNull Uri uri, String[] projection, String selection, String[] selectionArgs,
                         String sortOrder) {
-        Log.i(LOG_TAG, "QUERYING");
-
         SQLiteDatabase database = dbHelper.getReadableDatabase();
 
         Cursor cursor;
@@ -72,7 +70,6 @@ public class ProductProvider extends ContentProvider {
 
         switch (match) {
             case PRODUCTS:
-                Log.i(LOG_TAG, "PRODUCTS MATCHED");
                 cursor = database.query(
                         ProductEntry.TABLE_NAME,
                         projection,
@@ -81,11 +78,8 @@ public class ProductProvider extends ContentProvider {
                         null,
                         null,
                         sortOrder);
-                Log.i(LOG_TAG, "AFTER DATABASE.PRODUCTS QUERY ");
                 break;
             case PRODUCT_ID:
-                Log.i(LOG_TAG, "PRODUCT_ID MATCHED");
-                // ??
                 selection = ProductEntry._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
 
@@ -99,7 +93,6 @@ public class ProductProvider extends ContentProvider {
                         sortOrder);
                 break;
             default:
-                Log.i(LOG_TAG, "NOTHING MATCHED");
                 throw new IllegalArgumentException("Cannot query unknown URI " + uri);
         }
 
@@ -266,7 +259,6 @@ public class ProductProvider extends ContentProvider {
         int rowsDeleted = 0;
 
         final int match = uriMatcher.match(uri);
-        Log.i(LOG_TAG, "match code: "+ match);
 
         switch (match) {
             case PRODUCTS:
