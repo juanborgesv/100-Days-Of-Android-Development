@@ -71,7 +71,6 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
         listView.setEmptyView(findViewById(R.id.empty_view));
 
         // Setup an Adapter to create a list item for each row of pet data in the Cursor.
-        // There is no pet data yet (until the loader finishes) so pass in null for the Cursor.
         adapter = new PetCursorAdapter(this, null);
         listView.setAdapter(adapter);
 

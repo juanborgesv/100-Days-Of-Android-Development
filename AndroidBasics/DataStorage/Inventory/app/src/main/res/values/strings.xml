@@ -16,6 +16,23 @@
     <!-- Label for the list item sale button -->
     <string name="sale_button_title">Sale</string>
 
+    <!-- Title text for the empty view, which describes the empty dog house image [CHAR LIMIT=50]-->
+    <string name="empty_view_title_text">It\'s a bit lonely here...</string>
+
+    <!-- Subtitle text for the empty view that prompts the user to add a pet [CHAR LIMIT=50] -->
+    <string name="empty_view_subtitle_text">Get started by adding a product</string>
+
+    <!-- Toast message in main activity when trying to sale a product with 0 quantity. -->
+    <string name="sale_failed">Sale failed, product out of stock.</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the current product [CHAR LIMIT=NONE] -->
+    <string name="main_delete_dialog_msg">Delete all products stored?</string>
+    
+    <!-- -->
+    <string name="no_data">There is no data to delete.</string>
+
+    <!-- -->
+    <string name="out_of_stock">Out Of Stock</string>
 
     <!-- EditorActivity Strings below -->
 
@@ -61,26 +78,48 @@
     <!-- Dialog button text for the option to keep editing the current pet [CHAR LIMIT=20] -->
     <string name="keep_editing">Keep Editing</string>
 
+    <!-- Toast message in editor when trying to order a product from a missing supplier data [CHAR LIMIT=NONE] -->
     <string name="supplier_missing_data">Could not order, some supplier data is missing</string>
 
-
+    <!-- Text hint for product [CHAR LIMIT=30] -->
     <string name="product_title">Product</string>
+
+    <!-- Text hint for supplier [CHAR LIMIT=30]  -->
     <string name="supplier_title">Supplier</string>
+
+    <!-- Text hint for image field in the editor [CHAR LIMIT=30] -->
     <string name="image_title">Image</string>
+
+    <!-- Text hint for quantity field in the editor [CHAR LIMIT=30] -->
     <string name="quantity_title">Quantity</string>
 
+    <!-- Text hint for product name field in the editor [CHAR LIMIT=30] -->
     <string name="hint_name">Name</string>
+
+    <!-- Text hint for price field in the editor [CHAR LIMIT=30] -->
     <string name="hint_price">Price</string>
+
+    <!-- Text hint for supplier's email in the editor [CHAR LIMIT=30] -->
     <string name="hint_email">Email</string>
 
+    <!-- Button text for order more product from supplier [CHAR LIMIT=20]-->
     <string name="order_more">Order More</string>
-    
+
+    <!-- Initial value for quantity field in the editor [CHAR LIMIT=12]-->
     <string name="zero">0</string>
 
+    <!-- Error message above product name field [CHAR LIMIT=8]-->
     <string name="error_product_name">Product name required.</string>
+
+    <!-- Error message above product price field [CHAR LIMIT=8]-->
     <string name="error_product_price">Product price required.</string>
+
+    <!-- Error message above product image field [CHAR LIMIT=8] -->
     <string name="error_product_image">Product image required.</string>
+
+    <!-- Error message above supplier name field in the editor [CHAR LIMIT=8] -->
     <string name="error_supplier_name">Supplier name required.</string>
+
+    <!-- Error message above supplier email field in the editor [CHAR LIMIT=8] -->
     <string name="error_supplier_email">Supplier email required.</string>
-    <string name="insert_dummy_data">Insert Dummy Data</string>
 </resources>

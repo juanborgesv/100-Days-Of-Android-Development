@@ -7,6 +7,7 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -59,13 +60,13 @@ public class ProductProvider extends ContentProvider {
     }
 
     @Override
-    public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs,
+    public Cursor query(@NonNull Uri uri, String[] projection, String selection, String[] selectionArgs,
                         String sortOrder) {
         Log.i(LOG_TAG, "QUERYING");
 
         SQLiteDatabase database = dbHelper.getReadableDatabase();
 
-        Cursor cursor = null;
+        Cursor cursor;
 
         int match = uriMatcher.match(uri);
 
@@ -102,7 +103,6 @@ public class ProductProvider extends ContentProvider {
                 throw new IllegalArgumentException("Cannot query unknown URI " + uri);
         }
 
-        // ??
         cursor.setNotificationUri(getContext().getContentResolver(), uri);
 
         return cursor;
@@ -112,7 +112,7 @@ public class ProductProvider extends ContentProvider {
      * Insert new data into the provider with the given ContentValues.
      */
     @Override
-    public Uri insert(Uri uri, ContentValues contentValues) {
+    public Uri insert(@NonNull Uri uri, ContentValues contentValues) {
         final int match = uriMatcher.match(uri);
         switch (match) {
             case PRODUCTS:
@@ -159,7 +159,6 @@ public class ProductProvider extends ContentProvider {
             return null;
         }
 
-        // ??
         getContext().getContentResolver().notifyChange(uri, null);
 
         // Once we know the ID of the new row in the table,
@@ -171,7 +170,7 @@ public class ProductProvider extends ContentProvider {
      * Updates the data at the given selection and selection arguments, with the new ContentValues.
      */
     @Override
-    public int update(Uri uri, ContentValues contentValues, String selection, String[] selectionArgs) {
+    public int update(@NonNull Uri uri, ContentValues contentValues, String selection, String[] selectionArgs) {
         final int match = uriMatcher.match(uri);
         switch (match) {
             case PRODUCTS:
@@ -234,6 +233,12 @@ public class ProductProvider extends ContentProvider {
                 isSomethingNull = true;
         }
 
+        // If there is only one value expected to change, it means it is changing the quantity
+        // from the MainActivity. Set isSomethingNull to false to avoid null data errors.
+        if (contentValues.size() == 1) {
+            isSomethingNull = false;
+        }
+
         SQLiteDatabase database = dbHelper.getWritableDatabase();
 
         int rowsUpdated = 0;
@@ -247,6 +252,7 @@ public class ProductProvider extends ContentProvider {
         } else {
             Toast.makeText(getContext(), "Error updating. Check there is not null data.",
                     Toast.LENGTH_LONG).show();
+
             rowsUpdated = -1;
         }
 
@@ -254,7 +260,7 @@ public class ProductProvider extends ContentProvider {
     }
 
     @Override
-    public int delete(Uri uri, String selection, String[] selectionArgs) {
+    public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
         SQLiteDatabase database = dbHelper.getWritableDatabase();
 
         int rowsDeleted = 0;
@@ -289,8 +295,7 @@ public class ProductProvider extends ContentProvider {
      * Returns the MIME type of data for the content URI. ??
      */
     @Override
-    public String getType(Uri uri) {
-        /*
+    public String getType(@NonNull Uri uri) {
         final int match = uriMatcher.match(uri);
         switch (match) {
             case PRODUCTS:
@@ -299,7 +304,6 @@ public class ProductProvider extends ContentProvider {
                 return ProductEntry.CONTENT_ITEM_TYPE;
             default:
                 throw new IllegalStateException("Unknown URI " + uri + " with match " + match);
-        }*/
-        return null;
+        }
     }
 }
