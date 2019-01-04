@@ -464,3 +464,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Update method finished and checked, added a Dialog to confirm if the user wants to discard changes if they are not saved, and another Dialog to confirm the user wants to delete a product of the database.
 
 **Thoughts:** Can't wait to start learning how to use Firebase, the only thing that keeps not working well is loading the product's image. But either way I am going to send the project and see how the instructors can help me to fix the issue.
+
+## Day 89: January 3, 2019
+**Today's Progress:** Delete Insert Dummy Data menu option, and add a dialog that pops up after Delete All menu option is selected. Implement the Button in every list item, and came across with a common issue that I'll probably encounter more than once. The list item has an OnClick method that opens the EditorActivity, but when the list item has a button, it disables that capability of being clickable. I found [this solution](https://stackoverflow.com/questions/11160639/list-item-with-button-not-clickable-anymore) that includes [this great website with a very detailed explanation](https://cyrilmottier.com/2011/11/23/listview-tips-tricks-4-add-several-clickable-areas/).
+
+**Thoughts:** The app still can't show the images, but I'll send the project so I can get a review about it and see how should I manage the images on the app.
