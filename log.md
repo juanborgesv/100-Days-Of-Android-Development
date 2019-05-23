@@ -469,3 +469,8 @@ It was good to do all the methods even if it was not necessary for reinforcing a
 **Today's Progress:** Delete Insert Dummy Data menu option, and add a dialog that pops up after Delete All menu option is selected. Implement the Button in every list item, and came across with a common issue that I'll probably encounter more than once. The list item has an OnClick method that opens the EditorActivity, but when the list item has a button, it disables that capability of being clickable. I found [this solution](https://stackoverflow.com/questions/11160639/list-item-with-button-not-clickable-anymore) that includes [this great website with a very detailed explanation](https://cyrilmottier.com/2011/11/23/listview-tips-tricks-4-add-several-clickable-areas/).
 
 **Thoughts:** The app still can't show the images, but I'll send the project so I can get a review about it and see how should I manage the images on the app.
+
+## Day 90: May 22, 2019
+**Today's Progress:** The last project of the Android course is finished. The Inventory App displays all the information stored in the database and show the respective product image aswell.
+
+**Thoughts:** I thought the challenge was going to take forever, but it actually feels like it was yesterday when I started. It's Day 90 so I still have 10 days to learn about Firebase, and probably start learning Kotlin and Android Jetpack.
