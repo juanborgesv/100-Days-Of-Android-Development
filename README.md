@@ -27,6 +27,11 @@ Udacity's courses are a great point of start. Courses in Android Basics Nanodegr
 9. [Firebase Analytics: Android](https://www.udacity.com/course/firebase-analytics-android--ud354)
 10. [Firebase Essentials For Android](https://sa.udacity.com/course/firebase-essentials-for-android--ud009) 
 
+## Other Android development related courses:
+11. [Advanced Android App Development](https://www.udacity.com/course/advanced-android-app-development--ud855)
+12. [Android Performance](https://www.udacity.com/course/android-performance--ud825)
+13. [Developing Android Apps](https://www.udacity.com/course/new-android-fundamentals--ud851)
+
 ### Android Developer Documentation:
 [Android Developer Documentation](https://developer.android.com/docs/)
 
